@@ -1,4 +1,5 @@
 ---
+import PhotoModal from "./PhotoModal.astro";
 import type { Photo } from "../lib/photos";
 
 interface Props {
@@ -6,21 +7,75 @@ interface Props {
 }
 
 const { photos } = Astro.props;
+
+function imageSizeLabel(width: number | null, height: number | null) {
+	if (!width || !height) {
+		return null;
+	}
+
+	return `${width} x ${height}`;
+}
+
+function apertureLabel(value: string | number | null) {
+	if (!value) {
+		return null;
+	}
+
+	const text = String(value);
+
+	return text.startsWith("f/") ? text : `f/${text}`;
+}
+
+function metadataRows(photo: Photo) {
+	const rows = [
+		["Filename", photo.filename],
+		["Roll", photo.roll],
+		["Date", photo.dateDisplay],
+		["Camera", photo.camera],
+		["Film", photo.film],
+		["Lens", photo.metadata.lensModel],
+		["Focal length", photo.metadata.focalLength],
+		["Aperture", apertureLabel(photo.metadata.aperture)],
+		["Shutter", photo.metadata.shutterSpeed],
+		["ISO", photo.metadata.iso ? String(photo.metadata.iso) : null],
+		["Large image", imageSizeLabel(photo.images.large.width, photo.images.large.height)],
+		[
+			"Original image",
+			photo.images.original
+				? imageSizeLabel(photo.images.original.width, photo.images.original.height)
+				: null,
+		],
+	];
+
+	return rows
+		.filter(([, value]) => value)
+		.map(([label, value]) => ({ label, value }));
+}
 ---
 
 <div class="photo-grid">
 	{photos.map((photo) => (
 		<figure class="photo">
-			<img
-				src={photo.images.grid.url}
-				srcset={`${photo.images.thumb.url} 480w, ${photo.images.grid.url} 960w, ${photo.images.large.url} 2048w`}
-				sizes="(max-width: 720px) 100vw, (max-width: 1200px) 50vw, 33vw"
-				width={photo.images.grid.width ?? undefined}
-				height={photo.images.grid.height ?? undefined}
-				alt=""
-				loading="lazy"
-				decoding="async"
-			/>
+			<button
+				class="photo-button"
+				type="button"
+				aria-label={`View ${photo.filename}`}
+				data-large-url={photo.images.large.url}
+				data-original-url={photo.images.original?.url ?? photo.images.large.url}
+				data-filename={photo.filename}
+				data-properties={JSON.stringify(metadataRows(photo))}
+			>
+				<img
+					src={photo.images.grid.url}
+					srcset={`${photo.images.thumb.url} 480w, ${photo.images.grid.url} 960w, ${photo.images.large.url} 2048w`}
+					sizes="(max-width: 720px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					width={photo.images.grid.width ?? undefined}
+					height={photo.images.grid.height ?? undefined}
+					alt=""
+					loading="lazy"
+					decoding="async"
+				/>
+			</button>
 			<figcaption>
 				<span>{photo.dateDisplay}</span>
 				<span>{photo.camera}</span>
@@ -29,6 +84,8 @@ const { photos } = Astro.props;
 		</figure>
 	))}
 </div>
+
+<PhotoModal />
 
 <style>
 	.photo-grid {
@@ -42,7 +99,22 @@ const { photos } = Astro.props;
 		min-width: 0;
 	}
 
-	img {
+	.photo-button {
+		display: block;
+		width: 100%;
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		cursor: zoom-in;
+	}
+
+	.photo-button:focus-visible {
+		outline: 2px solid #111;
+		outline-offset: 4px;
+	}
+
+	.photo-button img {
 		display: block;
 		width: 100%;
 		height: auto;

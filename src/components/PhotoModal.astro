@@ -1,0 +1,197 @@
+<dialog class="photo-dialog" aria-label="Photo viewer">
+	<div class="photo-viewer">
+		<div class="viewer-image-wrap">
+			<img class="viewer-image" alt="" />
+		</div>
+		<aside class="viewer-details">
+			<div class="viewer-header">
+				<h2>Properties</h2>
+				<form method="dialog">
+					<button class="close-button" type="submit" aria-label="Close">x</button>
+				</form>
+			</div>
+			<dl class="property-list"></dl>
+			<a class="original-link" href="#" target="_blank" rel="noreferrer">Open original</a>
+		</aside>
+	</div>
+</dialog>
+
+<script>
+	const dialog = document.querySelector(".photo-dialog");
+	const viewerImage = dialog?.querySelector(".viewer-image");
+	const propertyList = dialog?.querySelector(".property-list");
+	const originalLink = dialog?.querySelector(".original-link");
+
+	function setProperties(properties) {
+		if (!propertyList) {
+			return;
+		}
+
+		propertyList.replaceChildren(
+			...properties.flatMap(({ label, value }) => {
+				const term = document.createElement("dt");
+				const description = document.createElement("dd");
+
+				term.textContent = label;
+				description.textContent = value;
+
+				return [term, description];
+			}),
+		);
+	}
+
+	document.querySelectorAll(".photo-button").forEach((button) => {
+		button.addEventListener("click", () => {
+			if (!(dialog instanceof HTMLDialogElement) || !(viewerImage instanceof HTMLImageElement)) {
+				return;
+			}
+
+			const properties = JSON.parse(button.dataset.properties ?? "[]");
+			const filename = button.dataset.filename ?? "";
+			const originalUrl = button.dataset.originalUrl ?? button.dataset.largeUrl ?? "#";
+
+			viewerImage.src = button.dataset.largeUrl ?? "";
+			viewerImage.alt = filename;
+			setProperties(properties);
+
+			if (originalLink instanceof HTMLAnchorElement) {
+				originalLink.href = originalUrl;
+			}
+
+			dialog.showModal();
+		});
+	});
+
+	dialog?.addEventListener("click", (event) => {
+		if (event.target === dialog && dialog instanceof HTMLDialogElement) {
+			dialog.close();
+		}
+	});
+</script>
+
+<style>
+	.photo-dialog {
+		width: min(100% - 2rem, 86rem);
+		max-width: none;
+		height: min(100% - 2rem, 52rem);
+		max-height: none;
+		padding: 0;
+		border: 0;
+		background: #111;
+		color: #fbfaf6;
+	}
+
+	.photo-dialog::backdrop {
+		background: rgb(0 0 0 / 0.72);
+	}
+
+	.photo-viewer {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(17rem, 21rem);
+		width: 100%;
+		height: 100%;
+	}
+
+	.viewer-image-wrap {
+		display: grid;
+		min-height: 0;
+		place-items: center;
+		background: #0b0b0b;
+	}
+
+	.viewer-image {
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+	}
+
+	.viewer-details {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		gap: 1rem;
+		min-width: 0;
+		padding: 1.25rem;
+		overflow: auto;
+		background: #fbfaf6;
+		color: #111;
+	}
+
+	.viewer-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	.viewer-header h2 {
+		margin: 0;
+		font-size: 0.9rem;
+		font-weight: 650;
+		letter-spacing: 0;
+		text-transform: uppercase;
+	}
+
+	.close-button {
+		display: grid;
+		width: 2rem;
+		height: 2rem;
+		place-items: center;
+		padding: 0;
+		border: 1px solid #d8d3c8;
+		background: transparent;
+		color: #111;
+		cursor: pointer;
+		font: inherit;
+		line-height: 1;
+	}
+
+	.close-button:focus-visible,
+	.original-link:focus-visible {
+		outline: 2px solid #111;
+		outline-offset: 3px;
+	}
+
+	.property-list {
+		display: grid;
+		grid-template-columns: max-content minmax(0, 1fr);
+		gap: 0.65rem 1rem;
+		align-content: start;
+		margin: 0;
+		font-size: 0.9rem;
+		line-height: 1.35;
+	}
+
+	.property-list dt {
+		color: #666;
+	}
+
+	.property-list dd {
+		margin: 0;
+		min-width: 0;
+		overflow-wrap: anywhere;
+	}
+
+	.original-link {
+		color: #111;
+		font-size: 0.92rem;
+		text-underline-offset: 0.18em;
+	}
+
+	@media (max-width: 760px) {
+		.photo-dialog {
+			width: 100%;
+			height: 100%;
+		}
+
+		.photo-viewer {
+			grid-template-columns: 1fr;
+			grid-template-rows: minmax(0, 1fr) auto;
+		}
+
+		.viewer-details {
+			max-height: 42vh;
+		}
+	}
+</style>
