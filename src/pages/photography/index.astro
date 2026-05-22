@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PhotographyPage from "../../components/PhotographyPage.astro";
+import { cameras, films, paginate, photoCountLabel, photos } from "../../lib/photos";
+
+const page = paginate(photos, 1);
+---
+
+<Layout>
+	<PhotographyPage
+		title="Photography"
+		subtitle={`${photoCountLabel(page.totalPhotos)}, sorted by shot date`}
+		page={page}
+		basePath="/photography"
+		cameras={cameras}
+		films={films}
+	/>
+</Layout>

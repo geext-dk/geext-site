@@ -1,0 +1,32 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import PhotographyPage from "../../../components/PhotographyPage.astro";
+import { PAGE_SIZE, cameras, films, paginate, photoCountLabel, photos } from "../../../lib/photos";
+
+export function getStaticPaths() {
+	const totalPages = Math.ceil(photos.length / PAGE_SIZE);
+
+	return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
+		const pageNumber = index + 2;
+
+		return {
+			params: { page: String(pageNumber) },
+			props: { pageNumber },
+		};
+	});
+}
+
+const { pageNumber } = Astro.props;
+const page = paginate(photos, pageNumber);
+---
+
+<Layout>
+	<PhotographyPage
+		title="Photography"
+		subtitle={`${photoCountLabel(page.totalPhotos)}, sorted by shot date`}
+		page={page}
+		basePath="/photography"
+		cameras={cameras}
+		films={films}
+	/>
+</Layout>

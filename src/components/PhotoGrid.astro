@@ -1,0 +1,64 @@
+---
+import type { Photo } from "../lib/photos";
+
+interface Props {
+	photos: Photo[];
+}
+
+const { photos } = Astro.props;
+---
+
+<div class="photo-grid">
+	{photos.map((photo) => (
+		<figure class="photo">
+			<img
+				src={photo.images.grid.url}
+				srcset={`${photo.images.thumb.url} 480w, ${photo.images.grid.url} 960w, ${photo.images.large.url} 2048w`}
+				sizes="(max-width: 720px) 100vw, (max-width: 1200px) 50vw, 33vw"
+				width={photo.images.grid.width ?? undefined}
+				height={photo.images.grid.height ?? undefined}
+				alt=""
+				loading="lazy"
+				decoding="async"
+			/>
+			<figcaption>
+				<span>{photo.dateDisplay}</span>
+				<span>{photo.camera}</span>
+				<span>{photo.film}</span>
+			</figcaption>
+		</figure>
+	))}
+</div>
+
+<style>
+	.photo-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+		gap: 2.25rem 1rem;
+	}
+
+	.photo {
+		margin: 0;
+		min-width: 0;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		background: #e8e6df;
+	}
+
+	figcaption {
+		display: grid;
+		gap: 0.18rem;
+		padding-top: 0.65rem;
+		color: #333;
+		font-size: 0.82rem;
+		line-height: 1.35;
+	}
+
+	figcaption span:first-child {
+		color: #666;
+	}
+</style>

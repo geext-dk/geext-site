@@ -1,0 +1,143 @@
+---
+import PhotoGrid from "./PhotoGrid.astro";
+import Pagination from "./Pagination.astro";
+import type { Facet, PaginatedPhotos } from "../lib/photos";
+
+interface Props {
+	title: string;
+	subtitle: string;
+	page: PaginatedPhotos;
+	basePath: string;
+	cameras: Facet[];
+	films: Facet[];
+}
+
+const { title, subtitle, page, basePath, cameras, films } = Astro.props;
+---
+
+<main class="photography-page">
+	<header class="page-header">
+		<a class="home-link" href="/">Home</a>
+		<h1>{title}</h1>
+		<p>{subtitle}</p>
+	</header>
+
+	<nav class="facets" aria-label="Photography sections">
+		<section>
+			<h2>Cameras</h2>
+			<div>
+				{cameras.map((camera) => (
+					<a href={`/photography/camera/${camera.slug}/`}>
+						{camera.name} <span>{camera.count}</span>
+					</a>
+				))}
+			</div>
+		</section>
+		<section>
+			<h2>Film</h2>
+			<div>
+				{films.map((film) => (
+					<a href={`/photography/film/${film.slug}/`}>
+						{film.name} <span>{film.count}</span>
+					</a>
+				))}
+			</div>
+		</section>
+	</nav>
+
+	<PhotoGrid photos={page.photos} />
+	<Pagination currentPage={page.currentPage} totalPages={page.totalPages} basePath={basePath} />
+</main>
+
+<style>
+	.photography-page {
+		width: min(100% - 2rem, 76rem);
+		margin: 0 auto;
+		padding: 2rem 0 4rem;
+	}
+
+	.page-header {
+		display: grid;
+		gap: 0.45rem;
+		margin-bottom: 2rem;
+	}
+
+	.home-link {
+		width: fit-content;
+		color: #555;
+		font-size: 0.9rem;
+		text-underline-offset: 0.18em;
+	}
+
+	h1,
+	h2,
+	p {
+		margin: 0;
+	}
+
+	h1 {
+		color: #111;
+		font-size: clamp(2rem, 4vw, 4rem);
+		font-weight: 500;
+		letter-spacing: 0;
+		line-height: 1;
+	}
+
+	p {
+		color: #555;
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	.facets {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+		padding: 1.25rem 0;
+		border-top: 1px solid #ddd8ce;
+		border-bottom: 1px solid #ddd8ce;
+	}
+
+	.facets section {
+		min-width: 0;
+	}
+
+	h2 {
+		margin-bottom: 0.7rem;
+		color: #555;
+		font-size: 0.78rem;
+		font-weight: 600;
+		letter-spacing: 0;
+		text-transform: uppercase;
+	}
+
+	.facets div {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.55rem 0.85rem;
+	}
+
+	.facets a {
+		color: #111;
+		font-size: 0.92rem;
+		line-height: 1.35;
+		text-underline-offset: 0.18em;
+	}
+
+	.facets span {
+		color: #76716a;
+	}
+
+	@media (max-width: 700px) {
+		.photography-page {
+			width: min(100% - 1.25rem, 76rem);
+			padding-top: 1.25rem;
+		}
+
+		.facets {
+			grid-template-columns: 1fr;
+			gap: 1.25rem;
+		}
+	}
+</style>

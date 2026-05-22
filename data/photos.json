@@ -1,0 +1,1224 @@
+{
+  "generatedAt": "2026-05-20T22:48:31.425Z",
+  "baseUrl": "https://photos.geext.xyz",
+  "photos": [
+    {
+      "filename": "000886900021.jpg",
+      "roll": "2025-001 - Pentax MX, Lomography Purple",
+      "metadata": {
+        "date": "2026:02:06 23:58:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": null,
+        "film": "Lomography Purple",
+        "cameraModel": null,
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab",
+      "sourcePath": "2025-001 - Pentax MX, Lomography Purple/000886900021.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-thumb.jpg",
+          "objectKey": "photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-thumb.jpg",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-grid.jpg",
+          "objectKey": "photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-grid.jpg",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-large.jpg",
+          "objectKey": "photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-large.jpg",
+          "width": 2048,
+          "height": 1335
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-original.jpg",
+          "objectKey": "photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-original.jpg",
+          "width": 3089,
+          "height": 2014
+        }
+      }
+    },
+    {
+      "filename": "000886890001.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890001.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-thumb.jpg",
+          "objectKey": "photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-grid.jpg",
+          "objectKey": "photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-large.jpg",
+          "objectKey": "photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-original.jpg",
+          "objectKey": "photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "000886890004.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "9735d092f9769e811ae2796b3fbb6ace08033bc49cb6e1b95a69bc4070cf0587",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890004.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/9735d092f9769e811ae2796b3fbb6ace08033bc49cb6e1b95a69bc4070cf0587-thumb.jpg",
+          "objectKey": "photos/9735d092f9769e811ae2796b3fbb6ace08033bc49cb6e1b95a69bc4070cf0587-thumb.jpg",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/9735d092f9769e811ae2796b3fbb6ace08033bc49cb6e1b95a69bc4070cf0587-grid.jpg",
+          "objectKey": "photos/9735d092f9769e811ae2796b3fbb6ace08033bc49cb6e1b95a69bc4070cf0587-grid.jpg",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/9735d092f9769e811ae2796b3fbb6ace08033bc49cb6e1b95a69bc4070cf0587-large.jpg",
+          "objectKey": "photos/9735d092f9769e811ae2796b3fbb6ace08033bc49cb6e1b95a69bc4070cf0587-large.jpg",
+          "width": 2048,
+          "height": 3089
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/9735d092f9769e811ae2796b3fbb6ace08033bc49cb6e1b95a69bc4070cf0587-original.jpg",
+          "objectKey": "photos/9735d092f9769e811ae2796b3fbb6ace08033bc49cb6e1b95a69bc4070cf0587-original.jpg",
+          "width": 2075,
+          "height": 3130
+        }
+      }
+    },
+    {
+      "filename": "000886890007.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "d38c5310e7aa1287d6b467f9126795df8e7c0cf14972d8e9a9989b541a2579ce",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890007.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/d38c5310e7aa1287d6b467f9126795df8e7c0cf14972d8e9a9989b541a2579ce-thumb.jpg",
+          "objectKey": "photos/d38c5310e7aa1287d6b467f9126795df8e7c0cf14972d8e9a9989b541a2579ce-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/d38c5310e7aa1287d6b467f9126795df8e7c0cf14972d8e9a9989b541a2579ce-grid.jpg",
+          "objectKey": "photos/d38c5310e7aa1287d6b467f9126795df8e7c0cf14972d8e9a9989b541a2579ce-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/d38c5310e7aa1287d6b467f9126795df8e7c0cf14972d8e9a9989b541a2579ce-large.jpg",
+          "objectKey": "photos/d38c5310e7aa1287d6b467f9126795df8e7c0cf14972d8e9a9989b541a2579ce-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/d38c5310e7aa1287d6b467f9126795df8e7c0cf14972d8e9a9989b541a2579ce-original.jpg",
+          "objectKey": "photos/d38c5310e7aa1287d6b467f9126795df8e7c0cf14972d8e9a9989b541a2579ce-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "000886890009.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "b63be949bf44023a819c84ee6abdaf7cc06e65914ef044e57647760adea0fc38",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890009.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/b63be949bf44023a819c84ee6abdaf7cc06e65914ef044e57647760adea0fc38-thumb.jpg",
+          "objectKey": "photos/b63be949bf44023a819c84ee6abdaf7cc06e65914ef044e57647760adea0fc38-thumb.jpg",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/b63be949bf44023a819c84ee6abdaf7cc06e65914ef044e57647760adea0fc38-grid.jpg",
+          "objectKey": "photos/b63be949bf44023a819c84ee6abdaf7cc06e65914ef044e57647760adea0fc38-grid.jpg",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/b63be949bf44023a819c84ee6abdaf7cc06e65914ef044e57647760adea0fc38-large.jpg",
+          "objectKey": "photos/b63be949bf44023a819c84ee6abdaf7cc06e65914ef044e57647760adea0fc38-large.jpg",
+          "width": 2048,
+          "height": 3089
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/b63be949bf44023a819c84ee6abdaf7cc06e65914ef044e57647760adea0fc38-original.jpg",
+          "objectKey": "photos/b63be949bf44023a819c84ee6abdaf7cc06e65914ef044e57647760adea0fc38-original.jpg",
+          "width": 2075,
+          "height": 3130
+        }
+      }
+    },
+    {
+      "filename": "000886890010.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "0b6660c1aed55910476cdd5759a57e045480bf670432c32672c1487793e8476b",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890010.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/0b6660c1aed55910476cdd5759a57e045480bf670432c32672c1487793e8476b-thumb.jpg",
+          "objectKey": "photos/0b6660c1aed55910476cdd5759a57e045480bf670432c32672c1487793e8476b-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/0b6660c1aed55910476cdd5759a57e045480bf670432c32672c1487793e8476b-grid.jpg",
+          "objectKey": "photos/0b6660c1aed55910476cdd5759a57e045480bf670432c32672c1487793e8476b-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/0b6660c1aed55910476cdd5759a57e045480bf670432c32672c1487793e8476b-large.jpg",
+          "objectKey": "photos/0b6660c1aed55910476cdd5759a57e045480bf670432c32672c1487793e8476b-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/0b6660c1aed55910476cdd5759a57e045480bf670432c32672c1487793e8476b-original.jpg",
+          "objectKey": "photos/0b6660c1aed55910476cdd5759a57e045480bf670432c32672c1487793e8476b-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "000886890011.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "77748a64df68f2b33bcd00d22ab3ffdaef39ccd5eecea1b3ca92797b296892f0",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890011.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/77748a64df68f2b33bcd00d22ab3ffdaef39ccd5eecea1b3ca92797b296892f0-thumb.jpg",
+          "objectKey": "photos/77748a64df68f2b33bcd00d22ab3ffdaef39ccd5eecea1b3ca92797b296892f0-thumb.jpg",
+          "width": 480,
+          "height": 314
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/77748a64df68f2b33bcd00d22ab3ffdaef39ccd5eecea1b3ca92797b296892f0-grid.jpg",
+          "objectKey": "photos/77748a64df68f2b33bcd00d22ab3ffdaef39ccd5eecea1b3ca92797b296892f0-grid.jpg",
+          "width": 960,
+          "height": 628
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/77748a64df68f2b33bcd00d22ab3ffdaef39ccd5eecea1b3ca92797b296892f0-large.jpg",
+          "objectKey": "photos/77748a64df68f2b33bcd00d22ab3ffdaef39ccd5eecea1b3ca92797b296892f0-large.jpg",
+          "width": 2048,
+          "height": 1340
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/77748a64df68f2b33bcd00d22ab3ffdaef39ccd5eecea1b3ca92797b296892f0-original.jpg",
+          "objectKey": "photos/77748a64df68f2b33bcd00d22ab3ffdaef39ccd5eecea1b3ca92797b296892f0-original.jpg",
+          "width": 3099,
+          "height": 2027
+        }
+      }
+    },
+    {
+      "filename": "000886890012.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "a824676d562d487327dd3a1581a32fa380291faf87fda2b5a0a0513e526314c1",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890012.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a824676d562d487327dd3a1581a32fa380291faf87fda2b5a0a0513e526314c1-thumb.jpg",
+          "objectKey": "photos/a824676d562d487327dd3a1581a32fa380291faf87fda2b5a0a0513e526314c1-thumb.jpg",
+          "width": 480,
+          "height": 303
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a824676d562d487327dd3a1581a32fa380291faf87fda2b5a0a0513e526314c1-grid.jpg",
+          "objectKey": "photos/a824676d562d487327dd3a1581a32fa380291faf87fda2b5a0a0513e526314c1-grid.jpg",
+          "width": 960,
+          "height": 607
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a824676d562d487327dd3a1581a32fa380291faf87fda2b5a0a0513e526314c1-large.jpg",
+          "objectKey": "photos/a824676d562d487327dd3a1581a32fa380291faf87fda2b5a0a0513e526314c1-large.jpg",
+          "width": 2048,
+          "height": 1294
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/a824676d562d487327dd3a1581a32fa380291faf87fda2b5a0a0513e526314c1-original.jpg",
+          "objectKey": "photos/a824676d562d487327dd3a1581a32fa380291faf87fda2b5a0a0513e526314c1-original.jpg",
+          "width": 3013,
+          "height": 1904
+        }
+      }
+    },
+    {
+      "filename": "000886890013.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "88e1f7b833bad4126cc091a71dc138a1c5404f9dcba47b43632d145a183bfdd5",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890013.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/88e1f7b833bad4126cc091a71dc138a1c5404f9dcba47b43632d145a183bfdd5-thumb.jpg",
+          "objectKey": "photos/88e1f7b833bad4126cc091a71dc138a1c5404f9dcba47b43632d145a183bfdd5-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/88e1f7b833bad4126cc091a71dc138a1c5404f9dcba47b43632d145a183bfdd5-grid.jpg",
+          "objectKey": "photos/88e1f7b833bad4126cc091a71dc138a1c5404f9dcba47b43632d145a183bfdd5-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/88e1f7b833bad4126cc091a71dc138a1c5404f9dcba47b43632d145a183bfdd5-large.jpg",
+          "objectKey": "photos/88e1f7b833bad4126cc091a71dc138a1c5404f9dcba47b43632d145a183bfdd5-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/88e1f7b833bad4126cc091a71dc138a1c5404f9dcba47b43632d145a183bfdd5-original.jpg",
+          "objectKey": "photos/88e1f7b833bad4126cc091a71dc138a1c5404f9dcba47b43632d145a183bfdd5-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "000886890014.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "ef951ff0901b57d6e518c1221109b9c35b08c337dff5c7ed3bbe4b71f384a05d",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890014.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/ef951ff0901b57d6e518c1221109b9c35b08c337dff5c7ed3bbe4b71f384a05d-thumb.jpg",
+          "objectKey": "photos/ef951ff0901b57d6e518c1221109b9c35b08c337dff5c7ed3bbe4b71f384a05d-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/ef951ff0901b57d6e518c1221109b9c35b08c337dff5c7ed3bbe4b71f384a05d-grid.jpg",
+          "objectKey": "photos/ef951ff0901b57d6e518c1221109b9c35b08c337dff5c7ed3bbe4b71f384a05d-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/ef951ff0901b57d6e518c1221109b9c35b08c337dff5c7ed3bbe4b71f384a05d-large.jpg",
+          "objectKey": "photos/ef951ff0901b57d6e518c1221109b9c35b08c337dff5c7ed3bbe4b71f384a05d-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/ef951ff0901b57d6e518c1221109b9c35b08c337dff5c7ed3bbe4b71f384a05d-original.jpg",
+          "objectKey": "photos/ef951ff0901b57d6e518c1221109b9c35b08c337dff5c7ed3bbe4b71f384a05d-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "000886890016.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "ffb7712ec5234033e5418b4a79436cad1d2d7a564f990ac32f768ec19d0a3833",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890016.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/ffb7712ec5234033e5418b4a79436cad1d2d7a564f990ac32f768ec19d0a3833-thumb.jpg",
+          "objectKey": "photos/ffb7712ec5234033e5418b4a79436cad1d2d7a564f990ac32f768ec19d0a3833-thumb.jpg",
+          "width": 480,
+          "height": 309
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/ffb7712ec5234033e5418b4a79436cad1d2d7a564f990ac32f768ec19d0a3833-grid.jpg",
+          "objectKey": "photos/ffb7712ec5234033e5418b4a79436cad1d2d7a564f990ac32f768ec19d0a3833-grid.jpg",
+          "width": 960,
+          "height": 618
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/ffb7712ec5234033e5418b4a79436cad1d2d7a564f990ac32f768ec19d0a3833-large.jpg",
+          "objectKey": "photos/ffb7712ec5234033e5418b4a79436cad1d2d7a564f990ac32f768ec19d0a3833-large.jpg",
+          "width": 2048,
+          "height": 1318
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/ffb7712ec5234033e5418b4a79436cad1d2d7a564f990ac32f768ec19d0a3833-original.jpg",
+          "objectKey": "photos/ffb7712ec5234033e5418b4a79436cad1d2d7a564f990ac32f768ec19d0a3833-original.jpg",
+          "width": 3062,
+          "height": 1970
+        }
+      }
+    },
+    {
+      "filename": "000886890017.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "9849cc23a27b0e3de154db00de79c4d8efebf69f79f973d94df7fee254475b12",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890017.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/9849cc23a27b0e3de154db00de79c4d8efebf69f79f973d94df7fee254475b12-thumb.jpg",
+          "objectKey": "photos/9849cc23a27b0e3de154db00de79c4d8efebf69f79f973d94df7fee254475b12-thumb.jpg",
+          "width": 480,
+          "height": 309
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/9849cc23a27b0e3de154db00de79c4d8efebf69f79f973d94df7fee254475b12-grid.jpg",
+          "objectKey": "photos/9849cc23a27b0e3de154db00de79c4d8efebf69f79f973d94df7fee254475b12-grid.jpg",
+          "width": 960,
+          "height": 619
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/9849cc23a27b0e3de154db00de79c4d8efebf69f79f973d94df7fee254475b12-large.jpg",
+          "objectKey": "photos/9849cc23a27b0e3de154db00de79c4d8efebf69f79f973d94df7fee254475b12-large.jpg",
+          "width": 2048,
+          "height": 1320
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/9849cc23a27b0e3de154db00de79c4d8efebf69f79f973d94df7fee254475b12-original.jpg",
+          "objectKey": "photos/9849cc23a27b0e3de154db00de79c4d8efebf69f79f973d94df7fee254475b12-original.jpg",
+          "width": 3064,
+          "height": 1975
+        }
+      }
+    },
+    {
+      "filename": "000886890018.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "1e85c2582d648b97aecb3ca9809ee18a49de1d3cc24cfcf6f944a6ca017cf4d4",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890018.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/1e85c2582d648b97aecb3ca9809ee18a49de1d3cc24cfcf6f944a6ca017cf4d4-thumb.jpg",
+          "objectKey": "photos/1e85c2582d648b97aecb3ca9809ee18a49de1d3cc24cfcf6f944a6ca017cf4d4-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/1e85c2582d648b97aecb3ca9809ee18a49de1d3cc24cfcf6f944a6ca017cf4d4-grid.jpg",
+          "objectKey": "photos/1e85c2582d648b97aecb3ca9809ee18a49de1d3cc24cfcf6f944a6ca017cf4d4-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/1e85c2582d648b97aecb3ca9809ee18a49de1d3cc24cfcf6f944a6ca017cf4d4-large.jpg",
+          "objectKey": "photos/1e85c2582d648b97aecb3ca9809ee18a49de1d3cc24cfcf6f944a6ca017cf4d4-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/1e85c2582d648b97aecb3ca9809ee18a49de1d3cc24cfcf6f944a6ca017cf4d4-original.jpg",
+          "objectKey": "photos/1e85c2582d648b97aecb3ca9809ee18a49de1d3cc24cfcf6f944a6ca017cf4d4-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "000886890024.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "bd44dab6f6a54c4e4ba998ed51e7fb0742d20ecd60064fff67b5ddac35479cf3",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890024.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/bd44dab6f6a54c4e4ba998ed51e7fb0742d20ecd60064fff67b5ddac35479cf3-thumb.jpg",
+          "objectKey": "photos/bd44dab6f6a54c4e4ba998ed51e7fb0742d20ecd60064fff67b5ddac35479cf3-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/bd44dab6f6a54c4e4ba998ed51e7fb0742d20ecd60064fff67b5ddac35479cf3-grid.jpg",
+          "objectKey": "photos/bd44dab6f6a54c4e4ba998ed51e7fb0742d20ecd60064fff67b5ddac35479cf3-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/bd44dab6f6a54c4e4ba998ed51e7fb0742d20ecd60064fff67b5ddac35479cf3-large.jpg",
+          "objectKey": "photos/bd44dab6f6a54c4e4ba998ed51e7fb0742d20ecd60064fff67b5ddac35479cf3-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/bd44dab6f6a54c4e4ba998ed51e7fb0742d20ecd60064fff67b5ddac35479cf3-original.jpg",
+          "objectKey": "photos/bd44dab6f6a54c4e4ba998ed51e7fb0742d20ecd60064fff67b5ddac35479cf3-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "000886890025.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "f86d8c215a64d2dce6de8d06ccd170cfd1e2abb1f2451d9f40d4613d9ef224b2",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890025.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/f86d8c215a64d2dce6de8d06ccd170cfd1e2abb1f2451d9f40d4613d9ef224b2-thumb.jpg",
+          "objectKey": "photos/f86d8c215a64d2dce6de8d06ccd170cfd1e2abb1f2451d9f40d4613d9ef224b2-thumb.jpg",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/f86d8c215a64d2dce6de8d06ccd170cfd1e2abb1f2451d9f40d4613d9ef224b2-grid.jpg",
+          "objectKey": "photos/f86d8c215a64d2dce6de8d06ccd170cfd1e2abb1f2451d9f40d4613d9ef224b2-grid.jpg",
+          "width": 960,
+          "height": 625
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/f86d8c215a64d2dce6de8d06ccd170cfd1e2abb1f2451d9f40d4613d9ef224b2-large.jpg",
+          "objectKey": "photos/f86d8c215a64d2dce6de8d06ccd170cfd1e2abb1f2451d9f40d4613d9ef224b2-large.jpg",
+          "width": 2048,
+          "height": 1334
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/f86d8c215a64d2dce6de8d06ccd170cfd1e2abb1f2451d9f40d4613d9ef224b2-original.jpg",
+          "objectKey": "photos/f86d8c215a64d2dce6de8d06ccd170cfd1e2abb1f2451d9f40d4613d9ef224b2-original.jpg",
+          "width": 3084,
+          "height": 2009
+        }
+      }
+    },
+    {
+      "filename": "000886890026.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 17:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "26b9d705f55f81ffc3ed6e4e562873bfab1908296c4edfecbc328dcb526e4604",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890026.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/26b9d705f55f81ffc3ed6e4e562873bfab1908296c4edfecbc328dcb526e4604-thumb.jpg",
+          "objectKey": "photos/26b9d705f55f81ffc3ed6e4e562873bfab1908296c4edfecbc328dcb526e4604-thumb.jpg",
+          "width": 480,
+          "height": 301
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/26b9d705f55f81ffc3ed6e4e562873bfab1908296c4edfecbc328dcb526e4604-grid.jpg",
+          "objectKey": "photos/26b9d705f55f81ffc3ed6e4e562873bfab1908296c4edfecbc328dcb526e4604-grid.jpg",
+          "width": 960,
+          "height": 603
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/26b9d705f55f81ffc3ed6e4e562873bfab1908296c4edfecbc328dcb526e4604-large.jpg",
+          "objectKey": "photos/26b9d705f55f81ffc3ed6e4e562873bfab1908296c4edfecbc328dcb526e4604-large.jpg",
+          "width": 2048,
+          "height": 1286
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/26b9d705f55f81ffc3ed6e4e562873bfab1908296c4edfecbc328dcb526e4604-original.jpg",
+          "objectKey": "photos/26b9d705f55f81ffc3ed6e4e562873bfab1908296c4edfecbc328dcb526e4604-original.jpg",
+          "width": 3019,
+          "height": 1896
+        }
+      }
+    },
+    {
+      "filename": "000886890027.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 16:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "756359d241a7cebdb17c15d2171744f99ff891ccdebf3ae088daf653fc6fd894",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890027.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/756359d241a7cebdb17c15d2171744f99ff891ccdebf3ae088daf653fc6fd894-thumb.jpg",
+          "objectKey": "photos/756359d241a7cebdb17c15d2171744f99ff891ccdebf3ae088daf653fc6fd894-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/756359d241a7cebdb17c15d2171744f99ff891ccdebf3ae088daf653fc6fd894-grid.jpg",
+          "objectKey": "photos/756359d241a7cebdb17c15d2171744f99ff891ccdebf3ae088daf653fc6fd894-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/756359d241a7cebdb17c15d2171744f99ff891ccdebf3ae088daf653fc6fd894-large.jpg",
+          "objectKey": "photos/756359d241a7cebdb17c15d2171744f99ff891ccdebf3ae088daf653fc6fd894-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/756359d241a7cebdb17c15d2171744f99ff891ccdebf3ae088daf653fc6fd894-original.jpg",
+          "objectKey": "photos/756359d241a7cebdb17c15d2171744f99ff891ccdebf3ae088daf653fc6fd894-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "000886890028.jpg",
+      "roll": "2025-002 - Canon A-1, Fuji 400",
+      "metadata": {
+        "date": "2025:11:23 16:30:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": null
+      },
+      "id": "5310a1f30ab830597aa5f472152c065aa7838230b4dcc55705b57f8e7bbf433b",
+      "sourcePath": "2025-002 - Canon A-1, Fuji 400/000886890028.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/5310a1f30ab830597aa5f472152c065aa7838230b4dcc55705b57f8e7bbf433b-thumb.jpg",
+          "objectKey": "photos/5310a1f30ab830597aa5f472152c065aa7838230b4dcc55705b57f8e7bbf433b-thumb.jpg",
+          "width": 480,
+          "height": 309
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/5310a1f30ab830597aa5f472152c065aa7838230b4dcc55705b57f8e7bbf433b-grid.jpg",
+          "objectKey": "photos/5310a1f30ab830597aa5f472152c065aa7838230b4dcc55705b57f8e7bbf433b-grid.jpg",
+          "width": 960,
+          "height": 618
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/5310a1f30ab830597aa5f472152c065aa7838230b4dcc55705b57f8e7bbf433b-large.jpg",
+          "objectKey": "photos/5310a1f30ab830597aa5f472152c065aa7838230b4dcc55705b57f8e7bbf433b-large.jpg",
+          "width": 2048,
+          "height": 1318
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/5310a1f30ab830597aa5f472152c065aa7838230b4dcc55705b57f8e7bbf433b-original.jpg",
+          "objectKey": "photos/5310a1f30ab830597aa5f472152c065aa7838230b4dcc55705b57f8e7bbf433b-original.jpg",
+          "width": 3062,
+          "height": 1970
+        }
+      }
+    },
+    {
+      "filename": "001539740001.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:03:08 16:24:10",
+        "aperture": 5.6,
+        "shutterSpeed": "1/250",
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "a2433cc99cddf758d57638d9f2eca3b93871ae053f6762329ff85407c8bbc76f",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740001.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a2433cc99cddf758d57638d9f2eca3b93871ae053f6762329ff85407c8bbc76f-thumb.jpg",
+          "objectKey": "photos/a2433cc99cddf758d57638d9f2eca3b93871ae053f6762329ff85407c8bbc76f-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a2433cc99cddf758d57638d9f2eca3b93871ae053f6762329ff85407c8bbc76f-grid.jpg",
+          "objectKey": "photos/a2433cc99cddf758d57638d9f2eca3b93871ae053f6762329ff85407c8bbc76f-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a2433cc99cddf758d57638d9f2eca3b93871ae053f6762329ff85407c8bbc76f-large.jpg",
+          "objectKey": "photos/a2433cc99cddf758d57638d9f2eca3b93871ae053f6762329ff85407c8bbc76f-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/a2433cc99cddf758d57638d9f2eca3b93871ae053f6762329ff85407c8bbc76f-original.jpg",
+          "objectKey": "photos/a2433cc99cddf758d57638d9f2eca3b93871ae053f6762329ff85407c8bbc76f-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "001539740003.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:03:08 15:55:31",
+        "aperture": 5.6,
+        "shutterSpeed": "1/250",
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "ce536753de49ca341fa72cf2acb56a976d49f68af7a2eb90123d44f9446c21b4",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740003.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/ce536753de49ca341fa72cf2acb56a976d49f68af7a2eb90123d44f9446c21b4-thumb.jpg",
+          "objectKey": "photos/ce536753de49ca341fa72cf2acb56a976d49f68af7a2eb90123d44f9446c21b4-thumb.jpg",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/ce536753de49ca341fa72cf2acb56a976d49f68af7a2eb90123d44f9446c21b4-grid.jpg",
+          "objectKey": "photos/ce536753de49ca341fa72cf2acb56a976d49f68af7a2eb90123d44f9446c21b4-grid.jpg",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/ce536753de49ca341fa72cf2acb56a976d49f68af7a2eb90123d44f9446c21b4-large.jpg",
+          "objectKey": "photos/ce536753de49ca341fa72cf2acb56a976d49f68af7a2eb90123d44f9446c21b4-large.jpg",
+          "width": 2048,
+          "height": 1349
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/ce536753de49ca341fa72cf2acb56a976d49f68af7a2eb90123d44f9446c21b4-original.jpg",
+          "objectKey": "photos/ce536753de49ca341fa72cf2acb56a976d49f68af7a2eb90123d44f9446c21b4-original.jpg",
+          "width": 3101,
+          "height": 2043
+        }
+      }
+    },
+    {
+      "filename": "001539740005.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:03:08 15:55:30",
+        "aperture": 5.6,
+        "shutterSpeed": "1/250",
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "a3184f8888feb470cca300baabe794185d7e932a801bb977dbbd3b813b9f3cf8",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740005.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a3184f8888feb470cca300baabe794185d7e932a801bb977dbbd3b813b9f3cf8-thumb.jpg",
+          "objectKey": "photos/a3184f8888feb470cca300baabe794185d7e932a801bb977dbbd3b813b9f3cf8-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a3184f8888feb470cca300baabe794185d7e932a801bb977dbbd3b813b9f3cf8-grid.jpg",
+          "objectKey": "photos/a3184f8888feb470cca300baabe794185d7e932a801bb977dbbd3b813b9f3cf8-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a3184f8888feb470cca300baabe794185d7e932a801bb977dbbd3b813b9f3cf8-large.jpg",
+          "objectKey": "photos/a3184f8888feb470cca300baabe794185d7e932a801bb977dbbd3b813b9f3cf8-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/a3184f8888feb470cca300baabe794185d7e932a801bb977dbbd3b813b9f3cf8-original.jpg",
+          "objectKey": "photos/a3184f8888feb470cca300baabe794185d7e932a801bb977dbbd3b813b9f3cf8-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "001539740013.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:03:08 15:23:01",
+        "aperture": 5.6,
+        "shutterSpeed": "1/250",
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "6378b4830e11707173729a6a75f38756c46086e547159bcbd7478b9c6120699a",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740013.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/6378b4830e11707173729a6a75f38756c46086e547159bcbd7478b9c6120699a-thumb.jpg",
+          "objectKey": "photos/6378b4830e11707173729a6a75f38756c46086e547159bcbd7478b9c6120699a-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/6378b4830e11707173729a6a75f38756c46086e547159bcbd7478b9c6120699a-grid.jpg",
+          "objectKey": "photos/6378b4830e11707173729a6a75f38756c46086e547159bcbd7478b9c6120699a-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/6378b4830e11707173729a6a75f38756c46086e547159bcbd7478b9c6120699a-large.jpg",
+          "objectKey": "photos/6378b4830e11707173729a6a75f38756c46086e547159bcbd7478b9c6120699a-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/6378b4830e11707173729a6a75f38756c46086e547159bcbd7478b9c6120699a-original.jpg",
+          "objectKey": "photos/6378b4830e11707173729a6a75f38756c46086e547159bcbd7478b9c6120699a-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "001539740016.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:02:25 17:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "5023f1cf3b82f10decbb6018fac32b9c4fb42bb45fbe5a103cba867c4e2b1fca",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740016.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/5023f1cf3b82f10decbb6018fac32b9c4fb42bb45fbe5a103cba867c4e2b1fca-thumb.jpg",
+          "objectKey": "photos/5023f1cf3b82f10decbb6018fac32b9c4fb42bb45fbe5a103cba867c4e2b1fca-thumb.jpg",
+          "width": 480,
+          "height": 733
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/5023f1cf3b82f10decbb6018fac32b9c4fb42bb45fbe5a103cba867c4e2b1fca-grid.jpg",
+          "objectKey": "photos/5023f1cf3b82f10decbb6018fac32b9c4fb42bb45fbe5a103cba867c4e2b1fca-grid.jpg",
+          "width": 960,
+          "height": 1467
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/5023f1cf3b82f10decbb6018fac32b9c4fb42bb45fbe5a103cba867c4e2b1fca-large.jpg",
+          "objectKey": "photos/5023f1cf3b82f10decbb6018fac32b9c4fb42bb45fbe5a103cba867c4e2b1fca-large.jpg",
+          "width": 2018,
+          "height": 3083
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/5023f1cf3b82f10decbb6018fac32b9c4fb42bb45fbe5a103cba867c4e2b1fca-original.jpg",
+          "objectKey": "photos/5023f1cf3b82f10decbb6018fac32b9c4fb42bb45fbe5a103cba867c4e2b1fca-original.jpg",
+          "width": 2018,
+          "height": 3083
+        }
+      }
+    },
+    {
+      "filename": "001539740021.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:02:25 17:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "a1dc5000e11bd65f313ca7a6bfe97d197f93800114d34416cb168f059d94e391",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740021.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a1dc5000e11bd65f313ca7a6bfe97d197f93800114d34416cb168f059d94e391-thumb.jpg",
+          "objectKey": "photos/a1dc5000e11bd65f313ca7a6bfe97d197f93800114d34416cb168f059d94e391-thumb.jpg",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a1dc5000e11bd65f313ca7a6bfe97d197f93800114d34416cb168f059d94e391-grid.jpg",
+          "objectKey": "photos/a1dc5000e11bd65f313ca7a6bfe97d197f93800114d34416cb168f059d94e391-grid.jpg",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a1dc5000e11bd65f313ca7a6bfe97d197f93800114d34416cb168f059d94e391-large.jpg",
+          "objectKey": "photos/a1dc5000e11bd65f313ca7a6bfe97d197f93800114d34416cb168f059d94e391-large.jpg",
+          "width": 2048,
+          "height": 1349
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/a1dc5000e11bd65f313ca7a6bfe97d197f93800114d34416cb168f059d94e391-original.jpg",
+          "objectKey": "photos/a1dc5000e11bd65f313ca7a6bfe97d197f93800114d34416cb168f059d94e391-original.jpg",
+          "width": 3101,
+          "height": 2043
+        }
+      }
+    },
+    {
+      "filename": "001539740027.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:02:16 16:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740027.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-thumb.jpg",
+          "objectKey": "photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-thumb.jpg",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-grid.jpg",
+          "objectKey": "photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-grid.jpg",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-large.jpg",
+          "objectKey": "photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-large.jpg",
+          "width": 2048,
+          "height": 1358
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-original.jpg",
+          "objectKey": "photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-original.jpg",
+          "width": 3130,
+          "height": 2075
+        }
+      }
+    },
+    {
+      "filename": "001539740031.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:02:05 14:01:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "92990e132b3a512da27a0997187b7b68f31587f5d9bee0937913b22bfe1fa016",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740031.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/92990e132b3a512da27a0997187b7b68f31587f5d9bee0937913b22bfe1fa016-thumb.jpg",
+          "objectKey": "photos/92990e132b3a512da27a0997187b7b68f31587f5d9bee0937913b22bfe1fa016-thumb.jpg",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/92990e132b3a512da27a0997187b7b68f31587f5d9bee0937913b22bfe1fa016-grid.jpg",
+          "objectKey": "photos/92990e132b3a512da27a0997187b7b68f31587f5d9bee0937913b22bfe1fa016-grid.jpg",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/92990e132b3a512da27a0997187b7b68f31587f5d9bee0937913b22bfe1fa016-large.jpg",
+          "objectKey": "photos/92990e132b3a512da27a0997187b7b68f31587f5d9bee0937913b22bfe1fa016-large.jpg",
+          "width": 2048,
+          "height": 3089
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/92990e132b3a512da27a0997187b7b68f31587f5d9bee0937913b22bfe1fa016-original.jpg",
+          "objectKey": "photos/92990e132b3a512da27a0997187b7b68f31587f5d9bee0937913b22bfe1fa016-original.jpg",
+          "width": 2075,
+          "height": 3130
+        }
+      }
+    },
+    {
+      "filename": "001539740032.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:02:05 14:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "b47da229b525cf323cab3fb89e897227f44589ac16a4a0a0f57054aa8cf1aea5",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740032.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/b47da229b525cf323cab3fb89e897227f44589ac16a4a0a0f57054aa8cf1aea5-thumb.jpg",
+          "objectKey": "photos/b47da229b525cf323cab3fb89e897227f44589ac16a4a0a0f57054aa8cf1aea5-thumb.jpg",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/b47da229b525cf323cab3fb89e897227f44589ac16a4a0a0f57054aa8cf1aea5-grid.jpg",
+          "objectKey": "photos/b47da229b525cf323cab3fb89e897227f44589ac16a4a0a0f57054aa8cf1aea5-grid.jpg",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/b47da229b525cf323cab3fb89e897227f44589ac16a4a0a0f57054aa8cf1aea5-large.jpg",
+          "objectKey": "photos/b47da229b525cf323cab3fb89e897227f44589ac16a4a0a0f57054aa8cf1aea5-large.jpg",
+          "width": 2048,
+          "height": 3089
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/b47da229b525cf323cab3fb89e897227f44589ac16a4a0a0f57054aa8cf1aea5-original.jpg",
+          "objectKey": "photos/b47da229b525cf323cab3fb89e897227f44589ac16a4a0a0f57054aa8cf1aea5-original.jpg",
+          "width": 2075,
+          "height": 3130
+        }
+      }
+    },
+    {
+      "filename": "001539740033.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:02:05 14:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "ea4d9b62260b9fd111c27704bff3641edd8ba874c343ca4562a664b1bc2a6ccf",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740033.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/ea4d9b62260b9fd111c27704bff3641edd8ba874c343ca4562a664b1bc2a6ccf-thumb.jpg",
+          "objectKey": "photos/ea4d9b62260b9fd111c27704bff3641edd8ba874c343ca4562a664b1bc2a6ccf-thumb.jpg",
+          "width": 480,
+          "height": 309
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/ea4d9b62260b9fd111c27704bff3641edd8ba874c343ca4562a664b1bc2a6ccf-grid.jpg",
+          "objectKey": "photos/ea4d9b62260b9fd111c27704bff3641edd8ba874c343ca4562a664b1bc2a6ccf-grid.jpg",
+          "width": 960,
+          "height": 618
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/ea4d9b62260b9fd111c27704bff3641edd8ba874c343ca4562a664b1bc2a6ccf-large.jpg",
+          "objectKey": "photos/ea4d9b62260b9fd111c27704bff3641edd8ba874c343ca4562a664b1bc2a6ccf-large.jpg",
+          "width": 2048,
+          "height": 1317
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/ea4d9b62260b9fd111c27704bff3641edd8ba874c343ca4562a664b1bc2a6ccf-original.jpg",
+          "objectKey": "photos/ea4d9b62260b9fd111c27704bff3641edd8ba874c343ca4562a664b1bc2a6ccf-original.jpg",
+          "width": 3067,
+          "height": 1973
+        }
+      }
+    },
+    {
+      "filename": "001539740035.jpg",
+      "roll": "2026-005 - Canon A-1, Kodak Gold 200",
+      "metadata": {
+        "date": "2026:02:04 15:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Kodak Gold 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59",
+      "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740035.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-thumb.jpg",
+          "objectKey": "photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-thumb.jpg",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-grid.jpg",
+          "objectKey": "photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-grid.jpg",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-large.jpg",
+          "objectKey": "photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-large.jpg",
+          "width": 2048,
+          "height": 3089
+        },
+        "original": {
+          "url": "https://photos.geext.xyz/photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-original.jpg",
+          "objectKey": "photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-original.jpg",
+          "width": 2075,
+          "height": 3130
+        }
+      }
+    }
+  ]
+}

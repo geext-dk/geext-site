@@ -1,0 +1,42 @@
+---
+import Layout from "../../../../../layouts/Layout.astro";
+import PhotographyPage from "../../../../../components/PhotographyPage.astro";
+import {
+	PAGE_SIZE,
+	cameras,
+	films,
+	paginate,
+	photoCountLabel,
+	photosForFacet,
+} from "../../../../../lib/photos";
+
+export function getStaticPaths() {
+	return cameras.flatMap((camera) => {
+		const cameraPhotos = photosForFacet("camera", camera.slug);
+		const totalPages = Math.ceil(cameraPhotos.length / PAGE_SIZE);
+
+		return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
+			const pageNumber = index + 2;
+
+			return {
+				params: { camera: camera.slug, page: String(pageNumber) },
+				props: { camera, pageNumber },
+			};
+		});
+	});
+}
+
+const { camera, pageNumber } = Astro.props;
+const page = paginate(photosForFacet("camera", camera.slug), pageNumber);
+---
+
+<Layout>
+	<PhotographyPage
+		title={camera.name}
+		subtitle={`${photoCountLabel(page.totalPhotos)} shot with this camera`}
+		page={page}
+		basePath={`/photography/camera/${camera.slug}`}
+		cameras={cameras}
+		films={films}
+	/>
+</Layout>
