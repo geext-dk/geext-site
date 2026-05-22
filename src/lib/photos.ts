@@ -28,7 +28,6 @@ type SourcePhoto = {
     thumb: ImageVariant;
     grid: ImageVariant;
     large: ImageVariant;
-    original: ImageVariant;
   };
 };
 

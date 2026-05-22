@@ -11,6 +11,7 @@ import {
   PutObjectCommand,
   S3Client,
 } from "@aws-sdk/client-s3";
+import sharp from "sharp";
 
 const DEFAULT_SOURCE_DIR = path.join(os.homedir(), "iCloud/Data/darktable_exported");
 const SOURCE_DIR = process.env.PHOTO_SOURCE_DIR ?? DEFAULT_SOURCE_DIR;
@@ -24,6 +25,10 @@ const R2_PUBLIC_BASE_URL = normalizeBaseUrl(process.env.R2_PUBLIC_BASE_URL ?? ""
 const CACHE_CONTROL = "public, max-age=31536000, immutable";
 const UPLOAD_CONCURRENCY = parsePositiveInteger(process.env.R2_UPLOAD_CONCURRENCY ?? "6", "R2_UPLOAD_CONCURRENCY");
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".heic", ".heif", ".tif", ".tiff"]);
+const OUTPUT_EXTENSION = ".avif";
+const OUTPUT_CONTENT_TYPE = "image/avif";
+const AVIF_QUALITY = 70;
+const AVIF_EFFORT = 6;
 const VARIANTS = [
   ["thumb", 480],
   ["grid", 960],
@@ -296,32 +301,12 @@ async function sanitizeOriginal(sourcePath, destinationPath) {
 }
 
 async function makeVariant(sourcePath, destinationPath, targetWidth) {
-  await fs.copyFile(sourcePath, destinationPath);
-  const { width } = await imageSize(destinationPath);
-
-  if (width !== null && width > targetWidth) {
-    await run("sips", ["--resampleWidth", String(targetWidth), destinationPath]);
-  }
-
-  await stripSensitiveMetadata(destinationPath);
-}
-
-function contentTypeForExtension(extension) {
-  switch (extension.toLowerCase()) {
-    case ".jpg":
-    case ".jpeg":
-      return "image/jpeg";
-    case ".png":
-      return "image/png";
-    case ".heic":
-    case ".heif":
-      return "image/heic";
-    case ".tif":
-    case ".tiff":
-      return "image/tiff";
-    default:
-      return "application/octet-stream";
-  }
+  await sharp(sourcePath)
+    .rotate()
+    .resize({ width: targetWidth, withoutEnlargement: true })
+    .keepIccProfile()
+    .avif({ quality: AVIF_QUALITY, effort: AVIF_EFFORT })
+    .toFile(destinationPath);
 }
 
 function createR2Client() {
@@ -405,8 +390,8 @@ function scaledSize(originalSize, targetWidth) {
   };
 }
 
-function imageJsonForVariant(variant, sourceHash, extension, size) {
-  const objectKey = `${R2_PREFIX}/${sourceHash}-${variant}${extension.toLowerCase()}`;
+function imageJsonForVariant(variant, sourceHash, size) {
+  const objectKey = `${R2_PREFIX}/${sourceHash}-${variant}${OUTPUT_EXTENSION}`;
   const url = `${R2_PUBLIC_BASE_URL}/${encodeObjectKey(objectKey)}`;
 
   return {
@@ -422,29 +407,26 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
   const roll = path.dirname(relativePath);
   const filename = path.basename(sourcePath);
   const extension = path.extname(filename).toLowerCase();
-  const contentType = contentTypeForExtension(extension);
   const sourceHash = await hashFile(sourcePath);
   const sourceSize = await imageSize(sourcePath);
   const workDir = path.join(tempRoot, createHash("sha256").update(relativePath).digest("hex"));
   const sanitizedPath = path.join(workDir, `original${extension}`);
   const variantPaths = Object.fromEntries(
-    VARIANTS.map(([name]) => [name, path.join(workDir, `${name}${extension}`)]),
+    VARIANTS.map(([name]) => [name, path.join(workDir, `${name}${OUTPUT_EXTENSION}`)]),
   );
   const images = Object.fromEntries(
     VARIANTS.map(([name, width]) => [
       name,
-      imageJsonForVariant(name, sourceHash, extension, scaledSize(sourceSize, width)),
+      imageJsonForVariant(name, sourceHash, scaledSize(sourceSize, width)),
     ]),
   );
-
-  images.original = imageJsonForVariant("original", sourceHash, extension, sourceSize);
 
   log(`process: ${relativePath}`);
 
   const base = await metadataForSource(sourcePath, roll, filename);
 
-  if (existingObjectKeys.has(images.original.objectKey)) {
-    log(`skip existing original: ${images.original.objectKey}`);
+  if (VARIANTS.every(([name]) => existingObjectKeys.has(images[name].objectKey))) {
+    log(`skip existing variants: ${relativePath}`);
     return {
       ...base,
       id: sourceHash,
@@ -463,14 +445,9 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
     uploadQueue.push({
       objectKey: images[name].objectKey,
       filePath: variantPaths[name],
-      contentType,
+      contentType: OUTPUT_CONTENT_TYPE,
     });
   }
-  uploadQueue.push({
-    objectKey: images.original.objectKey,
-    filePath: sanitizedPath,
-    contentType,
-  });
 
   return {
     ...base,
@@ -511,7 +488,6 @@ async function main() {
   }
 
   await requireCommand("exiftool");
-  await requireCommand("sips");
 
   if (!(await pathExists(SOURCE_DIR))) {
     die(`PHOTO_SOURCE_DIR does not exist: ${SOURCE_DIR}`);
