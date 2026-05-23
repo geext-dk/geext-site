@@ -11,13 +11,13 @@ import {
   PutObjectCommand,
   S3Client,
 } from "@aws-sdk/client-s3";
+import "dotenv/config";
 import sharp from "sharp";
 
-const DEFAULT_SOURCE_DIR = path.join(os.homedir(), "iCloud/Data/darktable_exported");
-const SOURCE_DIR = process.env.PHOTO_SOURCE_DIR ?? DEFAULT_SOURCE_DIR;
+const SOURCE_DIR = process.env.PHOTO_SOURCE_DIR;
 const OUTPUT_JSON = process.env.PHOTO_OUTPUT_JSON ?? "data/photos.json";
-const PHOTO_R2_PREFIX = normalizePrefix(process.env.R2_PREFIX ?? "photos");
-const IMAGE_R2_PREFIX = normalizePrefix(process.env.IMAGE_R2_PREFIX ?? "images");
+const PHOTO_R2_PREFIX = "photos";
+const IMAGE_R2_PREFIX = "images";
 const R2_BUCKET = process.env.R2_BUCKET;
 const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID;
 const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID;
@@ -54,11 +54,11 @@ Required environment:
   R2_SECRET_ACCESS_KEY  R2 S3 API secret access key
   R2_PUBLIC_BASE_URL    Public base URL for the bucket/custom domain
 
+Required for photo sync:
+  PHOTO_SOURCE_DIR      Source hierarchy to walk when syncing photos
+
 Optional environment:
-  PHOTO_SOURCE_DIR      Source hierarchy to walk
   PHOTO_OUTPUT_JSON     Output JSON path
-  R2_PREFIX             Photo object key prefix, default photos
-  IMAGE_R2_PREFIX       Single-image object key prefix, default images
   R2_UPLOAD_CONCURRENCY Number of simultaneous S3 uploads, default 6
 
 Photo example:
@@ -67,6 +67,7 @@ Photo example:
   R2_ACCESS_KEY_ID=... \\
   R2_SECRET_ACCESS_KEY=... \\
   R2_PUBLIC_BASE_URL=https://photos.example.com \\
+  PHOTO_SOURCE_DIR=~/Pictures/darktable_exported \\
   node scripts/sync-photos-to-r2.mjs
 
 Image example:
@@ -89,10 +90,6 @@ function die(message) {
 
 function normalizeBaseUrl(value) {
   return value.replace(/\/+$/, "");
-}
-
-function normalizePrefix(value) {
-  return value.replace(/^\/+/, "").replace(/\/+$/, "");
 }
 
 function encodeObjectKey(key) {
@@ -522,7 +519,7 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
   };
 }
 
-function validateR2Environment(prefix, prefixName) {
+function validateR2Environment() {
   if (!R2_BUCKET) {
     die("R2_BUCKET is required");
   }
@@ -542,15 +539,15 @@ function validateR2Environment(prefix, prefixName) {
   if (!R2_PUBLIC_BASE_URL) {
     die("R2_PUBLIC_BASE_URL is required");
   }
-
-  if (!prefix) {
-    die(`${prefixName} must not be empty`);
-  }
 }
 
 async function syncPhotos() {
-  validateR2Environment(PHOTO_R2_PREFIX, "R2_PREFIX");
+  validateR2Environment();
   await requireCommand("exiftool");
+
+  if (!SOURCE_DIR) {
+    die("PHOTO_SOURCE_DIR is required");
+  }
 
   if (!(await pathExists(SOURCE_DIR))) {
     die(`PHOTO_SOURCE_DIR does not exist: ${SOURCE_DIR}`);
@@ -614,7 +611,7 @@ async function uploadImage(args) {
     die(`image source file does not exist: ${sourcePath}`);
   }
 
-  validateR2Environment(IMAGE_R2_PREFIX, "IMAGE_R2_PREFIX");
+  validateR2Environment();
   await requireCommand("exiftool");
 
   const sourceHash = await hashFile(sourcePath);

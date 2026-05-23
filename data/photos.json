@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T14:07:17.600Z",
+  "generatedAt": "2026-05-23T15:15:32.641Z",
   "baseUrl": "https://photos.geext.xyz",
   "photos": [
     {
@@ -651,6 +651,2670 @@
       }
     },
     {
+      "filename": "000896700001.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 21:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "48c8838849f47b6686614226af043038f3b104c63a509611a624d1a64543a24a",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700001.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/48c8838849f47b6686614226af043038f3b104c63a509611a624d1a64543a24a-thumb.avif",
+          "objectKey": "photos/48c8838849f47b6686614226af043038f3b104c63a509611a624d1a64543a24a-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/48c8838849f47b6686614226af043038f3b104c63a509611a624d1a64543a24a-grid.avif",
+          "objectKey": "photos/48c8838849f47b6686614226af043038f3b104c63a509611a624d1a64543a24a-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/48c8838849f47b6686614226af043038f3b104c63a509611a624d1a64543a24a-large.avif",
+          "objectKey": "photos/48c8838849f47b6686614226af043038f3b104c63a509611a624d1a64543a24a-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000896700002.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 21:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "266691e5ed9de507632b845f4859c89c6c20ed9ef204d5b52417da5018a701f1",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700002.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/266691e5ed9de507632b845f4859c89c6c20ed9ef204d5b52417da5018a701f1-thumb.avif",
+          "objectKey": "photos/266691e5ed9de507632b845f4859c89c6c20ed9ef204d5b52417da5018a701f1-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/266691e5ed9de507632b845f4859c89c6c20ed9ef204d5b52417da5018a701f1-grid.avif",
+          "objectKey": "photos/266691e5ed9de507632b845f4859c89c6c20ed9ef204d5b52417da5018a701f1-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/266691e5ed9de507632b845f4859c89c6c20ed9ef204d5b52417da5018a701f1-large.avif",
+          "objectKey": "photos/266691e5ed9de507632b845f4859c89c6c20ed9ef204d5b52417da5018a701f1-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000896700004.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 21:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "851ae9e25ec15f1602e24049116541e5d273e20378c65f52482a0f59d550c5e2",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700004.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/851ae9e25ec15f1602e24049116541e5d273e20378c65f52482a0f59d550c5e2-thumb.avif",
+          "objectKey": "photos/851ae9e25ec15f1602e24049116541e5d273e20378c65f52482a0f59d550c5e2-thumb.avif",
+          "width": 480,
+          "height": 383
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/851ae9e25ec15f1602e24049116541e5d273e20378c65f52482a0f59d550c5e2-grid.avif",
+          "objectKey": "photos/851ae9e25ec15f1602e24049116541e5d273e20378c65f52482a0f59d550c5e2-grid.avif",
+          "width": 960,
+          "height": 767
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/851ae9e25ec15f1602e24049116541e5d273e20378c65f52482a0f59d550c5e2-large.avif",
+          "objectKey": "photos/851ae9e25ec15f1602e24049116541e5d273e20378c65f52482a0f59d550c5e2-large.avif",
+          "width": 2048,
+          "height": 1635
+        }
+      }
+    },
+    {
+      "filename": "000896700006.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 21:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "947c2c5465a44e062cd7d8fc03167d568ffedf69b387aed7498afd419960b21c",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700006.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/947c2c5465a44e062cd7d8fc03167d568ffedf69b387aed7498afd419960b21c-thumb.avif",
+          "objectKey": "photos/947c2c5465a44e062cd7d8fc03167d568ffedf69b387aed7498afd419960b21c-thumb.avif",
+          "width": 480,
+          "height": 721
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/947c2c5465a44e062cd7d8fc03167d568ffedf69b387aed7498afd419960b21c-grid.avif",
+          "objectKey": "photos/947c2c5465a44e062cd7d8fc03167d568ffedf69b387aed7498afd419960b21c-grid.avif",
+          "width": 960,
+          "height": 1442
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/947c2c5465a44e062cd7d8fc03167d568ffedf69b387aed7498afd419960b21c-large.avif",
+          "objectKey": "photos/947c2c5465a44e062cd7d8fc03167d568ffedf69b387aed7498afd419960b21c-large.avif",
+          "width": 1463,
+          "height": 2198
+        }
+      }
+    },
+    {
+      "filename": "000896700007.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 21:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "3477636f1070cb290d1def37c9b9c0700e33b29ad0850ea1f1e1bae9a9dd9824",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700007.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/3477636f1070cb290d1def37c9b9c0700e33b29ad0850ea1f1e1bae9a9dd9824-thumb.avif",
+          "objectKey": "photos/3477636f1070cb290d1def37c9b9c0700e33b29ad0850ea1f1e1bae9a9dd9824-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/3477636f1070cb290d1def37c9b9c0700e33b29ad0850ea1f1e1bae9a9dd9824-grid.avif",
+          "objectKey": "photos/3477636f1070cb290d1def37c9b9c0700e33b29ad0850ea1f1e1bae9a9dd9824-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/3477636f1070cb290d1def37c9b9c0700e33b29ad0850ea1f1e1bae9a9dd9824-large.avif",
+          "objectKey": "photos/3477636f1070cb290d1def37c9b9c0700e33b29ad0850ea1f1e1bae9a9dd9824-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000896700008.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 21:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "7b678079bfc60298c805b6aae091fae34549695bc47f46d8deb33486ea01134c",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700008.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/7b678079bfc60298c805b6aae091fae34549695bc47f46d8deb33486ea01134c-thumb.avif",
+          "objectKey": "photos/7b678079bfc60298c805b6aae091fae34549695bc47f46d8deb33486ea01134c-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/7b678079bfc60298c805b6aae091fae34549695bc47f46d8deb33486ea01134c-grid.avif",
+          "objectKey": "photos/7b678079bfc60298c805b6aae091fae34549695bc47f46d8deb33486ea01134c-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/7b678079bfc60298c805b6aae091fae34549695bc47f46d8deb33486ea01134c-large.avif",
+          "objectKey": "photos/7b678079bfc60298c805b6aae091fae34549695bc47f46d8deb33486ea01134c-large.avif",
+          "width": 1431,
+          "height": 2159
+        }
+      }
+    },
+    {
+      "filename": "000896700009.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 21:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "82f83147d7b6a29ecbfeaa82f2f9eda52b1655d35210ae92955041f0644e6cb1",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700009.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/82f83147d7b6a29ecbfeaa82f2f9eda52b1655d35210ae92955041f0644e6cb1-thumb.avif",
+          "objectKey": "photos/82f83147d7b6a29ecbfeaa82f2f9eda52b1655d35210ae92955041f0644e6cb1-thumb.avif",
+          "width": 480,
+          "height": 731
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/82f83147d7b6a29ecbfeaa82f2f9eda52b1655d35210ae92955041f0644e6cb1-grid.avif",
+          "objectKey": "photos/82f83147d7b6a29ecbfeaa82f2f9eda52b1655d35210ae92955041f0644e6cb1-grid.avif",
+          "width": 960,
+          "height": 1462
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/82f83147d7b6a29ecbfeaa82f2f9eda52b1655d35210ae92955041f0644e6cb1-large.avif",
+          "objectKey": "photos/82f83147d7b6a29ecbfeaa82f2f9eda52b1655d35210ae92955041f0644e6cb1-large.avif",
+          "width": 2033,
+          "height": 3097
+        }
+      }
+    },
+    {
+      "filename": "000896700010.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2026:01:03 20:01:11",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "5f8f35a69d577a2d11e6946b86e1ddbcba2d9d357b6f7615e34031ab5e36ade8",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700010.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/5f8f35a69d577a2d11e6946b86e1ddbcba2d9d357b6f7615e34031ab5e36ade8-thumb.avif",
+          "objectKey": "photos/5f8f35a69d577a2d11e6946b86e1ddbcba2d9d357b6f7615e34031ab5e36ade8-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/5f8f35a69d577a2d11e6946b86e1ddbcba2d9d357b6f7615e34031ab5e36ade8-grid.avif",
+          "objectKey": "photos/5f8f35a69d577a2d11e6946b86e1ddbcba2d9d357b6f7615e34031ab5e36ade8-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/5f8f35a69d577a2d11e6946b86e1ddbcba2d9d357b6f7615e34031ab5e36ade8-large.avif",
+          "objectKey": "photos/5f8f35a69d577a2d11e6946b86e1ddbcba2d9d357b6f7615e34031ab5e36ade8-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000896700013.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 19:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "776543f32397cfce39388dce91c22809e23238b4949ee8ce1a25b4dd30cf2102",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700013.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/776543f32397cfce39388dce91c22809e23238b4949ee8ce1a25b4dd30cf2102-thumb.avif",
+          "objectKey": "photos/776543f32397cfce39388dce91c22809e23238b4949ee8ce1a25b4dd30cf2102-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/776543f32397cfce39388dce91c22809e23238b4949ee8ce1a25b4dd30cf2102-grid.avif",
+          "objectKey": "photos/776543f32397cfce39388dce91c22809e23238b4949ee8ce1a25b4dd30cf2102-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/776543f32397cfce39388dce91c22809e23238b4949ee8ce1a25b4dd30cf2102-large.avif",
+          "objectKey": "photos/776543f32397cfce39388dce91c22809e23238b4949ee8ce1a25b4dd30cf2102-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000896700016.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 19:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "e38c314e88c48268c8bc5ef274766c7d2f2d8ae2834cce72e210b47ff66d55f4",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700016.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/e38c314e88c48268c8bc5ef274766c7d2f2d8ae2834cce72e210b47ff66d55f4-thumb.avif",
+          "objectKey": "photos/e38c314e88c48268c8bc5ef274766c7d2f2d8ae2834cce72e210b47ff66d55f4-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/e38c314e88c48268c8bc5ef274766c7d2f2d8ae2834cce72e210b47ff66d55f4-grid.avif",
+          "objectKey": "photos/e38c314e88c48268c8bc5ef274766c7d2f2d8ae2834cce72e210b47ff66d55f4-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/e38c314e88c48268c8bc5ef274766c7d2f2d8ae2834cce72e210b47ff66d55f4-large.avif",
+          "objectKey": "photos/e38c314e88c48268c8bc5ef274766c7d2f2d8ae2834cce72e210b47ff66d55f4-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000896700017.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 19:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "78ad02194501934cfcc231851006288ab230e66c65f840ed79d388a35a7503cd",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700017.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/78ad02194501934cfcc231851006288ab230e66c65f840ed79d388a35a7503cd-thumb.avif",
+          "objectKey": "photos/78ad02194501934cfcc231851006288ab230e66c65f840ed79d388a35a7503cd-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/78ad02194501934cfcc231851006288ab230e66c65f840ed79d388a35a7503cd-grid.avif",
+          "objectKey": "photos/78ad02194501934cfcc231851006288ab230e66c65f840ed79d388a35a7503cd-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/78ad02194501934cfcc231851006288ab230e66c65f840ed79d388a35a7503cd-large.avif",
+          "objectKey": "photos/78ad02194501934cfcc231851006288ab230e66c65f840ed79d388a35a7503cd-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000896700022.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 19:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "c684115bfa9abb4ca21f03ae401708112e9249e742b9e7dbf671215bccfeda76",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700022.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/c684115bfa9abb4ca21f03ae401708112e9249e742b9e7dbf671215bccfeda76-thumb.avif",
+          "objectKey": "photos/c684115bfa9abb4ca21f03ae401708112e9249e742b9e7dbf671215bccfeda76-thumb.avif",
+          "width": 480,
+          "height": 305
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/c684115bfa9abb4ca21f03ae401708112e9249e742b9e7dbf671215bccfeda76-grid.avif",
+          "objectKey": "photos/c684115bfa9abb4ca21f03ae401708112e9249e742b9e7dbf671215bccfeda76-grid.avif",
+          "width": 960,
+          "height": 611
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/c684115bfa9abb4ca21f03ae401708112e9249e742b9e7dbf671215bccfeda76-large.avif",
+          "objectKey": "photos/c684115bfa9abb4ca21f03ae401708112e9249e742b9e7dbf671215bccfeda76-large.avif",
+          "width": 2048,
+          "height": 1303
+        }
+      }
+    },
+    {
+      "filename": "000896700024.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 19:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "d257fffdd55b2ea476abdf3f64d84f2c9a49e473f0755cd58db4bb135eada002",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700024.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/d257fffdd55b2ea476abdf3f64d84f2c9a49e473f0755cd58db4bb135eada002-thumb.avif",
+          "objectKey": "photos/d257fffdd55b2ea476abdf3f64d84f2c9a49e473f0755cd58db4bb135eada002-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/d257fffdd55b2ea476abdf3f64d84f2c9a49e473f0755cd58db4bb135eada002-grid.avif",
+          "objectKey": "photos/d257fffdd55b2ea476abdf3f64d84f2c9a49e473f0755cd58db4bb135eada002-grid.avif",
+          "width": 960,
+          "height": 1449
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/d257fffdd55b2ea476abdf3f64d84f2c9a49e473f0755cd58db4bb135eada002-large.avif",
+          "objectKey": "photos/d257fffdd55b2ea476abdf3f64d84f2c9a49e473f0755cd58db4bb135eada002-large.avif",
+          "width": 1088,
+          "height": 1642
+        }
+      }
+    },
+    {
+      "filename": "000896700026.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 19:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "738f5746c608728655f77c187cdd962d434686cc715e2053ff47d399ad4a73db",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700026.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/738f5746c608728655f77c187cdd962d434686cc715e2053ff47d399ad4a73db-thumb.avif",
+          "objectKey": "photos/738f5746c608728655f77c187cdd962d434686cc715e2053ff47d399ad4a73db-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/738f5746c608728655f77c187cdd962d434686cc715e2053ff47d399ad4a73db-grid.avif",
+          "objectKey": "photos/738f5746c608728655f77c187cdd962d434686cc715e2053ff47d399ad4a73db-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/738f5746c608728655f77c187cdd962d434686cc715e2053ff47d399ad4a73db-large.avif",
+          "objectKey": "photos/738f5746c608728655f77c187cdd962d434686cc715e2053ff47d399ad4a73db-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000896700027.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 19:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "6b4f699b130560c62d8294c9a51777284607de0fae55a4a0a8292af7b9a06e09",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700027.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/6b4f699b130560c62d8294c9a51777284607de0fae55a4a0a8292af7b9a06e09-thumb.avif",
+          "objectKey": "photos/6b4f699b130560c62d8294c9a51777284607de0fae55a4a0a8292af7b9a06e09-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/6b4f699b130560c62d8294c9a51777284607de0fae55a4a0a8292af7b9a06e09-grid.avif",
+          "objectKey": "photos/6b4f699b130560c62d8294c9a51777284607de0fae55a4a0a8292af7b9a06e09-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/6b4f699b130560c62d8294c9a51777284607de0fae55a4a0a8292af7b9a06e09-large.avif",
+          "objectKey": "photos/6b4f699b130560c62d8294c9a51777284607de0fae55a4a0a8292af7b9a06e09-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000896700028.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 19:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "ed83f87f65d58e1df555cb9345123088d5415a719c3be3e82204954643730651",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700028.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/ed83f87f65d58e1df555cb9345123088d5415a719c3be3e82204954643730651-thumb.avif",
+          "objectKey": "photos/ed83f87f65d58e1df555cb9345123088d5415a719c3be3e82204954643730651-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/ed83f87f65d58e1df555cb9345123088d5415a719c3be3e82204954643730651-grid.avif",
+          "objectKey": "photos/ed83f87f65d58e1df555cb9345123088d5415a719c3be3e82204954643730651-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/ed83f87f65d58e1df555cb9345123088d5415a719c3be3e82204954643730651-large.avif",
+          "objectKey": "photos/ed83f87f65d58e1df555cb9345123088d5415a719c3be3e82204954643730651-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000896700029.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2025:12:04 19:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "2caaf8b7b33ad779a05b72a98d50d239933e0934e94189b86b1b799919dc59c2",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700029.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/2caaf8b7b33ad779a05b72a98d50d239933e0934e94189b86b1b799919dc59c2-thumb.avif",
+          "objectKey": "photos/2caaf8b7b33ad779a05b72a98d50d239933e0934e94189b86b1b799919dc59c2-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/2caaf8b7b33ad779a05b72a98d50d239933e0934e94189b86b1b799919dc59c2-grid.avif",
+          "objectKey": "photos/2caaf8b7b33ad779a05b72a98d50d239933e0934e94189b86b1b799919dc59c2-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/2caaf8b7b33ad779a05b72a98d50d239933e0934e94189b86b1b799919dc59c2-large.avif",
+          "objectKey": "photos/2caaf8b7b33ad779a05b72a98d50d239933e0934e94189b86b1b799919dc59c2-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000896700037.jpg",
+      "roll": "2025-003",
+      "metadata": {
+        "date": "2026:01:03 20:01:18",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Fujifilm 200",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 50mm 1:1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "c42714500dbfeda2151cf3670ab15e332aa09825d96d4af062e7c5c0031a5176",
+      "sourcePath": "2025-003 - Canon A-1, Fuji 200/000896700037.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/c42714500dbfeda2151cf3670ab15e332aa09825d96d4af062e7c5c0031a5176-thumb.avif",
+          "objectKey": "photos/c42714500dbfeda2151cf3670ab15e332aa09825d96d4af062e7c5c0031a5176-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/c42714500dbfeda2151cf3670ab15e332aa09825d96d4af062e7c5c0031a5176-grid.avif",
+          "objectKey": "photos/c42714500dbfeda2151cf3670ab15e332aa09825d96d4af062e7c5c0031a5176-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/c42714500dbfeda2151cf3670ab15e332aa09825d96d4af062e7c5c0031a5176-large.avif",
+          "objectKey": "photos/c42714500dbfeda2151cf3670ab15e332aa09825d96d4af062e7c5c0031a5176-large.avif",
+          "width": 2048,
+          "height": 1357
+        }
+      }
+    },
+    {
+      "filename": "001539710032.jpg",
+      "roll": "2025-004",
+      "metadata": {
+        "date": "2026:03:15 14:05:36",
+        "aperture": 11,
+        "shutterSpeed": "1/100",
+        "iso": 400,
+        "film": "Lomography Purple",
+        "cameraModel": "Kodak Ektar H35N",
+        "lensModel": "Kodak Ektar H35N Lens",
+        "focalLength": "22.0 mm"
+      },
+      "id": "65d2b3c3eadcf463f70508d8db7b8aca120d929fde98b43aee77997a5981a08d",
+      "sourcePath": "2025-004 - Kodak Ektar H35N, Lomography Purple/001539710032.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/65d2b3c3eadcf463f70508d8db7b8aca120d929fde98b43aee77997a5981a08d-thumb.avif",
+          "objectKey": "photos/65d2b3c3eadcf463f70508d8db7b8aca120d929fde98b43aee77997a5981a08d-thumb.avif",
+          "width": 480,
+          "height": 338
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/65d2b3c3eadcf463f70508d8db7b8aca120d929fde98b43aee77997a5981a08d-grid.avif",
+          "objectKey": "photos/65d2b3c3eadcf463f70508d8db7b8aca120d929fde98b43aee77997a5981a08d-grid.avif",
+          "width": 960,
+          "height": 677
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/65d2b3c3eadcf463f70508d8db7b8aca120d929fde98b43aee77997a5981a08d-large.avif",
+          "objectKey": "photos/65d2b3c3eadcf463f70508d8db7b8aca120d929fde98b43aee77997a5981a08d-large.avif",
+          "width": 2048,
+          "height": 1444
+        }
+      }
+    },
+    {
+      "filename": "001539710036.jpg",
+      "roll": "2025-004",
+      "metadata": {
+        "date": "2026:03:15 14:05:36",
+        "aperture": 11,
+        "shutterSpeed": "1/100",
+        "iso": 400,
+        "film": "Lomography Purple",
+        "cameraModel": "Kodak Ektar H35N",
+        "lensModel": "Kodak Ektar H35N Lens",
+        "focalLength": "22.0 mm"
+      },
+      "id": "712f84af95663ba72b209ce5f00edbb18c75be5686d7b2d0134b193eeeada276",
+      "sourcePath": "2025-004 - Kodak Ektar H35N, Lomography Purple/001539710036.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/712f84af95663ba72b209ce5f00edbb18c75be5686d7b2d0134b193eeeada276-thumb.avif",
+          "objectKey": "photos/712f84af95663ba72b209ce5f00edbb18c75be5686d7b2d0134b193eeeada276-thumb.avif",
+          "width": 480,
+          "height": 693
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/712f84af95663ba72b209ce5f00edbb18c75be5686d7b2d0134b193eeeada276-grid.avif",
+          "objectKey": "photos/712f84af95663ba72b209ce5f00edbb18c75be5686d7b2d0134b193eeeada276-grid.avif",
+          "width": 960,
+          "height": 1387
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/712f84af95663ba72b209ce5f00edbb18c75be5686d7b2d0134b193eeeada276-large.avif",
+          "objectKey": "photos/712f84af95663ba72b209ce5f00edbb18c75be5686d7b2d0134b193eeeada276-large.avif",
+          "width": 1410,
+          "height": 2037
+        }
+      }
+    },
+    {
+      "filename": "001539710072.jpg",
+      "roll": "2025-004",
+      "metadata": {
+        "date": "2026:03:15 14:05:36",
+        "aperture": 11,
+        "shutterSpeed": "1/100",
+        "iso": 400,
+        "film": "Lomography Purple",
+        "cameraModel": "Kodak Ektar H35N",
+        "lensModel": "Kodak Ektar H35N Lens",
+        "focalLength": "22.0 mm"
+      },
+      "id": "989f0deb007491ae36ab7657e1550df4bada3a75aea75b2aeab3b003ca8b23ec",
+      "sourcePath": "2025-004 - Kodak Ektar H35N, Lomography Purple/001539710072.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/989f0deb007491ae36ab7657e1550df4bada3a75aea75b2aeab3b003ca8b23ec-thumb.avif",
+          "objectKey": "photos/989f0deb007491ae36ab7657e1550df4bada3a75aea75b2aeab3b003ca8b23ec-thumb.avif",
+          "width": 480,
+          "height": 334
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/989f0deb007491ae36ab7657e1550df4bada3a75aea75b2aeab3b003ca8b23ec-grid.avif",
+          "objectKey": "photos/989f0deb007491ae36ab7657e1550df4bada3a75aea75b2aeab3b003ca8b23ec-grid.avif",
+          "width": 960,
+          "height": 668
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/989f0deb007491ae36ab7657e1550df4bada3a75aea75b2aeab3b003ca8b23ec-large.avif",
+          "objectKey": "photos/989f0deb007491ae36ab7657e1550df4bada3a75aea75b2aeab3b003ca8b23ec-large.avif",
+          "width": 2048,
+          "height": 1424
+        }
+      }
+    },
+    {
+      "filename": "001455250002.jpg",
+      "roll": "2025-005",
+      "metadata": {
+        "date": "2026:02:04 16:03:01+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "LomoChrome Classicolor 200",
+        "cameraModel": "Pentax MX",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "b5bb704d006e56ecb1212ea9da0c791d77bb9420b5eb18e625b1907332833007",
+      "sourcePath": "2025-005 - Pentax MX, Lomochrome Classicolor 200/001455250002.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/b5bb704d006e56ecb1212ea9da0c791d77bb9420b5eb18e625b1907332833007-thumb.avif",
+          "objectKey": "photos/b5bb704d006e56ecb1212ea9da0c791d77bb9420b5eb18e625b1907332833007-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/b5bb704d006e56ecb1212ea9da0c791d77bb9420b5eb18e625b1907332833007-grid.avif",
+          "objectKey": "photos/b5bb704d006e56ecb1212ea9da0c791d77bb9420b5eb18e625b1907332833007-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/b5bb704d006e56ecb1212ea9da0c791d77bb9420b5eb18e625b1907332833007-large.avif",
+          "objectKey": "photos/b5bb704d006e56ecb1212ea9da0c791d77bb9420b5eb18e625b1907332833007-large.avif",
+          "width": 2048,
+          "height": 1347
+        }
+      }
+    },
+    {
+      "filename": "001455250006.jpg",
+      "roll": "2025-005",
+      "metadata": {
+        "date": "2026:02:07 00:22:46",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "LomoChrome Classicolor 200",
+        "cameraModel": "Pentax MX",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "ff979d4303aca0dcdd10ba00a496cb89fb3812b7f415004540f82d1b75765bce",
+      "sourcePath": "2025-005 - Pentax MX, Lomochrome Classicolor 200/001455250006.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/ff979d4303aca0dcdd10ba00a496cb89fb3812b7f415004540f82d1b75765bce-thumb.avif",
+          "objectKey": "photos/ff979d4303aca0dcdd10ba00a496cb89fb3812b7f415004540f82d1b75765bce-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/ff979d4303aca0dcdd10ba00a496cb89fb3812b7f415004540f82d1b75765bce-grid.avif",
+          "objectKey": "photos/ff979d4303aca0dcdd10ba00a496cb89fb3812b7f415004540f82d1b75765bce-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/ff979d4303aca0dcdd10ba00a496cb89fb3812b7f415004540f82d1b75765bce-large.avif",
+          "objectKey": "photos/ff979d4303aca0dcdd10ba00a496cb89fb3812b7f415004540f82d1b75765bce-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "001455250007.jpg",
+      "roll": "2025-005",
+      "metadata": {
+        "date": "2026:02:07 00:22:47",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "LomoChrome Classicolor 200",
+        "cameraModel": "Pentax MX",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "cf6738ffd321a4723ef65cbb89b990612bc7ba7659d263bb8f25a33ad42744ad",
+      "sourcePath": "2025-005 - Pentax MX, Lomochrome Classicolor 200/001455250007.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/cf6738ffd321a4723ef65cbb89b990612bc7ba7659d263bb8f25a33ad42744ad-thumb.avif",
+          "objectKey": "photos/cf6738ffd321a4723ef65cbb89b990612bc7ba7659d263bb8f25a33ad42744ad-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/cf6738ffd321a4723ef65cbb89b990612bc7ba7659d263bb8f25a33ad42744ad-grid.avif",
+          "objectKey": "photos/cf6738ffd321a4723ef65cbb89b990612bc7ba7659d263bb8f25a33ad42744ad-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/cf6738ffd321a4723ef65cbb89b990612bc7ba7659d263bb8f25a33ad42744ad-large.avif",
+          "objectKey": "photos/cf6738ffd321a4723ef65cbb89b990612bc7ba7659d263bb8f25a33ad42744ad-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455250011.jpg",
+      "roll": "2025-005",
+      "metadata": {
+        "date": "2026:02:04 16:03:02+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "LomoChrome Classicolor 200",
+        "cameraModel": "Pentax MX",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "33de41c3d5eec89e5d9765ae735a7c1cdb7cb39b02eeb2125dcb82914945600c",
+      "sourcePath": "2025-005 - Pentax MX, Lomochrome Classicolor 200/001455250011.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/33de41c3d5eec89e5d9765ae735a7c1cdb7cb39b02eeb2125dcb82914945600c-thumb.avif",
+          "objectKey": "photos/33de41c3d5eec89e5d9765ae735a7c1cdb7cb39b02eeb2125dcb82914945600c-thumb.avif",
+          "width": 480,
+          "height": 317
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/33de41c3d5eec89e5d9765ae735a7c1cdb7cb39b02eeb2125dcb82914945600c-grid.avif",
+          "objectKey": "photos/33de41c3d5eec89e5d9765ae735a7c1cdb7cb39b02eeb2125dcb82914945600c-grid.avif",
+          "width": 960,
+          "height": 633
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/33de41c3d5eec89e5d9765ae735a7c1cdb7cb39b02eeb2125dcb82914945600c-large.avif",
+          "objectKey": "photos/33de41c3d5eec89e5d9765ae735a7c1cdb7cb39b02eeb2125dcb82914945600c-large.avif",
+          "width": 2048,
+          "height": 1350
+        }
+      }
+    },
+    {
+      "filename": "001455250016.jpg",
+      "roll": "2025-005",
+      "metadata": {
+        "date": "2026:02:04 16:03:02+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "LomoChrome Classicolor 200",
+        "cameraModel": "Pentax MX",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "b93b9e85974ec7a53ea2146f6494b3a27c231cc23ebad43edc67a3e53b131166",
+      "sourcePath": "2025-005 - Pentax MX, Lomochrome Classicolor 200/001455250016.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/b93b9e85974ec7a53ea2146f6494b3a27c231cc23ebad43edc67a3e53b131166-thumb.avif",
+          "objectKey": "photos/b93b9e85974ec7a53ea2146f6494b3a27c231cc23ebad43edc67a3e53b131166-thumb.avif",
+          "width": 480,
+          "height": 314
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/b93b9e85974ec7a53ea2146f6494b3a27c231cc23ebad43edc67a3e53b131166-grid.avif",
+          "objectKey": "photos/b93b9e85974ec7a53ea2146f6494b3a27c231cc23ebad43edc67a3e53b131166-grid.avif",
+          "width": 960,
+          "height": 628
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/b93b9e85974ec7a53ea2146f6494b3a27c231cc23ebad43edc67a3e53b131166-large.avif",
+          "objectKey": "photos/b93b9e85974ec7a53ea2146f6494b3a27c231cc23ebad43edc67a3e53b131166-large.avif",
+          "width": 2048,
+          "height": 1340
+        }
+      }
+    },
+    {
+      "filename": "001455250019.jpg",
+      "roll": "2025-005",
+      "metadata": {
+        "date": "2026:02:04 16:03:02+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "LomoChrome Classicolor 200",
+        "cameraModel": "Pentax MX",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "e0e13ce927f1eadc9ec428f3be673684327b63ec071e70bb9b1c0a846caa456c",
+      "sourcePath": "2025-005 - Pentax MX, Lomochrome Classicolor 200/001455250019.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/e0e13ce927f1eadc9ec428f3be673684327b63ec071e70bb9b1c0a846caa456c-thumb.avif",
+          "objectKey": "photos/e0e13ce927f1eadc9ec428f3be673684327b63ec071e70bb9b1c0a846caa456c-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/e0e13ce927f1eadc9ec428f3be673684327b63ec071e70bb9b1c0a846caa456c-grid.avif",
+          "objectKey": "photos/e0e13ce927f1eadc9ec428f3be673684327b63ec071e70bb9b1c0a846caa456c-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/e0e13ce927f1eadc9ec428f3be673684327b63ec071e70bb9b1c0a846caa456c-large.avif",
+          "objectKey": "photos/e0e13ce927f1eadc9ec428f3be673684327b63ec071e70bb9b1c0a846caa456c-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455250021.jpg",
+      "roll": "2025-005",
+      "metadata": {
+        "date": "2026:02:04 16:03:02+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "LomoChrome Classicolor 200",
+        "cameraModel": "Pentax MX",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "70a3d843c8d924a8260e8d261dbab7cffa88912a0e33f6c8846cdbf46e825b85",
+      "sourcePath": "2025-005 - Pentax MX, Lomochrome Classicolor 200/001455250021.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/70a3d843c8d924a8260e8d261dbab7cffa88912a0e33f6c8846cdbf46e825b85-thumb.avif",
+          "objectKey": "photos/70a3d843c8d924a8260e8d261dbab7cffa88912a0e33f6c8846cdbf46e825b85-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/70a3d843c8d924a8260e8d261dbab7cffa88912a0e33f6c8846cdbf46e825b85-grid.avif",
+          "objectKey": "photos/70a3d843c8d924a8260e8d261dbab7cffa88912a0e33f6c8846cdbf46e825b85-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/70a3d843c8d924a8260e8d261dbab7cffa88912a0e33f6c8846cdbf46e825b85-large.avif",
+          "objectKey": "photos/70a3d843c8d924a8260e8d261dbab7cffa88912a0e33f6c8846cdbf46e825b85-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455250022.jpg",
+      "roll": "2025-005",
+      "metadata": {
+        "date": "2026:02:07 00:22:51",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "LomoChrome Classicolor 200",
+        "cameraModel": "Pentax MX",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "d5383944cda23fc2e6936c0bbaca86f3f15ebd2c38218def866c7ec3fe03d1de",
+      "sourcePath": "2025-005 - Pentax MX, Lomochrome Classicolor 200/001455250022.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/d5383944cda23fc2e6936c0bbaca86f3f15ebd2c38218def866c7ec3fe03d1de-thumb.avif",
+          "objectKey": "photos/d5383944cda23fc2e6936c0bbaca86f3f15ebd2c38218def866c7ec3fe03d1de-thumb.avif",
+          "width": 480,
+          "height": 308
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/d5383944cda23fc2e6936c0bbaca86f3f15ebd2c38218def866c7ec3fe03d1de-grid.avif",
+          "objectKey": "photos/d5383944cda23fc2e6936c0bbaca86f3f15ebd2c38218def866c7ec3fe03d1de-grid.avif",
+          "width": 960,
+          "height": 616
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/d5383944cda23fc2e6936c0bbaca86f3f15ebd2c38218def866c7ec3fe03d1de-large.avif",
+          "objectKey": "photos/d5383944cda23fc2e6936c0bbaca86f3f15ebd2c38218def866c7ec3fe03d1de-large.avif",
+          "width": 2048,
+          "height": 1313
+        }
+      }
+    },
+    {
+      "filename": "001455250024.jpg",
+      "roll": "2025-005",
+      "metadata": {
+        "date": "2026:02:07 00:22:52",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "LomoChrome Classicolor 200",
+        "cameraModel": "Pentax MX",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "711650b9e04b3b5faeb206f8ccbdf5f25f30f24a7b5b78d012c86f5bb72db396",
+      "sourcePath": "2025-005 - Pentax MX, Lomochrome Classicolor 200/001455250024.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/711650b9e04b3b5faeb206f8ccbdf5f25f30f24a7b5b78d012c86f5bb72db396-thumb.avif",
+          "objectKey": "photos/711650b9e04b3b5faeb206f8ccbdf5f25f30f24a7b5b78d012c86f5bb72db396-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/711650b9e04b3b5faeb206f8ccbdf5f25f30f24a7b5b78d012c86f5bb72db396-grid.avif",
+          "objectKey": "photos/711650b9e04b3b5faeb206f8ccbdf5f25f30f24a7b5b78d012c86f5bb72db396-grid.avif",
+          "width": 960,
+          "height": 635
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/711650b9e04b3b5faeb206f8ccbdf5f25f30f24a7b5b78d012c86f5bb72db396-large.avif",
+          "objectKey": "photos/711650b9e04b3b5faeb206f8ccbdf5f25f30f24a7b5b78d012c86f5bb72db396-large.avif",
+          "width": 2048,
+          "height": 1355
+        }
+      }
+    },
+    {
+      "filename": "001455220002.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:35",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "f86c216392b3d765dc83b79a1c22d313413f7c22737e1c691b1c446a06268542",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220002.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/f86c216392b3d765dc83b79a1c22d313413f7c22737e1c691b1c446a06268542-thumb.avif",
+          "objectKey": "photos/f86c216392b3d765dc83b79a1c22d313413f7c22737e1c691b1c446a06268542-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/f86c216392b3d765dc83b79a1c22d313413f7c22737e1c691b1c446a06268542-grid.avif",
+          "objectKey": "photos/f86c216392b3d765dc83b79a1c22d313413f7c22737e1c691b1c446a06268542-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/f86c216392b3d765dc83b79a1c22d313413f7c22737e1c691b1c446a06268542-large.avif",
+          "objectKey": "photos/f86c216392b3d765dc83b79a1c22d313413f7c22737e1c691b1c446a06268542-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "001455220003.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:36",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "5e659c2cc74970b8310880dc914d2b8800bbed59de72b73ea3f389d1f00a1b22",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220003.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/5e659c2cc74970b8310880dc914d2b8800bbed59de72b73ea3f389d1f00a1b22-thumb.avif",
+          "objectKey": "photos/5e659c2cc74970b8310880dc914d2b8800bbed59de72b73ea3f389d1f00a1b22-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/5e659c2cc74970b8310880dc914d2b8800bbed59de72b73ea3f389d1f00a1b22-grid.avif",
+          "objectKey": "photos/5e659c2cc74970b8310880dc914d2b8800bbed59de72b73ea3f389d1f00a1b22-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/5e659c2cc74970b8310880dc914d2b8800bbed59de72b73ea3f389d1f00a1b22-large.avif",
+          "objectKey": "photos/5e659c2cc74970b8310880dc914d2b8800bbed59de72b73ea3f389d1f00a1b22-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455220005.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:37",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "1d904418bf2aaaafdcb6eb9f99ee19e580bedc0a4bca21d4a5aa940211e9e553",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220005.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/1d904418bf2aaaafdcb6eb9f99ee19e580bedc0a4bca21d4a5aa940211e9e553-thumb.avif",
+          "objectKey": "photos/1d904418bf2aaaafdcb6eb9f99ee19e580bedc0a4bca21d4a5aa940211e9e553-thumb.avif",
+          "width": 480,
+          "height": 314
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/1d904418bf2aaaafdcb6eb9f99ee19e580bedc0a4bca21d4a5aa940211e9e553-grid.avif",
+          "objectKey": "photos/1d904418bf2aaaafdcb6eb9f99ee19e580bedc0a4bca21d4a5aa940211e9e553-grid.avif",
+          "width": 960,
+          "height": 628
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/1d904418bf2aaaafdcb6eb9f99ee19e580bedc0a4bca21d4a5aa940211e9e553-large.avif",
+          "objectKey": "photos/1d904418bf2aaaafdcb6eb9f99ee19e580bedc0a4bca21d4a5aa940211e9e553-large.avif",
+          "width": 2048,
+          "height": 1339
+        }
+      }
+    },
+    {
+      "filename": "001455220006.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:04 15:52:19+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "e590b5f60ed3454d9b594ef86b109a42b04823a720f069d6cec4fac9937e6acf",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220006.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/e590b5f60ed3454d9b594ef86b109a42b04823a720f069d6cec4fac9937e6acf-thumb.avif",
+          "objectKey": "photos/e590b5f60ed3454d9b594ef86b109a42b04823a720f069d6cec4fac9937e6acf-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/e590b5f60ed3454d9b594ef86b109a42b04823a720f069d6cec4fac9937e6acf-grid.avif",
+          "objectKey": "photos/e590b5f60ed3454d9b594ef86b109a42b04823a720f069d6cec4fac9937e6acf-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/e590b5f60ed3454d9b594ef86b109a42b04823a720f069d6cec4fac9937e6acf-large.avif",
+          "objectKey": "photos/e590b5f60ed3454d9b594ef86b109a42b04823a720f069d6cec4fac9937e6acf-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455220008.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:04 15:52:19+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "ed9321c780f1d56acd9354bcdd5459af6a51ccf5053d8f66bff343b1facd5082",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220008.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/ed9321c780f1d56acd9354bcdd5459af6a51ccf5053d8f66bff343b1facd5082-thumb.avif",
+          "objectKey": "photos/ed9321c780f1d56acd9354bcdd5459af6a51ccf5053d8f66bff343b1facd5082-thumb.avif",
+          "width": 480,
+          "height": 734
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/ed9321c780f1d56acd9354bcdd5459af6a51ccf5053d8f66bff343b1facd5082-grid.avif",
+          "objectKey": "photos/ed9321c780f1d56acd9354bcdd5459af6a51ccf5053d8f66bff343b1facd5082-grid.avif",
+          "width": 960,
+          "height": 1468
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/ed9321c780f1d56acd9354bcdd5459af6a51ccf5053d8f66bff343b1facd5082-large.avif",
+          "objectKey": "photos/ed9321c780f1d56acd9354bcdd5459af6a51ccf5053d8f66bff343b1facd5082-large.avif",
+          "width": 2024,
+          "height": 3095
+        }
+      }
+    },
+    {
+      "filename": "001455220009.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:04 15:52:19+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "44a0ce82e6fc8a53db4bca9efc86b7e5e570ca7651f37aab42bc3c528adf5109",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220009.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/44a0ce82e6fc8a53db4bca9efc86b7e5e570ca7651f37aab42bc3c528adf5109-thumb.avif",
+          "objectKey": "photos/44a0ce82e6fc8a53db4bca9efc86b7e5e570ca7651f37aab42bc3c528adf5109-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/44a0ce82e6fc8a53db4bca9efc86b7e5e570ca7651f37aab42bc3c528adf5109-grid.avif",
+          "objectKey": "photos/44a0ce82e6fc8a53db4bca9efc86b7e5e570ca7651f37aab42bc3c528adf5109-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/44a0ce82e6fc8a53db4bca9efc86b7e5e570ca7651f37aab42bc3c528adf5109-large.avif",
+          "objectKey": "photos/44a0ce82e6fc8a53db4bca9efc86b7e5e570ca7651f37aab42bc3c528adf5109-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455220011.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:41",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "a2f3aa4e19b06a92659d3c617438dbcf8f73cba43feea933c37eacbbe148fe36",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220011.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a2f3aa4e19b06a92659d3c617438dbcf8f73cba43feea933c37eacbbe148fe36-thumb.avif",
+          "objectKey": "photos/a2f3aa4e19b06a92659d3c617438dbcf8f73cba43feea933c37eacbbe148fe36-thumb.avif",
+          "width": 480,
+          "height": 311
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a2f3aa4e19b06a92659d3c617438dbcf8f73cba43feea933c37eacbbe148fe36-grid.avif",
+          "objectKey": "photos/a2f3aa4e19b06a92659d3c617438dbcf8f73cba43feea933c37eacbbe148fe36-grid.avif",
+          "width": 960,
+          "height": 622
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a2f3aa4e19b06a92659d3c617438dbcf8f73cba43feea933c37eacbbe148fe36-large.avif",
+          "objectKey": "photos/a2f3aa4e19b06a92659d3c617438dbcf8f73cba43feea933c37eacbbe148fe36-large.avif",
+          "width": 2048,
+          "height": 1327
+        }
+      }
+    },
+    {
+      "filename": "001455220012.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:42",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "d0e281e5205d6191348f2e92ccbb383f6dc3de98d5c776a9e55473350cb3b5ce",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220012.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/d0e281e5205d6191348f2e92ccbb383f6dc3de98d5c776a9e55473350cb3b5ce-thumb.avif",
+          "objectKey": "photos/d0e281e5205d6191348f2e92ccbb383f6dc3de98d5c776a9e55473350cb3b5ce-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/d0e281e5205d6191348f2e92ccbb383f6dc3de98d5c776a9e55473350cb3b5ce-grid.avif",
+          "objectKey": "photos/d0e281e5205d6191348f2e92ccbb383f6dc3de98d5c776a9e55473350cb3b5ce-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/d0e281e5205d6191348f2e92ccbb383f6dc3de98d5c776a9e55473350cb3b5ce-large.avif",
+          "objectKey": "photos/d0e281e5205d6191348f2e92ccbb383f6dc3de98d5c776a9e55473350cb3b5ce-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455220015.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:43",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "eb46e32bd547d2f02734d7ddb0b4daf6e3bfd7322a5259d6422db31e2e8003c2",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220015.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/eb46e32bd547d2f02734d7ddb0b4daf6e3bfd7322a5259d6422db31e2e8003c2-thumb.avif",
+          "objectKey": "photos/eb46e32bd547d2f02734d7ddb0b4daf6e3bfd7322a5259d6422db31e2e8003c2-thumb.avif",
+          "width": 480,
+          "height": 729
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/eb46e32bd547d2f02734d7ddb0b4daf6e3bfd7322a5259d6422db31e2e8003c2-grid.avif",
+          "objectKey": "photos/eb46e32bd547d2f02734d7ddb0b4daf6e3bfd7322a5259d6422db31e2e8003c2-grid.avif",
+          "width": 960,
+          "height": 1457
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/eb46e32bd547d2f02734d7ddb0b4daf6e3bfd7322a5259d6422db31e2e8003c2-large.avif",
+          "objectKey": "photos/eb46e32bd547d2f02734d7ddb0b4daf6e3bfd7322a5259d6422db31e2e8003c2-large.avif",
+          "width": 2043,
+          "height": 3101
+        }
+      }
+    },
+    {
+      "filename": "001455220016.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:44",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "17d752f9ac70e8ba78f0835431cda5d567ba219f4280ffe3476d07031502113e",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220016.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/17d752f9ac70e8ba78f0835431cda5d567ba219f4280ffe3476d07031502113e-thumb.avif",
+          "objectKey": "photos/17d752f9ac70e8ba78f0835431cda5d567ba219f4280ffe3476d07031502113e-thumb.avif",
+          "width": 480,
+          "height": 315
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/17d752f9ac70e8ba78f0835431cda5d567ba219f4280ffe3476d07031502113e-grid.avif",
+          "objectKey": "photos/17d752f9ac70e8ba78f0835431cda5d567ba219f4280ffe3476d07031502113e-grid.avif",
+          "width": 960,
+          "height": 630
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/17d752f9ac70e8ba78f0835431cda5d567ba219f4280ffe3476d07031502113e-large.avif",
+          "objectKey": "photos/17d752f9ac70e8ba78f0835431cda5d567ba219f4280ffe3476d07031502113e-large.avif",
+          "width": 2048,
+          "height": 1344
+        }
+      }
+    },
+    {
+      "filename": "001455220017.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:45",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "d4061f2704f88df42cce34b108aecf64b06209a515f122dec1497d3e36434bcb",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220017.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/d4061f2704f88df42cce34b108aecf64b06209a515f122dec1497d3e36434bcb-thumb.avif",
+          "objectKey": "photos/d4061f2704f88df42cce34b108aecf64b06209a515f122dec1497d3e36434bcb-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/d4061f2704f88df42cce34b108aecf64b06209a515f122dec1497d3e36434bcb-grid.avif",
+          "objectKey": "photos/d4061f2704f88df42cce34b108aecf64b06209a515f122dec1497d3e36434bcb-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/d4061f2704f88df42cce34b108aecf64b06209a515f122dec1497d3e36434bcb-large.avif",
+          "objectKey": "photos/d4061f2704f88df42cce34b108aecf64b06209a515f122dec1497d3e36434bcb-large.avif",
+          "width": 2048,
+          "height": 1347
+        }
+      }
+    },
+    {
+      "filename": "001455220018.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:46",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "b6e8886cca5b5c36d95f95a8fa5b9b15ca80125852f4e0ac9c9c60de12d6e9d2",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220018.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/b6e8886cca5b5c36d95f95a8fa5b9b15ca80125852f4e0ac9c9c60de12d6e9d2-thumb.avif",
+          "objectKey": "photos/b6e8886cca5b5c36d95f95a8fa5b9b15ca80125852f4e0ac9c9c60de12d6e9d2-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/b6e8886cca5b5c36d95f95a8fa5b9b15ca80125852f4e0ac9c9c60de12d6e9d2-grid.avif",
+          "objectKey": "photos/b6e8886cca5b5c36d95f95a8fa5b9b15ca80125852f4e0ac9c9c60de12d6e9d2-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/b6e8886cca5b5c36d95f95a8fa5b9b15ca80125852f4e0ac9c9c60de12d6e9d2-large.avif",
+          "objectKey": "photos/b6e8886cca5b5c36d95f95a8fa5b9b15ca80125852f4e0ac9c9c60de12d6e9d2-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455220019.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:47",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "57d10914d9d36c439658a95f56335daadd5468ff80059e7bfb758f8fd513c3ca",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220019.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/57d10914d9d36c439658a95f56335daadd5468ff80059e7bfb758f8fd513c3ca-thumb.avif",
+          "objectKey": "photos/57d10914d9d36c439658a95f56335daadd5468ff80059e7bfb758f8fd513c3ca-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/57d10914d9d36c439658a95f56335daadd5468ff80059e7bfb758f8fd513c3ca-grid.avif",
+          "objectKey": "photos/57d10914d9d36c439658a95f56335daadd5468ff80059e7bfb758f8fd513c3ca-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/57d10914d9d36c439658a95f56335daadd5468ff80059e7bfb758f8fd513c3ca-large.avif",
+          "objectKey": "photos/57d10914d9d36c439658a95f56335daadd5468ff80059e7bfb758f8fd513c3ca-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455220021.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:48",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "699ee06f16b1d011bc8a6ba8fde2f4678b5c5742a7e37acb01f3be021e1270ac",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220021.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/699ee06f16b1d011bc8a6ba8fde2f4678b5c5742a7e37acb01f3be021e1270ac-thumb.avif",
+          "objectKey": "photos/699ee06f16b1d011bc8a6ba8fde2f4678b5c5742a7e37acb01f3be021e1270ac-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/699ee06f16b1d011bc8a6ba8fde2f4678b5c5742a7e37acb01f3be021e1270ac-grid.avif",
+          "objectKey": "photos/699ee06f16b1d011bc8a6ba8fde2f4678b5c5742a7e37acb01f3be021e1270ac-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/699ee06f16b1d011bc8a6ba8fde2f4678b5c5742a7e37acb01f3be021e1270ac-large.avif",
+          "objectKey": "photos/699ee06f16b1d011bc8a6ba8fde2f4678b5c5742a7e37acb01f3be021e1270ac-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001455220033.jpg",
+      "roll": "2026-001",
+      "metadata": {
+        "date": "2026:02:07 16:37:49",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Lomography 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": null,
+        "focalLength": null
+      },
+      "id": "9bc7ed83a35ae6c719183882e540f9c3da2ddd16fa80656028712b03b96fc407",
+      "sourcePath": "2026-001 - Canon A-1, Lomography 400/001455220033.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/9bc7ed83a35ae6c719183882e540f9c3da2ddd16fa80656028712b03b96fc407-thumb.avif",
+          "objectKey": "photos/9bc7ed83a35ae6c719183882e540f9c3da2ddd16fa80656028712b03b96fc407-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/9bc7ed83a35ae6c719183882e540f9c3da2ddd16fa80656028712b03b96fc407-grid.avif",
+          "objectKey": "photos/9bc7ed83a35ae6c719183882e540f9c3da2ddd16fa80656028712b03b96fc407-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/9bc7ed83a35ae6c719183882e540f9c3da2ddd16fa80656028712b03b96fc407-large.avif",
+          "objectKey": "photos/9bc7ed83a35ae6c719183882e540f9c3da2ddd16fa80656028712b03b96fc407-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000145520001.jpg",
+      "roll": "2026-002",
+      "metadata": {
+        "date": "2026:02:04 15:43:24+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Candido 200",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Yashica Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "c8b80f835afe1ba94d3fc1f857f74535b395f742da63bd6f45a8fdc37ef2a5cf",
+      "sourcePath": "2026-002 - Yashica Electro 35 CCN, Candido 200/000145520001.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/c8b80f835afe1ba94d3fc1f857f74535b395f742da63bd6f45a8fdc37ef2a5cf-thumb.avif",
+          "objectKey": "photos/c8b80f835afe1ba94d3fc1f857f74535b395f742da63bd6f45a8fdc37ef2a5cf-thumb.avif",
+          "width": 480,
+          "height": 315
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/c8b80f835afe1ba94d3fc1f857f74535b395f742da63bd6f45a8fdc37ef2a5cf-grid.avif",
+          "objectKey": "photos/c8b80f835afe1ba94d3fc1f857f74535b395f742da63bd6f45a8fdc37ef2a5cf-grid.avif",
+          "width": 960,
+          "height": 630
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/c8b80f835afe1ba94d3fc1f857f74535b395f742da63bd6f45a8fdc37ef2a5cf-large.avif",
+          "objectKey": "photos/c8b80f835afe1ba94d3fc1f857f74535b395f742da63bd6f45a8fdc37ef2a5cf-large.avif",
+          "width": 2048,
+          "height": 1345
+        }
+      }
+    },
+    {
+      "filename": "000145520002.jpg",
+      "roll": "2026-002",
+      "metadata": {
+        "date": "2026:02:07 17:00:15",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Candido 200",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Yashica Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "31eaa0b3120690b6aa0985e6e81ba4e417ede27cbb174128a18c8f7779ff208a",
+      "sourcePath": "2026-002 - Yashica Electro 35 CCN, Candido 200/000145520002.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/31eaa0b3120690b6aa0985e6e81ba4e417ede27cbb174128a18c8f7779ff208a-thumb.avif",
+          "objectKey": "photos/31eaa0b3120690b6aa0985e6e81ba4e417ede27cbb174128a18c8f7779ff208a-thumb.avif",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/31eaa0b3120690b6aa0985e6e81ba4e417ede27cbb174128a18c8f7779ff208a-grid.avif",
+          "objectKey": "photos/31eaa0b3120690b6aa0985e6e81ba4e417ede27cbb174128a18c8f7779ff208a-grid.avif",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/31eaa0b3120690b6aa0985e6e81ba4e417ede27cbb174128a18c8f7779ff208a-large.avif",
+          "objectKey": "photos/31eaa0b3120690b6aa0985e6e81ba4e417ede27cbb174128a18c8f7779ff208a-large.avif",
+          "width": 2048,
+          "height": 1335
+        }
+      }
+    },
+    {
+      "filename": "000145520023.jpg",
+      "roll": "2026-002",
+      "metadata": {
+        "date": "2026:02:04 15:43:25+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Candido 200",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Yashica Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "b7727bad234d0e51d66187a885b6f64eb6b0e86d7c53d2074daa1a776fead5cf",
+      "sourcePath": "2026-002 - Yashica Electro 35 CCN, Candido 200/000145520023.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/b7727bad234d0e51d66187a885b6f64eb6b0e86d7c53d2074daa1a776fead5cf-thumb.avif",
+          "objectKey": "photos/b7727bad234d0e51d66187a885b6f64eb6b0e86d7c53d2074daa1a776fead5cf-thumb.avif",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/b7727bad234d0e51d66187a885b6f64eb6b0e86d7c53d2074daa1a776fead5cf-grid.avif",
+          "objectKey": "photos/b7727bad234d0e51d66187a885b6f64eb6b0e86d7c53d2074daa1a776fead5cf-grid.avif",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/b7727bad234d0e51d66187a885b6f64eb6b0e86d7c53d2074daa1a776fead5cf-large.avif",
+          "objectKey": "photos/b7727bad234d0e51d66187a885b6f64eb6b0e86d7c53d2074daa1a776fead5cf-large.avif",
+          "width": 2048,
+          "height": 1336
+        }
+      }
+    },
+    {
+      "filename": "000145520030.jpg",
+      "roll": "2026-002",
+      "metadata": {
+        "date": "2026:02:04 15:43:25+04:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 200,
+        "film": "Candido 200",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Yashica Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "efa961114e058f339717f1ce1e0afea5eaadeed261ed00f3c12e10a25ac0dee6",
+      "sourcePath": "2026-002 - Yashica Electro 35 CCN, Candido 200/000145520030.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/efa961114e058f339717f1ce1e0afea5eaadeed261ed00f3c12e10a25ac0dee6-thumb.avif",
+          "objectKey": "photos/efa961114e058f339717f1ce1e0afea5eaadeed261ed00f3c12e10a25ac0dee6-thumb.avif",
+          "width": 480,
+          "height": 317
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/efa961114e058f339717f1ce1e0afea5eaadeed261ed00f3c12e10a25ac0dee6-grid.avif",
+          "objectKey": "photos/efa961114e058f339717f1ce1e0afea5eaadeed261ed00f3c12e10a25ac0dee6-grid.avif",
+          "width": 960,
+          "height": 634
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/efa961114e058f339717f1ce1e0afea5eaadeed261ed00f3c12e10a25ac0dee6-large.avif",
+          "objectKey": "photos/efa961114e058f339717f1ce1e0afea5eaadeed261ed00f3c12e10a25ac0dee6-large.avif",
+          "width": 2048,
+          "height": 1353
+        }
+      }
+    },
+    {
+      "filename": "001539720005.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "3a95426cee92104a1caadc5d842f52575616f4125b8860d5d231a9d412d43013",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720005.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/3a95426cee92104a1caadc5d842f52575616f4125b8860d5d231a9d412d43013-thumb.avif",
+          "objectKey": "photos/3a95426cee92104a1caadc5d842f52575616f4125b8860d5d231a9d412d43013-thumb.avif",
+          "width": 480,
+          "height": 310
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/3a95426cee92104a1caadc5d842f52575616f4125b8860d5d231a9d412d43013-grid.avif",
+          "objectKey": "photos/3a95426cee92104a1caadc5d842f52575616f4125b8860d5d231a9d412d43013-grid.avif",
+          "width": 960,
+          "height": 621
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/3a95426cee92104a1caadc5d842f52575616f4125b8860d5d231a9d412d43013-large.avif",
+          "objectKey": "photos/3a95426cee92104a1caadc5d842f52575616f4125b8860d5d231a9d412d43013-large.avif",
+          "width": 2048,
+          "height": 1324
+        }
+      }
+    },
+    {
+      "filename": "001539720013.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "150d922cf307de574b5f826178e34c189938f2c314cd1fa1f4a81d5353e318d6",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720013.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/150d922cf307de574b5f826178e34c189938f2c314cd1fa1f4a81d5353e318d6-thumb.avif",
+          "objectKey": "photos/150d922cf307de574b5f826178e34c189938f2c314cd1fa1f4a81d5353e318d6-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/150d922cf307de574b5f826178e34c189938f2c314cd1fa1f4a81d5353e318d6-grid.avif",
+          "objectKey": "photos/150d922cf307de574b5f826178e34c189938f2c314cd1fa1f4a81d5353e318d6-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/150d922cf307de574b5f826178e34c189938f2c314cd1fa1f4a81d5353e318d6-large.avif",
+          "objectKey": "photos/150d922cf307de574b5f826178e34c189938f2c314cd1fa1f4a81d5353e318d6-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001539720015.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "b6d43a7d49c6d4b8bedc9c759648ce88c0717741bd85123919532377a8281c96",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720015.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/b6d43a7d49c6d4b8bedc9c759648ce88c0717741bd85123919532377a8281c96-thumb.avif",
+          "objectKey": "photos/b6d43a7d49c6d4b8bedc9c759648ce88c0717741bd85123919532377a8281c96-thumb.avif",
+          "width": 480,
+          "height": 750
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/b6d43a7d49c6d4b8bedc9c759648ce88c0717741bd85123919532377a8281c96-grid.avif",
+          "objectKey": "photos/b6d43a7d49c6d4b8bedc9c759648ce88c0717741bd85123919532377a8281c96-grid.avif",
+          "width": 960,
+          "height": 1501
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/b6d43a7d49c6d4b8bedc9c759648ce88c0717741bd85123919532377a8281c96-large.avif",
+          "objectKey": "photos/b6d43a7d49c6d4b8bedc9c759648ce88c0717741bd85123919532377a8281c96-large.avif",
+          "width": 1952,
+          "height": 3052
+        }
+      }
+    },
+    {
+      "filename": "001539720016.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "952c603658eba6c1c004567b0ebb64d6973ccf29d9bc41e1a9d887bcd4d39592",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720016.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/952c603658eba6c1c004567b0ebb64d6973ccf29d9bc41e1a9d887bcd4d39592-thumb.avif",
+          "objectKey": "photos/952c603658eba6c1c004567b0ebb64d6973ccf29d9bc41e1a9d887bcd4d39592-thumb.avif",
+          "width": 480,
+          "height": 789
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/952c603658eba6c1c004567b0ebb64d6973ccf29d9bc41e1a9d887bcd4d39592-grid.avif",
+          "objectKey": "photos/952c603658eba6c1c004567b0ebb64d6973ccf29d9bc41e1a9d887bcd4d39592-grid.avif",
+          "width": 960,
+          "height": 1578
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/952c603658eba6c1c004567b0ebb64d6973ccf29d9bc41e1a9d887bcd4d39592-large.avif",
+          "objectKey": "photos/952c603658eba6c1c004567b0ebb64d6973ccf29d9bc41e1a9d887bcd4d39592-large.avif",
+          "width": 1801,
+          "height": 2961
+        }
+      }
+    },
+    {
+      "filename": "001539720018.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "58944fc933cf1f8a91bb989ebbbb7bdad2e7e75bcd87d70c35d94d521a729c7a",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720018.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/58944fc933cf1f8a91bb989ebbbb7bdad2e7e75bcd87d70c35d94d521a729c7a-thumb.avif",
+          "objectKey": "photos/58944fc933cf1f8a91bb989ebbbb7bdad2e7e75bcd87d70c35d94d521a729c7a-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/58944fc933cf1f8a91bb989ebbbb7bdad2e7e75bcd87d70c35d94d521a729c7a-grid.avif",
+          "objectKey": "photos/58944fc933cf1f8a91bb989ebbbb7bdad2e7e75bcd87d70c35d94d521a729c7a-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/58944fc933cf1f8a91bb989ebbbb7bdad2e7e75bcd87d70c35d94d521a729c7a-large.avif",
+          "objectKey": "photos/58944fc933cf1f8a91bb989ebbbb7bdad2e7e75bcd87d70c35d94d521a729c7a-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001539720020.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "9389160215fbf0c6f89bc38326f73af31bb0b26a42fa3e87d13929fd40c83b3d",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720020.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/9389160215fbf0c6f89bc38326f73af31bb0b26a42fa3e87d13929fd40c83b3d-thumb.avif",
+          "objectKey": "photos/9389160215fbf0c6f89bc38326f73af31bb0b26a42fa3e87d13929fd40c83b3d-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/9389160215fbf0c6f89bc38326f73af31bb0b26a42fa3e87d13929fd40c83b3d-grid.avif",
+          "objectKey": "photos/9389160215fbf0c6f89bc38326f73af31bb0b26a42fa3e87d13929fd40c83b3d-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/9389160215fbf0c6f89bc38326f73af31bb0b26a42fa3e87d13929fd40c83b3d-large.avif",
+          "objectKey": "photos/9389160215fbf0c6f89bc38326f73af31bb0b26a42fa3e87d13929fd40c83b3d-large.avif",
+          "width": 2048,
+          "height": 1347
+        }
+      }
+    },
+    {
+      "filename": "001539720022.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "d63b82e4225e7847be40582cdfd8634e1b4028bb4390fdbd853b031ec20470f9",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720022.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/d63b82e4225e7847be40582cdfd8634e1b4028bb4390fdbd853b031ec20470f9-thumb.avif",
+          "objectKey": "photos/d63b82e4225e7847be40582cdfd8634e1b4028bb4390fdbd853b031ec20470f9-thumb.avif",
+          "width": 480,
+          "height": 317
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/d63b82e4225e7847be40582cdfd8634e1b4028bb4390fdbd853b031ec20470f9-grid.avif",
+          "objectKey": "photos/d63b82e4225e7847be40582cdfd8634e1b4028bb4390fdbd853b031ec20470f9-grid.avif",
+          "width": 960,
+          "height": 633
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/d63b82e4225e7847be40582cdfd8634e1b4028bb4390fdbd853b031ec20470f9-large.avif",
+          "objectKey": "photos/d63b82e4225e7847be40582cdfd8634e1b4028bb4390fdbd853b031ec20470f9-large.avif",
+          "width": 2048,
+          "height": 1350
+        }
+      }
+    },
+    {
+      "filename": "001539720026.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "2aa9dcc118eda060c8f81a8fab3e85312f19c6060bacde572bd9514cd5955272",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720026.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/2aa9dcc118eda060c8f81a8fab3e85312f19c6060bacde572bd9514cd5955272-thumb.avif",
+          "objectKey": "photos/2aa9dcc118eda060c8f81a8fab3e85312f19c6060bacde572bd9514cd5955272-thumb.avif",
+          "width": 480,
+          "height": 740
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/2aa9dcc118eda060c8f81a8fab3e85312f19c6060bacde572bd9514cd5955272-grid.avif",
+          "objectKey": "photos/2aa9dcc118eda060c8f81a8fab3e85312f19c6060bacde572bd9514cd5955272-grid.avif",
+          "width": 960,
+          "height": 1479
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/2aa9dcc118eda060c8f81a8fab3e85312f19c6060bacde572bd9514cd5955272-large.avif",
+          "objectKey": "photos/2aa9dcc118eda060c8f81a8fab3e85312f19c6060bacde572bd9514cd5955272-large.avif",
+          "width": 1999,
+          "height": 3080
+        }
+      }
+    },
+    {
+      "filename": "001539720027.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "96eac4d92d0218c0eb339db7d608dc84e3e146b9390ca14498caa8293ecb55aa",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720027.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/96eac4d92d0218c0eb339db7d608dc84e3e146b9390ca14498caa8293ecb55aa-thumb.avif",
+          "objectKey": "photos/96eac4d92d0218c0eb339db7d608dc84e3e146b9390ca14498caa8293ecb55aa-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/96eac4d92d0218c0eb339db7d608dc84e3e146b9390ca14498caa8293ecb55aa-grid.avif",
+          "objectKey": "photos/96eac4d92d0218c0eb339db7d608dc84e3e146b9390ca14498caa8293ecb55aa-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/96eac4d92d0218c0eb339db7d608dc84e3e146b9390ca14498caa8293ecb55aa-large.avif",
+          "objectKey": "photos/96eac4d92d0218c0eb339db7d608dc84e3e146b9390ca14498caa8293ecb55aa-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001539720030.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "bfffa53013f51ed6d21a304920ba9b537a8f6bf5d6073eb64adc9858305fe34a",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720030.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/bfffa53013f51ed6d21a304920ba9b537a8f6bf5d6073eb64adc9858305fe34a-thumb.avif",
+          "objectKey": "photos/bfffa53013f51ed6d21a304920ba9b537a8f6bf5d6073eb64adc9858305fe34a-thumb.avif",
+          "width": 480,
+          "height": 731
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/bfffa53013f51ed6d21a304920ba9b537a8f6bf5d6073eb64adc9858305fe34a-grid.avif",
+          "objectKey": "photos/bfffa53013f51ed6d21a304920ba9b537a8f6bf5d6073eb64adc9858305fe34a-grid.avif",
+          "width": 960,
+          "height": 1462
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/bfffa53013f51ed6d21a304920ba9b537a8f6bf5d6073eb64adc9858305fe34a-large.avif",
+          "objectKey": "photos/bfffa53013f51ed6d21a304920ba9b537a8f6bf5d6073eb64adc9858305fe34a-large.avif",
+          "width": 2039,
+          "height": 3105
+        }
+      }
+    },
+    {
+      "filename": "001539720032.jpg",
+      "roll": "2026-003",
+      "metadata": {
+        "date": "2026:03:15 14:07:57",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 800,
+        "film": "Cinestill 800T",
+        "cameraModel": "Pentax MX",
+        "lensModel": "SMC Pentax 1:1.8/55",
+        "focalLength": "55.0 mm"
+      },
+      "id": "84ca2e576cb8ff62cab5f93f3c789b8a1d297cb697e3b6c11672d7151c43bd05",
+      "sourcePath": "2026-003 - Pentax MX, Cinestill 800T/001539720032.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/84ca2e576cb8ff62cab5f93f3c789b8a1d297cb697e3b6c11672d7151c43bd05-thumb.avif",
+          "objectKey": "photos/84ca2e576cb8ff62cab5f93f3c789b8a1d297cb697e3b6c11672d7151c43bd05-thumb.avif",
+          "width": 480,
+          "height": 314
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/84ca2e576cb8ff62cab5f93f3c789b8a1d297cb697e3b6c11672d7151c43bd05-grid.avif",
+          "objectKey": "photos/84ca2e576cb8ff62cab5f93f3c789b8a1d297cb697e3b6c11672d7151c43bd05-grid.avif",
+          "width": 960,
+          "height": 628
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/84ca2e576cb8ff62cab5f93f3c789b8a1d297cb697e3b6c11672d7151c43bd05-large.avif",
+          "objectKey": "photos/84ca2e576cb8ff62cab5f93f3c789b8a1d297cb697e3b6c11672d7151c43bd05-large.avif",
+          "width": 2048,
+          "height": 1339
+        }
+      }
+    },
+    {
+      "filename": "001539730003.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "341f3e8f293d6db616d7bd4c62b661a3ec2d41db1d4afa8c82bcb08e58acbe32",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730003.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/341f3e8f293d6db616d7bd4c62b661a3ec2d41db1d4afa8c82bcb08e58acbe32-thumb.avif",
+          "objectKey": "photos/341f3e8f293d6db616d7bd4c62b661a3ec2d41db1d4afa8c82bcb08e58acbe32-thumb.avif",
+          "width": 480,
+          "height": 738
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/341f3e8f293d6db616d7bd4c62b661a3ec2d41db1d4afa8c82bcb08e58acbe32-grid.avif",
+          "objectKey": "photos/341f3e8f293d6db616d7bd4c62b661a3ec2d41db1d4afa8c82bcb08e58acbe32-grid.avif",
+          "width": 960,
+          "height": 1476
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/341f3e8f293d6db616d7bd4c62b661a3ec2d41db1d4afa8c82bcb08e58acbe32-large.avif",
+          "objectKey": "photos/341f3e8f293d6db616d7bd4c62b661a3ec2d41db1d4afa8c82bcb08e58acbe32-large.avif",
+          "width": 2008,
+          "height": 3087
+        }
+      }
+    },
+    {
+      "filename": "001539730005.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "191d02c0fe7bf72cbb03ce5e57eda4564c66230965a66d230aebb7aca3a529b3",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730005.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/191d02c0fe7bf72cbb03ce5e57eda4564c66230965a66d230aebb7aca3a529b3-thumb.avif",
+          "objectKey": "photos/191d02c0fe7bf72cbb03ce5e57eda4564c66230965a66d230aebb7aca3a529b3-thumb.avif",
+          "width": 480,
+          "height": 311
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/191d02c0fe7bf72cbb03ce5e57eda4564c66230965a66d230aebb7aca3a529b3-grid.avif",
+          "objectKey": "photos/191d02c0fe7bf72cbb03ce5e57eda4564c66230965a66d230aebb7aca3a529b3-grid.avif",
+          "width": 960,
+          "height": 623
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/191d02c0fe7bf72cbb03ce5e57eda4564c66230965a66d230aebb7aca3a529b3-large.avif",
+          "objectKey": "photos/191d02c0fe7bf72cbb03ce5e57eda4564c66230965a66d230aebb7aca3a529b3-large.avif",
+          "width": 2048,
+          "height": 1328
+        }
+      }
+    },
+    {
+      "filename": "001539730006.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "af9f421350d5acd08a2d0a3d366c29d8d7bb4c9a5058237debc6c826612b4c04",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730006.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/af9f421350d5acd08a2d0a3d366c29d8d7bb4c9a5058237debc6c826612b4c04-thumb.avif",
+          "objectKey": "photos/af9f421350d5acd08a2d0a3d366c29d8d7bb4c9a5058237debc6c826612b4c04-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/af9f421350d5acd08a2d0a3d366c29d8d7bb4c9a5058237debc6c826612b4c04-grid.avif",
+          "objectKey": "photos/af9f421350d5acd08a2d0a3d366c29d8d7bb4c9a5058237debc6c826612b4c04-grid.avif",
+          "width": 960,
+          "height": 635
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/af9f421350d5acd08a2d0a3d366c29d8d7bb4c9a5058237debc6c826612b4c04-large.avif",
+          "objectKey": "photos/af9f421350d5acd08a2d0a3d366c29d8d7bb4c9a5058237debc6c826612b4c04-large.avif",
+          "width": 2048,
+          "height": 1355
+        }
+      }
+    },
+    {
+      "filename": "001539730007.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "9c27c4f0ae191076ddf3be6dfd9d1797f1cc3763b1b7c68e91d7c6a7a8cf0722",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730007.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/9c27c4f0ae191076ddf3be6dfd9d1797f1cc3763b1b7c68e91d7c6a7a8cf0722-thumb.avif",
+          "objectKey": "photos/9c27c4f0ae191076ddf3be6dfd9d1797f1cc3763b1b7c68e91d7c6a7a8cf0722-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/9c27c4f0ae191076ddf3be6dfd9d1797f1cc3763b1b7c68e91d7c6a7a8cf0722-grid.avif",
+          "objectKey": "photos/9c27c4f0ae191076ddf3be6dfd9d1797f1cc3763b1b7c68e91d7c6a7a8cf0722-grid.avif",
+          "width": 960,
+          "height": 635
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/9c27c4f0ae191076ddf3be6dfd9d1797f1cc3763b1b7c68e91d7c6a7a8cf0722-large.avif",
+          "objectKey": "photos/9c27c4f0ae191076ddf3be6dfd9d1797f1cc3763b1b7c68e91d7c6a7a8cf0722-large.avif",
+          "width": 2048,
+          "height": 1356
+        }
+      }
+    },
+    {
+      "filename": "001539730011.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "2ac2832626370e97ac6a7d429c66da74836ce11e8a0a4738f9848a807db0e6a8",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730011.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/2ac2832626370e97ac6a7d429c66da74836ce11e8a0a4738f9848a807db0e6a8-thumb.avif",
+          "objectKey": "photos/2ac2832626370e97ac6a7d429c66da74836ce11e8a0a4738f9848a807db0e6a8-thumb.avif",
+          "width": 480,
+          "height": 670
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/2ac2832626370e97ac6a7d429c66da74836ce11e8a0a4738f9848a807db0e6a8-grid.avif",
+          "objectKey": "photos/2ac2832626370e97ac6a7d429c66da74836ce11e8a0a4738f9848a807db0e6a8-grid.avif",
+          "width": 960,
+          "height": 1339
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/2ac2832626370e97ac6a7d429c66da74836ce11e8a0a4738f9848a807db0e6a8-large.avif",
+          "objectKey": "photos/2ac2832626370e97ac6a7d429c66da74836ce11e8a0a4738f9848a807db0e6a8-large.avif",
+          "width": 1853,
+          "height": 2585
+        }
+      }
+    },
+    {
+      "filename": "001539730017.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "52cef54cdae6bfbbb6674b8cab0d02c8764412ae8c177461c14388047b46523b",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730017.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/52cef54cdae6bfbbb6674b8cab0d02c8764412ae8c177461c14388047b46523b-thumb.avif",
+          "objectKey": "photos/52cef54cdae6bfbbb6674b8cab0d02c8764412ae8c177461c14388047b46523b-thumb.avif",
+          "width": 480,
+          "height": 315
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/52cef54cdae6bfbbb6674b8cab0d02c8764412ae8c177461c14388047b46523b-grid.avif",
+          "objectKey": "photos/52cef54cdae6bfbbb6674b8cab0d02c8764412ae8c177461c14388047b46523b-grid.avif",
+          "width": 960,
+          "height": 629
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/52cef54cdae6bfbbb6674b8cab0d02c8764412ae8c177461c14388047b46523b-large.avif",
+          "objectKey": "photos/52cef54cdae6bfbbb6674b8cab0d02c8764412ae8c177461c14388047b46523b-large.avif",
+          "width": 2048,
+          "height": 1342
+        }
+      }
+    },
+    {
+      "filename": "001539730019.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "96e9432f4d963d9b028d863e6f2c4dc22a88306976e4d2b1c85a94afd14602f5",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730019.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/96e9432f4d963d9b028d863e6f2c4dc22a88306976e4d2b1c85a94afd14602f5-thumb.avif",
+          "objectKey": "photos/96e9432f4d963d9b028d863e6f2c4dc22a88306976e4d2b1c85a94afd14602f5-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/96e9432f4d963d9b028d863e6f2c4dc22a88306976e4d2b1c85a94afd14602f5-grid.avif",
+          "objectKey": "photos/96e9432f4d963d9b028d863e6f2c4dc22a88306976e4d2b1c85a94afd14602f5-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/96e9432f4d963d9b028d863e6f2c4dc22a88306976e4d2b1c85a94afd14602f5-large.avif",
+          "objectKey": "photos/96e9432f4d963d9b028d863e6f2c4dc22a88306976e4d2b1c85a94afd14602f5-large.avif",
+          "width": 2048,
+          "height": 1349
+        }
+      }
+    },
+    {
+      "filename": "001539730020.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "7ee7b15f61028e1ceae4fa58a894449dac75c3f093b71719baee0aa91a42a5bb",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730020.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/7ee7b15f61028e1ceae4fa58a894449dac75c3f093b71719baee0aa91a42a5bb-thumb.avif",
+          "objectKey": "photos/7ee7b15f61028e1ceae4fa58a894449dac75c3f093b71719baee0aa91a42a5bb-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/7ee7b15f61028e1ceae4fa58a894449dac75c3f093b71719baee0aa91a42a5bb-grid.avif",
+          "objectKey": "photos/7ee7b15f61028e1ceae4fa58a894449dac75c3f093b71719baee0aa91a42a5bb-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/7ee7b15f61028e1ceae4fa58a894449dac75c3f093b71719baee0aa91a42a5bb-large.avif",
+          "objectKey": "photos/7ee7b15f61028e1ceae4fa58a894449dac75c3f093b71719baee0aa91a42a5bb-large.avif",
+          "width": 2048,
+          "height": 1349
+        }
+      }
+    },
+    {
+      "filename": "001539730022.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "84ddce831fb37c5f6b326fab78a7d35c46d0ee75ce0559a984529d5262b32cfa",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730022.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/84ddce831fb37c5f6b326fab78a7d35c46d0ee75ce0559a984529d5262b32cfa-thumb.avif",
+          "objectKey": "photos/84ddce831fb37c5f6b326fab78a7d35c46d0ee75ce0559a984529d5262b32cfa-thumb.avif",
+          "width": 480,
+          "height": 730
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/84ddce831fb37c5f6b326fab78a7d35c46d0ee75ce0559a984529d5262b32cfa-grid.avif",
+          "objectKey": "photos/84ddce831fb37c5f6b326fab78a7d35c46d0ee75ce0559a984529d5262b32cfa-grid.avif",
+          "width": 960,
+          "height": 1460
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/84ddce831fb37c5f6b326fab78a7d35c46d0ee75ce0559a984529d5262b32cfa-large.avif",
+          "objectKey": "photos/84ddce831fb37c5f6b326fab78a7d35c46d0ee75ce0559a984529d5262b32cfa-large.avif",
+          "width": 2038,
+          "height": 3099
+        }
+      }
+    },
+    {
+      "filename": "001539730023.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "c9802783d13cf66c53aba8b93e735c30611a8636789ad34b0e0d9ac44bd573d9",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730023.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/c9802783d13cf66c53aba8b93e735c30611a8636789ad34b0e0d9ac44bd573d9-thumb.avif",
+          "objectKey": "photos/c9802783d13cf66c53aba8b93e735c30611a8636789ad34b0e0d9ac44bd573d9-thumb.avif",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/c9802783d13cf66c53aba8b93e735c30611a8636789ad34b0e0d9ac44bd573d9-grid.avif",
+          "objectKey": "photos/c9802783d13cf66c53aba8b93e735c30611a8636789ad34b0e0d9ac44bd573d9-grid.avif",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/c9802783d13cf66c53aba8b93e735c30611a8636789ad34b0e0d9ac44bd573d9-large.avif",
+          "objectKey": "photos/c9802783d13cf66c53aba8b93e735c30611a8636789ad34b0e0d9ac44bd573d9-large.avif",
+          "width": 2048,
+          "height": 1335
+        }
+      }
+    },
+    {
+      "filename": "001539730026.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "7cb35c70584693b3e31e82f08b5197174a2ff2f87f0efd8faaac3bcab6c60d0a",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730026.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/7cb35c70584693b3e31e82f08b5197174a2ff2f87f0efd8faaac3bcab6c60d0a-thumb.avif",
+          "objectKey": "photos/7cb35c70584693b3e31e82f08b5197174a2ff2f87f0efd8faaac3bcab6c60d0a-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/7cb35c70584693b3e31e82f08b5197174a2ff2f87f0efd8faaac3bcab6c60d0a-grid.avif",
+          "objectKey": "photos/7cb35c70584693b3e31e82f08b5197174a2ff2f87f0efd8faaac3bcab6c60d0a-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/7cb35c70584693b3e31e82f08b5197174a2ff2f87f0efd8faaac3bcab6c60d0a-large.avif",
+          "objectKey": "photos/7cb35c70584693b3e31e82f08b5197174a2ff2f87f0efd8faaac3bcab6c60d0a-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001539730027.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "0b11cce025e3f574c6700760955b0e2f45486502de5757545f8a4ad728203173",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730027.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/0b11cce025e3f574c6700760955b0e2f45486502de5757545f8a4ad728203173-thumb.avif",
+          "objectKey": "photos/0b11cce025e3f574c6700760955b0e2f45486502de5757545f8a4ad728203173-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/0b11cce025e3f574c6700760955b0e2f45486502de5757545f8a4ad728203173-grid.avif",
+          "objectKey": "photos/0b11cce025e3f574c6700760955b0e2f45486502de5757545f8a4ad728203173-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/0b11cce025e3f574c6700760955b0e2f45486502de5757545f8a4ad728203173-large.avif",
+          "objectKey": "photos/0b11cce025e3f574c6700760955b0e2f45486502de5757545f8a4ad728203173-large.avif",
+          "width": 2048,
+          "height": 1347
+        }
+      }
+    },
+    {
+      "filename": "001539730030.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "76409b9ad914409991d5f752a013987024b40609e97ec50c07822cd7b80d6ba7",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730030.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/76409b9ad914409991d5f752a013987024b40609e97ec50c07822cd7b80d6ba7-thumb.avif",
+          "objectKey": "photos/76409b9ad914409991d5f752a013987024b40609e97ec50c07822cd7b80d6ba7-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/76409b9ad914409991d5f752a013987024b40609e97ec50c07822cd7b80d6ba7-grid.avif",
+          "objectKey": "photos/76409b9ad914409991d5f752a013987024b40609e97ec50c07822cd7b80d6ba7-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/76409b9ad914409991d5f752a013987024b40609e97ec50c07822cd7b80d6ba7-large.avif",
+          "objectKey": "photos/76409b9ad914409991d5f752a013987024b40609e97ec50c07822cd7b80d6ba7-large.avif",
+          "width": 2048,
+          "height": 1347
+        }
+      }
+    },
+    {
+      "filename": "001539730031.jpg",
+      "roll": "2026-004",
+      "metadata": {
+        "date": "2026:03:15 14:10:28",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Kodak Ektar 100",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "a0613f4f6317890a8321e5f738f1ce139f9d0587fb7c25eef0b61cd41a6514b7",
+      "sourcePath": "2026-004 - Canon A-1, Kodak Ektar 100/001539730031.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a0613f4f6317890a8321e5f738f1ce139f9d0587fb7c25eef0b61cd41a6514b7-thumb.avif",
+          "objectKey": "photos/a0613f4f6317890a8321e5f738f1ce139f9d0587fb7c25eef0b61cd41a6514b7-thumb.avif",
+          "width": 480,
+          "height": 315
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a0613f4f6317890a8321e5f738f1ce139f9d0587fb7c25eef0b61cd41a6514b7-grid.avif",
+          "objectKey": "photos/a0613f4f6317890a8321e5f738f1ce139f9d0587fb7c25eef0b61cd41a6514b7-grid.avif",
+          "width": 960,
+          "height": 629
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a0613f4f6317890a8321e5f738f1ce139f9d0587fb7c25eef0b61cd41a6514b7-large.avif",
+          "objectKey": "photos/a0613f4f6317890a8321e5f738f1ce139f9d0587fb7c25eef0b61cd41a6514b7-large.avif",
+          "width": 2048,
+          "height": 1342
+        }
+      }
+    },
+    {
       "filename": "001539740001.jpg",
       "roll": "2026-005",
       "metadata": {
@@ -879,24 +3543,24 @@
         "lensModel": "Canon nFD 50mm f/1.4",
         "focalLength": "50.0 mm"
       },
-      "id": "62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35",
+      "id": "232c9dbe1fa57be4bcf4c7c58f016a4bcf9fb650a883761e9db178f27f164c08",
       "sourcePath": "2026-005 - Canon A-1, Kodak Gold 200/001539740027.jpg",
       "images": {
         "thumb": {
-          "url": "https://photos.geext.xyz/photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-thumb.avif",
-          "objectKey": "photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-thumb.avif",
+          "url": "https://photos.geext.xyz/photos/232c9dbe1fa57be4bcf4c7c58f016a4bcf9fb650a883761e9db178f27f164c08-thumb.avif",
+          "objectKey": "photos/232c9dbe1fa57be4bcf4c7c58f016a4bcf9fb650a883761e9db178f27f164c08-thumb.avif",
           "width": 480,
           "height": 318
         },
         "grid": {
-          "url": "https://photos.geext.xyz/photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-grid.avif",
-          "objectKey": "photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-grid.avif",
+          "url": "https://photos.geext.xyz/photos/232c9dbe1fa57be4bcf4c7c58f016a4bcf9fb650a883761e9db178f27f164c08-grid.avif",
+          "objectKey": "photos/232c9dbe1fa57be4bcf4c7c58f016a4bcf9fb650a883761e9db178f27f164c08-grid.avif",
           "width": 960,
           "height": 636
         },
         "large": {
-          "url": "https://photos.geext.xyz/photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-large.avif",
-          "objectKey": "photos/62707784204646853f837af7f695bc72f424abe21cc66167597fde0b2dc31a35-large.avif",
+          "url": "https://photos.geext.xyz/photos/232c9dbe1fa57be4bcf4c7c58f016a4bcf9fb650a883761e9db178f27f164c08-large.avif",
+          "objectKey": "photos/232c9dbe1fa57be4bcf4c7c58f016a4bcf9fb650a883761e9db178f27f164c08-large.avif",
           "width": 2048,
           "height": 1358
         }

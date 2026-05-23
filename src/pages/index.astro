@@ -2,9 +2,11 @@
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Layout from "../layouts/Layout.astro";
 import { photos } from "../lib/photos";
+import { projects } from "../lib/projects";
 import { siteConfig } from "../site.config";
 
 const recentPhotos = photos.slice(0, 5);
+const featuredProjects = projects.slice(0, 3);
 const { name, profile } = siteConfig;
 const profileBackgroundPhoto = photos.find((photo) => photo.id === profile.backgroundPhotoId);
 
@@ -30,23 +32,6 @@ const socialLinks = profile.socialLinks.map((link) => {
 	};
 });
 
-const projects = [
-	{
-		name: "Project One",
-		description: "A short placeholder description for a featured project.",
-		href: "#",
-	},
-	{
-		name: "Project Two",
-		description: "A short placeholder description for another project.",
-		href: "#",
-	},
-	{
-		name: "Project Three",
-		description: "A short placeholder description for future work.",
-		href: "#",
-	},
-];
 ---
 
 <Layout title={name}>
@@ -105,15 +90,28 @@ const projects = [
 					<h2 id="projects-title">Projects</h2>
 					<p>Selected work and experiments.</p>
 				</div>
+				<a href="/projects/">View all</a>
 			</div>
 
 			<div class="project-list">
-				{projects.map((project) => (
-					<a class="project-entry" href={project.href}>
-						<span>{project.name}</span>
-						<p>{project.description}</p>
-					</a>
-				))}
+				{featuredProjects.map((project) => {
+					const content = (
+						<>
+							<span>{project.title}</span>
+							<p>{project.description}</p>
+						</>
+					);
+
+					return project.url ? (
+						<a class="project-entry" href={project.url}>
+							{content}
+						</a>
+					) : (
+						<article class="project-entry">
+							{content}
+						</article>
+					);
+				})}
 			</div>
 		</section>
 	</main>
@@ -299,7 +297,6 @@ const projects = [
 	.project-list {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		border-top: 1px solid #ddd8ce;
 	}
 
 	.project-entry {
@@ -307,7 +304,6 @@ const projects = [
 		gap: 0.45rem;
 		min-width: 0;
 		padding: 1.25rem 1.25rem 1.35rem 0;
-		border-bottom: 1px solid #ddd8ce;
 		color: #111;
 		text-decoration: none;
 	}
@@ -329,7 +325,7 @@ const projects = [
 		line-height: 1.5;
 	}
 
-	.project-entry:hover span {
+	a.project-entry:hover span {
 		text-decoration: underline;
 		text-underline-offset: 0.18em;
 	}
@@ -347,6 +343,7 @@ const projects = [
 		.project-entry + .project-entry {
 			padding-right: 0;
 			padding-left: 0;
+			border-bottom: 1px solid #ddd8ce;
 			border-left: 0;
 		}
 	}

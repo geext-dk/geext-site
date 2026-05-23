@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-05-23T00:00:00.000Z",
+  "projects": [
+    {
+      "title": "Geext Site",
+      "description": "My personal website with my protography and projects",
+      "image": "https://photos.geext.xyz/photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-grid.avif"
+    },
+    {
+      "title": "Grain Story",
+      "description": "Shot logger & film roll tracker for film photographers",
+      "image": "https://photos.geext.xyz/photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-grid.avif"
+    }
+  ]
+}
