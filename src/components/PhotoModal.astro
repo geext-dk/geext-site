@@ -9,17 +9,19 @@ const iconProps = {
 
 <dialog class="photo-dialog" aria-label="Photo viewer">
 	<div class="photo-viewer">
-		<div class="viewer-image-wrap">
-			<img class="viewer-image" alt="" />
-		</div>
-		<aside class="viewer-details">
-			<div class="viewer-header">
-				<button class="close-button" type="button" aria-label="Close">
-					<X {...iconProps} />
-				</button>
+		<div class="viewer-content">
+			<div class="viewer-image-wrap">
+				<img class="viewer-image" alt="" />
 			</div>
-			<dl class="property-list"></dl>
-		</aside>
+			<aside class="viewer-details">
+				<div class="viewer-header">
+					<button class="close-button" type="button" aria-label="Close">
+						<X {...iconProps} />
+					</button>
+				</div>
+				<dl class="property-list"></dl>
+			</aside>
+		</div>
 	</div>
 	<div class="property-icon-templates" hidden>
 		<template data-property-icon="date"><Calendar {...iconProps} /></template>
@@ -34,6 +36,8 @@ const iconProps = {
 <script>
 	const dialog = document.querySelector(".photo-dialog");
 	const viewerImage = dialog?.querySelector(".viewer-image");
+	const viewerContent = dialog?.querySelector(".viewer-content");
+	const viewerDetails = dialog?.querySelector(".viewer-details");
 	const propertyList = dialog?.querySelector(".property-list");
 	const closeButton = dialog?.querySelector(".close-button");
 	let isClosing = false;
@@ -92,6 +96,67 @@ const iconProps = {
 				return property;
 			}),
 		);
+	}
+
+	function syncViewerMeasurements() {
+		if (
+			!(dialog instanceof HTMLDialogElement) ||
+			!(viewerImage instanceof HTMLImageElement) ||
+			!(viewerContent instanceof HTMLElement) ||
+			!(viewerDetails instanceof HTMLElement)
+		) {
+			return;
+		}
+
+		const naturalWidth = Number(viewerImage.getAttribute("width"));
+		const naturalHeight = Number(viewerImage.getAttribute("height"));
+
+		if (!naturalWidth || !naturalHeight) {
+			return;
+		}
+
+		if (window.matchMedia("(max-width: 700px)").matches) {
+			dialog.style.removeProperty("--viewer-image-width");
+			dialog.style.removeProperty("--viewer-image-height");
+			return;
+		}
+
+		const aspectRatio = naturalWidth / naturalHeight;
+		const contentBounds = viewerContent.getBoundingClientRect();
+		const detailsBounds = viewerDetails.getBoundingClientRect();
+		const isPortrait = naturalHeight > naturalWidth;
+		const availableWidth = isPortrait
+			? Math.max(0, contentBounds.width - detailsBounds.width)
+			: contentBounds.width;
+		const availableHeight = isPortrait
+			? contentBounds.height
+			: Math.max(0, contentBounds.height - detailsBounds.height);
+		let imageWidth = Math.min(availableWidth, availableHeight * aspectRatio);
+		let imageHeight = imageWidth / aspectRatio;
+
+		if (imageHeight > availableHeight) {
+			imageHeight = availableHeight;
+			imageWidth = imageHeight * aspectRatio;
+		}
+
+		if (imageWidth > 0 && imageHeight > 0) {
+			dialog.style.setProperty("--viewer-image-width", `${imageWidth}px`);
+			dialog.style.setProperty("--viewer-image-height", `${imageHeight}px`);
+		}
+	}
+
+	function setViewerDimensions(width, height) {
+		if (!(dialog instanceof HTMLDialogElement) || !(viewerImage instanceof HTMLImageElement)) {
+			return;
+		}
+
+		if (!width || !height) {
+			return;
+		}
+
+		viewerImage.setAttribute("width", String(width));
+		viewerImage.setAttribute("height", String(height));
+		dialog.dataset.orientation = height > width ? "portrait" : "landscape";
 	}
 
 	function closeDialog() {
@@ -156,18 +221,32 @@ const iconProps = {
 			}
 
 			const properties = JSON.parse(button.dataset.properties ?? "[]");
+			const imageWidth = Number(button.dataset.largeWidth);
+			const imageHeight = Number(button.dataset.largeHeight);
 
+			delete dialog.dataset.orientation;
+			dialog.style.removeProperty("--viewer-image-width");
+			dialog.style.removeProperty("--viewer-image-height");
+			setProperties(properties);
+			setViewerDimensions(imageWidth, imageHeight);
 			viewerImage.src = button.dataset.largeUrl ?? "";
 			viewerImage.alt = "";
-			setProperties(properties);
 
 			lockPageScroll();
 			dialog.showModal();
+			syncViewerMeasurements();
 		});
 	});
 
+	window.addEventListener("resize", syncViewerMeasurements);
+
 	dialog?.addEventListener("click", (event) => {
-		if (event.target === dialog && dialog instanceof HTMLDialogElement) {
+		if (
+			dialog instanceof HTMLDialogElement &&
+			viewerContent instanceof HTMLElement &&
+			event.target instanceof Node &&
+			!viewerContent.contains(event.target)
+		) {
 			closeDialog();
 		}
 	});
@@ -180,13 +259,15 @@ const iconProps = {
 
 <style>
 	.photo-dialog {
+		--viewer-image-height: 100%;
+		--viewer-image-width: 100%;
 		width: min(100% - 2rem, 86rem);
 		max-width: none;
 		height: min(100% - 2rem, 52rem);
 		max-height: none;
 		padding: 0;
 		border: 0;
-		background: #111;
+		background: transparent;
 		color: #fbfaf6;
 		opacity: 0;
 		transform: scale(0.96);
@@ -211,25 +292,44 @@ const iconProps = {
 
 	.photo-viewer {
 		display: grid;
-		grid-template-rows: minmax(0, 1fr) auto;
+		place-items: center;
 		width: 100%;
 		height: 100%;
 	}
 
+	.viewer-content {
+		display: grid;
+		grid-template-rows: minmax(0, var(--viewer-image-height)) auto;
+		align-content: center;
+		justify-items: stretch;
+		width: min(100%, var(--viewer-image-width));
+		height: min(100%, calc(var(--viewer-image-height) + 10rem));
+		max-width: 100%;
+		max-height: 100%;
+		min-width: 0;
+		min-height: 0;
+	}
+
 	.viewer-image-wrap {
+		display: grid;
+		place-items: end center;
 		position: relative;
+		width: var(--viewer-image-width);
+		height: var(--viewer-image-height);
 		min-height: 0;
 		min-width: 0;
-		background: #0b0b0b;
+		background: transparent;
 		overflow: hidden;
 	}
 
 	.viewer-image {
 		display: block;
-		position: absolute;
-		inset: 0;
+		position: relative;
 		width: 100%;
 		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		background: rgb(11 11 11 / 0.76);
 		object-fit: contain;
 	}
 
@@ -237,6 +337,7 @@ const iconProps = {
 		display: grid;
 		grid-template-rows: auto;
 		gap: 1rem;
+		width: min(100%, var(--viewer-image-width));
 		min-width: 0;
 		padding: 1.25rem;
 		overflow: auto;
@@ -276,14 +377,13 @@ const iconProps = {
 
 	.property-list {
 		display: grid;
-		grid-template-columns: repeat(3, 18rem);
-		gap: 1.35rem 1.5rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.75rem 1rem;
 		align-content: start;
-		justify-content: center;
-		width: min(100%, 58.5rem);
-		margin: 0 auto;
-		font-size: 1.35rem;
-		line-height: 1.35;
+		width: 100%;
+		margin: 0;
+		font-size: 0.9rem;
+		line-height: 1.45;
 	}
 
 	:global(.property) {
@@ -300,20 +400,48 @@ const iconProps = {
 
 	:global(.property-icon) {
 		display: grid;
-		width: 1.875rem;
-		height: 1.875rem;
+		width: 1.35rem;
+		height: 1.35rem;
 		place-items: center;
 	}
 
 	:global(.property-icon svg) {
-		width: 1.5rem;
-		height: 1.5rem;
+		width: 1rem;
+		height: 1rem;
 	}
 
 	.property-list :global(dd) {
 		margin: 0;
 		min-width: 0;
 		overflow-wrap: anywhere;
+	}
+
+	.photo-dialog[data-orientation="portrait"] .photo-viewer {
+		place-items: center;
+	}
+
+	.photo-dialog[data-orientation="portrait"] .viewer-content {
+		grid-template-columns: minmax(0, var(--viewer-image-width)) minmax(10rem, 16rem);
+		grid-template-rows: minmax(0, var(--viewer-image-height));
+		align-items: stretch;
+		justify-content: center;
+		width: min(100%, calc(var(--viewer-image-width) + 16rem));
+		height: min(100%, var(--viewer-image-height));
+	}
+
+	.photo-dialog[data-orientation="portrait"] .viewer-image-wrap {
+		place-items: center;
+		width: var(--viewer-image-width);
+	}
+
+	.photo-dialog[data-orientation="portrait"] .viewer-details {
+		width: 100%;
+		height: min(100%, var(--viewer-image-height));
+		max-height: min(100%, var(--viewer-image-height));
+	}
+
+	.photo-dialog[data-orientation="portrait"] .property-list {
+		grid-template-columns: 1fr;
 	}
 
 	:global(.visually-hidden) {
@@ -329,19 +457,70 @@ const iconProps = {
 	}
 
 	@media (max-width: 980px) {
-		.photo-dialog {
-			width: 100%;
-			height: 100%;
-		}
-
 		.viewer-details {
 			max-height: 42vh;
 		}
 
 		.property-list {
-			width: 100%;
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.photo-dialog[data-orientation="portrait"] .viewer-content {
+			grid-template-columns: minmax(0, var(--viewer-image-width)) minmax(8.5rem, 40%);
+			width: min(100%, calc(var(--viewer-image-width) + 40%));
+		}
+
+		.photo-dialog[data-orientation="portrait"] .viewer-details {
+			max-height: min(100%, var(--viewer-image-height));
+		}
+
+		.photo-dialog[data-orientation="portrait"] .property-list {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.photo-dialog {
+			width: 100vw;
+			height: 100dvh;
+			margin: 0;
+		}
+
+		.photo-dialog[data-orientation="portrait"] .viewer-content,
+		.viewer-content {
+			grid-template-columns: 1fr;
+			grid-template-rows: minmax(0, auto) auto;
+			align-content: center;
+			align-items: end;
 			justify-content: stretch;
+			width: 100%;
+			height: 100%;
+		}
+
+		.photo-dialog[data-orientation="portrait"] .viewer-image-wrap,
+		.viewer-image-wrap {
+			place-items: center;
+			width: 100%;
+			height: auto;
+		}
+
+		.viewer-image {
+			width: 100%;
+			height: auto;
+		}
+
+		.photo-dialog[data-orientation="portrait"] .viewer-details,
+		.viewer-details {
+			align-self: auto;
+			justify-self: stretch;
+			width: 100%;
+			height: auto;
+			max-height: 42dvh;
+		}
+
+		.photo-dialog[data-orientation="portrait"] .property-list,
+		.property-list {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
 

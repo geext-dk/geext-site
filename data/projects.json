@@ -4,12 +4,12 @@
     {
       "title": "Geext Site",
       "description": "My personal website with my protography and projects",
-      "image": "https://photos.geext.xyz/photos/3c26b87cf16e0cf227b2ec922577406d3056d1f30fbe3a5de3843cbf2529e4ab-grid.avif"
+      "image": "https://photos.geext.xyz/images/109cb2c22dcdbe34ab6d02725798a8fa6462a120dee2efb3c9731b4eea7b19cd.avif"
     },
     {
       "title": "Grain Story",
       "description": "Shot logger & film roll tracker for film photographers",
-      "image": "https://photos.geext.xyz/photos/28076b1a218b1a08879d13498bed3d98c0df94d294d6f0a3f16f03a31ec329fb-grid.avif"
+      "image": "/grain-story-icon.svg"
     }
   ]
 }

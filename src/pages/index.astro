@@ -237,7 +237,6 @@ const socialLinks = profile.socialLinks.map((link) => {
 		gap: 1rem;
 		margin-bottom: 1.25rem;
 		padding-bottom: 1rem;
-		border-bottom: 1px solid #ddd8ce;
 	}
 
 	.section-heading div {
@@ -303,7 +302,8 @@ const socialLinks = profile.socialLinks.map((link) => {
 		display: grid;
 		gap: 0.45rem;
 		min-width: 0;
-		padding: 1.25rem 1.25rem 1.35rem 0;
+		padding: 0 1.25rem 1.35rem 0;
+		margin-bottom: 1.25rem;
 		color: #111;
 		text-decoration: none;
 	}
@@ -331,6 +331,11 @@ const socialLinks = profile.socialLinks.map((link) => {
 	}
 
 	@media (max-width: 900px) {
+		.profile-section {
+			margin-inline: calc(50% - 50vw);
+			border-inline: 0;
+		}
+
 		.recent-photos {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
 		}
@@ -364,12 +369,23 @@ const socialLinks = profile.socialLinks.map((link) => {
 		}
 
 		.dashboard-section {
+			display: flex;
+			flex-direction: column;
 			padding-top: 3rem;
 		}
 
 		.section-heading {
-			align-items: start;
-			flex-direction: column;
+			display: contents;
+		}
+
+		.section-heading div {
+			margin-bottom: 1.25rem;
+		}
+
+		.section-heading a {
+			align-self: start;
+			margin-top: 1rem;
+			order: 1;
 		}
 
 		.recent-photos {
