@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T15:15:32.641Z",
+  "generatedAt": "2026-05-23T23:24:05.637Z",
   "baseUrl": "https://photos.geext.xyz",
   "photos": [
     {
@@ -3705,6 +3705,1806 @@
         "large": {
           "url": "https://photos.geext.xyz/photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-large.avif",
           "objectKey": "photos/e5f81d7d9e45dc6e8203d333d765d09b48aece41a3b945c9dd546d5d579e5f59-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000153970001.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:03:08 15:27:56",
+        "aperture": 5.6,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "4f5d71232bdd005a2e86b522ef9bbc0ccca9709e9336b51e2bdc03aa0bccf19f",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970001.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/4f5d71232bdd005a2e86b522ef9bbc0ccca9709e9336b51e2bdc03aa0bccf19f-thumb.avif",
+          "objectKey": "photos/4f5d71232bdd005a2e86b522ef9bbc0ccca9709e9336b51e2bdc03aa0bccf19f-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/4f5d71232bdd005a2e86b522ef9bbc0ccca9709e9336b51e2bdc03aa0bccf19f-grid.avif",
+          "objectKey": "photos/4f5d71232bdd005a2e86b522ef9bbc0ccca9709e9336b51e2bdc03aa0bccf19f-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/4f5d71232bdd005a2e86b522ef9bbc0ccca9709e9336b51e2bdc03aa0bccf19f-large.avif",
+          "objectKey": "photos/4f5d71232bdd005a2e86b522ef9bbc0ccca9709e9336b51e2bdc03aa0bccf19f-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000153970004.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:03:08 14:47:26",
+        "aperture": 11,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "4d0eb0f8f688983a3ac214a79156978e3ca5527b7ea606c44f6c8b398cb0a90b",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970004.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/4d0eb0f8f688983a3ac214a79156978e3ca5527b7ea606c44f6c8b398cb0a90b-thumb.avif",
+          "objectKey": "photos/4d0eb0f8f688983a3ac214a79156978e3ca5527b7ea606c44f6c8b398cb0a90b-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/4d0eb0f8f688983a3ac214a79156978e3ca5527b7ea606c44f6c8b398cb0a90b-grid.avif",
+          "objectKey": "photos/4d0eb0f8f688983a3ac214a79156978e3ca5527b7ea606c44f6c8b398cb0a90b-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/4d0eb0f8f688983a3ac214a79156978e3ca5527b7ea606c44f6c8b398cb0a90b-large.avif",
+          "objectKey": "photos/4d0eb0f8f688983a3ac214a79156978e3ca5527b7ea606c44f6c8b398cb0a90b-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000153970006.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:03:08 14:44:27",
+        "aperture": 16,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "bb857f459a087c3254a82a41fdc1b2c9a003e135e7edc03ed8820bcb909eed8a",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970006.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/bb857f459a087c3254a82a41fdc1b2c9a003e135e7edc03ed8820bcb909eed8a-thumb.avif",
+          "objectKey": "photos/bb857f459a087c3254a82a41fdc1b2c9a003e135e7edc03ed8820bcb909eed8a-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/bb857f459a087c3254a82a41fdc1b2c9a003e135e7edc03ed8820bcb909eed8a-grid.avif",
+          "objectKey": "photos/bb857f459a087c3254a82a41fdc1b2c9a003e135e7edc03ed8820bcb909eed8a-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/bb857f459a087c3254a82a41fdc1b2c9a003e135e7edc03ed8820bcb909eed8a-large.avif",
+          "objectKey": "photos/bb857f459a087c3254a82a41fdc1b2c9a003e135e7edc03ed8820bcb909eed8a-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000153970009.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:03:08 14:40:35",
+        "aperture": 11,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "66d6591cc23aa288bd6bf8d5b64dfbf2bee5784f9b6888cdcebce1a2b334d76a",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970009.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/66d6591cc23aa288bd6bf8d5b64dfbf2bee5784f9b6888cdcebce1a2b334d76a-thumb.avif",
+          "objectKey": "photos/66d6591cc23aa288bd6bf8d5b64dfbf2bee5784f9b6888cdcebce1a2b334d76a-thumb.avif",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/66d6591cc23aa288bd6bf8d5b64dfbf2bee5784f9b6888cdcebce1a2b334d76a-grid.avif",
+          "objectKey": "photos/66d6591cc23aa288bd6bf8d5b64dfbf2bee5784f9b6888cdcebce1a2b334d76a-grid.avif",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/66d6591cc23aa288bd6bf8d5b64dfbf2bee5784f9b6888cdcebce1a2b334d76a-large.avif",
+          "objectKey": "photos/66d6591cc23aa288bd6bf8d5b64dfbf2bee5784f9b6888cdcebce1a2b334d76a-large.avif",
+          "width": 2048,
+          "height": 1336
+        }
+      }
+    },
+    {
+      "filename": "000153970011.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:03:08 14:24:23",
+        "aperture": 8,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "d99aac7b80dd653c1f3b1f05abc3dd42d00690f4fd9e3154a59138ff547bfef3",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970011.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/d99aac7b80dd653c1f3b1f05abc3dd42d00690f4fd9e3154a59138ff547bfef3-thumb.avif",
+          "objectKey": "photos/d99aac7b80dd653c1f3b1f05abc3dd42d00690f4fd9e3154a59138ff547bfef3-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/d99aac7b80dd653c1f3b1f05abc3dd42d00690f4fd9e3154a59138ff547bfef3-grid.avif",
+          "objectKey": "photos/d99aac7b80dd653c1f3b1f05abc3dd42d00690f4fd9e3154a59138ff547bfef3-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/d99aac7b80dd653c1f3b1f05abc3dd42d00690f4fd9e3154a59138ff547bfef3-large.avif",
+          "objectKey": "photos/d99aac7b80dd653c1f3b1f05abc3dd42d00690f4fd9e3154a59138ff547bfef3-large.avif",
+          "width": 2048,
+          "height": 1349
+        }
+      }
+    },
+    {
+      "filename": "000153970012.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:03:08 14:19:14",
+        "aperture": 11,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "94bb144c7ba6442c2fd7bfcc6c8b3a61dda1b3db68e1b536e476fa00c72e04e4",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970012.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/94bb144c7ba6442c2fd7bfcc6c8b3a61dda1b3db68e1b536e476fa00c72e04e4-thumb.avif",
+          "objectKey": "photos/94bb144c7ba6442c2fd7bfcc6c8b3a61dda1b3db68e1b536e476fa00c72e04e4-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/94bb144c7ba6442c2fd7bfcc6c8b3a61dda1b3db68e1b536e476fa00c72e04e4-grid.avif",
+          "objectKey": "photos/94bb144c7ba6442c2fd7bfcc6c8b3a61dda1b3db68e1b536e476fa00c72e04e4-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/94bb144c7ba6442c2fd7bfcc6c8b3a61dda1b3db68e1b536e476fa00c72e04e4-large.avif",
+          "objectKey": "photos/94bb144c7ba6442c2fd7bfcc6c8b3a61dda1b3db68e1b536e476fa00c72e04e4-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000153970019.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:03:04 16:24:00",
+        "aperture": 5.6,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "9865ea6e779808b402f29f8f3d5290596ff78e4a00d9c8ed43d605d9bde055fd",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970019.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/9865ea6e779808b402f29f8f3d5290596ff78e4a00d9c8ed43d605d9bde055fd-thumb.avif",
+          "objectKey": "photos/9865ea6e779808b402f29f8f3d5290596ff78e4a00d9c8ed43d605d9bde055fd-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/9865ea6e779808b402f29f8f3d5290596ff78e4a00d9c8ed43d605d9bde055fd-grid.avif",
+          "objectKey": "photos/9865ea6e779808b402f29f8f3d5290596ff78e4a00d9c8ed43d605d9bde055fd-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/9865ea6e779808b402f29f8f3d5290596ff78e4a00d9c8ed43d605d9bde055fd-large.avif",
+          "objectKey": "photos/9865ea6e779808b402f29f8f3d5290596ff78e4a00d9c8ed43d605d9bde055fd-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "000153970021.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:03:04 16:05:00",
+        "aperture": 5.6,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "985b76dc3a6db6f18a2d33e3004f13729f82042e8d34b5a483cf35adad9e4e7b",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970021.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/985b76dc3a6db6f18a2d33e3004f13729f82042e8d34b5a483cf35adad9e4e7b-thumb.avif",
+          "objectKey": "photos/985b76dc3a6db6f18a2d33e3004f13729f82042e8d34b5a483cf35adad9e4e7b-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/985b76dc3a6db6f18a2d33e3004f13729f82042e8d34b5a483cf35adad9e4e7b-grid.avif",
+          "objectKey": "photos/985b76dc3a6db6f18a2d33e3004f13729f82042e8d34b5a483cf35adad9e4e7b-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/985b76dc3a6db6f18a2d33e3004f13729f82042e8d34b5a483cf35adad9e4e7b-large.avif",
+          "objectKey": "photos/985b76dc3a6db6f18a2d33e3004f13729f82042e8d34b5a483cf35adad9e4e7b-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000153970024.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:02:25 11:02:00",
+        "aperture": 5.6,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "807cbcd05e7dff852ad66a2bc230517727f6ddf6e6975bf48f347a853b2e8504",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970024.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/807cbcd05e7dff852ad66a2bc230517727f6ddf6e6975bf48f347a853b2e8504-thumb.avif",
+          "objectKey": "photos/807cbcd05e7dff852ad66a2bc230517727f6ddf6e6975bf48f347a853b2e8504-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/807cbcd05e7dff852ad66a2bc230517727f6ddf6e6975bf48f347a853b2e8504-grid.avif",
+          "objectKey": "photos/807cbcd05e7dff852ad66a2bc230517727f6ddf6e6975bf48f347a853b2e8504-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/807cbcd05e7dff852ad66a2bc230517727f6ddf6e6975bf48f347a853b2e8504-large.avif",
+          "objectKey": "photos/807cbcd05e7dff852ad66a2bc230517727f6ddf6e6975bf48f347a853b2e8504-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000153970029.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:02:20 14:12:53",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "a74003ca9da95a39080ff5b5ab28e94e9c4ed07efb64d3ed4e0bc4de757ffabe",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970029.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a74003ca9da95a39080ff5b5ab28e94e9c4ed07efb64d3ed4e0bc4de757ffabe-thumb.avif",
+          "objectKey": "photos/a74003ca9da95a39080ff5b5ab28e94e9c4ed07efb64d3ed4e0bc4de757ffabe-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a74003ca9da95a39080ff5b5ab28e94e9c4ed07efb64d3ed4e0bc4de757ffabe-grid.avif",
+          "objectKey": "photos/a74003ca9da95a39080ff5b5ab28e94e9c4ed07efb64d3ed4e0bc4de757ffabe-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a74003ca9da95a39080ff5b5ab28e94e9c4ed07efb64d3ed4e0bc4de757ffabe-large.avif",
+          "objectKey": "photos/a74003ca9da95a39080ff5b5ab28e94e9c4ed07efb64d3ed4e0bc4de757ffabe-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000153970030.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:02:20 00:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "e63916b772efa11e8cb3c0f1485e00b90aa4b42da7ba62b06b774e9b0e83d782",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970030.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/e63916b772efa11e8cb3c0f1485e00b90aa4b42da7ba62b06b774e9b0e83d782-thumb.avif",
+          "objectKey": "photos/e63916b772efa11e8cb3c0f1485e00b90aa4b42da7ba62b06b774e9b0e83d782-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/e63916b772efa11e8cb3c0f1485e00b90aa4b42da7ba62b06b774e9b0e83d782-grid.avif",
+          "objectKey": "photos/e63916b772efa11e8cb3c0f1485e00b90aa4b42da7ba62b06b774e9b0e83d782-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/e63916b772efa11e8cb3c0f1485e00b90aa4b42da7ba62b06b774e9b0e83d782-large.avif",
+          "objectKey": "photos/e63916b772efa11e8cb3c0f1485e00b90aa4b42da7ba62b06b774e9b0e83d782-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "000153970031.jpg",
+      "roll": "2026-006",
+      "metadata": {
+        "date": "2026:02:20 00:00:00",
+        "aperture": null,
+        "shutterSpeed": null,
+        "iso": 100,
+        "film": "Qwerty Fomapan 100",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "8f828a5b88454a1eb418091e9fbe401ae77b4b70031859bdae78cba62588a172",
+      "sourcePath": "2026-006 - Yashica, Qwerty Fomapan 100/000153970031.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/8f828a5b88454a1eb418091e9fbe401ae77b4b70031859bdae78cba62588a172-thumb.avif",
+          "objectKey": "photos/8f828a5b88454a1eb418091e9fbe401ae77b4b70031859bdae78cba62588a172-thumb.avif",
+          "width": 480,
+          "height": 314
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/8f828a5b88454a1eb418091e9fbe401ae77b4b70031859bdae78cba62588a172-grid.avif",
+          "objectKey": "photos/8f828a5b88454a1eb418091e9fbe401ae77b4b70031859bdae78cba62588a172-grid.avif",
+          "width": 960,
+          "height": 628
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/8f828a5b88454a1eb418091e9fbe401ae77b4b70031859bdae78cba62588a172-large.avif",
+          "objectKey": "photos/8f828a5b88454a1eb418091e9fbe401ae77b4b70031859bdae78cba62588a172-large.avif",
+          "width": 2048,
+          "height": 1339
+        }
+      }
+    },
+    {
+      "filename": "001611730015.jpg",
+      "roll": "2026-007",
+      "metadata": {
+        "date": "2026:03:29 18:55:03",
+        "aperture": 5.6,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Wolfen Color NC500",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "2db0bf98cf4e76f8d604735b60a58b62e87da4031cee94b616a934aa0ed1f17f",
+      "sourcePath": "2026-007 - Yashica, Wolfen Color NC500/001611730015.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/2db0bf98cf4e76f8d604735b60a58b62e87da4031cee94b616a934aa0ed1f17f-thumb.avif",
+          "objectKey": "photos/2db0bf98cf4e76f8d604735b60a58b62e87da4031cee94b616a934aa0ed1f17f-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/2db0bf98cf4e76f8d604735b60a58b62e87da4031cee94b616a934aa0ed1f17f-grid.avif",
+          "objectKey": "photos/2db0bf98cf4e76f8d604735b60a58b62e87da4031cee94b616a934aa0ed1f17f-grid.avif",
+          "width": 960,
+          "height": 635
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/2db0bf98cf4e76f8d604735b60a58b62e87da4031cee94b616a934aa0ed1f17f-large.avif",
+          "objectKey": "photos/2db0bf98cf4e76f8d604735b60a58b62e87da4031cee94b616a934aa0ed1f17f-large.avif",
+          "width": 2048,
+          "height": 1355
+        }
+      }
+    },
+    {
+      "filename": "001611730026.jpg",
+      "roll": "2026-007",
+      "metadata": {
+        "date": "2026:03:29 16:08:31",
+        "aperture": 8,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Wolfen Color NC500",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "dc5454a110ecfa82aec63f50eeab790a8e1d106e955826577134ea05345ed9a7",
+      "sourcePath": "2026-007 - Yashica, Wolfen Color NC500/001611730026.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/dc5454a110ecfa82aec63f50eeab790a8e1d106e955826577134ea05345ed9a7-thumb.avif",
+          "objectKey": "photos/dc5454a110ecfa82aec63f50eeab790a8e1d106e955826577134ea05345ed9a7-thumb.avif",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/dc5454a110ecfa82aec63f50eeab790a8e1d106e955826577134ea05345ed9a7-grid.avif",
+          "objectKey": "photos/dc5454a110ecfa82aec63f50eeab790a8e1d106e955826577134ea05345ed9a7-grid.avif",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/dc5454a110ecfa82aec63f50eeab790a8e1d106e955826577134ea05345ed9a7-large.avif",
+          "objectKey": "photos/dc5454a110ecfa82aec63f50eeab790a8e1d106e955826577134ea05345ed9a7-large.avif",
+          "width": 2048,
+          "height": 1336
+        }
+      }
+    },
+    {
+      "filename": "001611730027.jpg",
+      "roll": "2026-007",
+      "metadata": {
+        "date": "2026:03:28 19:50:00",
+        "aperture": 5.6,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Wolfen Color NC500",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "9de2cfeae89b9f9d7d264f7b5209a2e31df9115b533ea0b3925945f9d27488b3",
+      "sourcePath": "2026-007 - Yashica, Wolfen Color NC500/001611730027.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/9de2cfeae89b9f9d7d264f7b5209a2e31df9115b533ea0b3925945f9d27488b3-thumb.avif",
+          "objectKey": "photos/9de2cfeae89b9f9d7d264f7b5209a2e31df9115b533ea0b3925945f9d27488b3-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/9de2cfeae89b9f9d7d264f7b5209a2e31df9115b533ea0b3925945f9d27488b3-grid.avif",
+          "objectKey": "photos/9de2cfeae89b9f9d7d264f7b5209a2e31df9115b533ea0b3925945f9d27488b3-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/9de2cfeae89b9f9d7d264f7b5209a2e31df9115b533ea0b3925945f9d27488b3-large.avif",
+          "objectKey": "photos/9de2cfeae89b9f9d7d264f7b5209a2e31df9115b533ea0b3925945f9d27488b3-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611730029.jpg",
+      "roll": "2026-007",
+      "metadata": {
+        "date": "2026:03:28 19:44:12",
+        "aperture": 8,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Wolfen Color NC500",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "6f24e4e3d22244600f6303fa6a53f5f8704376d75691629607535adf3d01bf98",
+      "sourcePath": "2026-007 - Yashica, Wolfen Color NC500/001611730029.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/6f24e4e3d22244600f6303fa6a53f5f8704376d75691629607535adf3d01bf98-thumb.avif",
+          "objectKey": "photos/6f24e4e3d22244600f6303fa6a53f5f8704376d75691629607535adf3d01bf98-thumb.avif",
+          "width": 480,
+          "height": 315
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/6f24e4e3d22244600f6303fa6a53f5f8704376d75691629607535adf3d01bf98-grid.avif",
+          "objectKey": "photos/6f24e4e3d22244600f6303fa6a53f5f8704376d75691629607535adf3d01bf98-grid.avif",
+          "width": 960,
+          "height": 630
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/6f24e4e3d22244600f6303fa6a53f5f8704376d75691629607535adf3d01bf98-large.avif",
+          "objectKey": "photos/6f24e4e3d22244600f6303fa6a53f5f8704376d75691629607535adf3d01bf98-large.avif",
+          "width": 2048,
+          "height": 1345
+        }
+      }
+    },
+    {
+      "filename": "001611730032.jpg",
+      "roll": "2026-007",
+      "metadata": {
+        "date": "2026:03:28 19:32:42",
+        "aperture": 4,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Wolfen Color NC500",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "4212fde6f65425c46fdcd23aa7afa9803f5877b5a8e34895bf65202084e92cd4",
+      "sourcePath": "2026-007 - Yashica, Wolfen Color NC500/001611730032.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/4212fde6f65425c46fdcd23aa7afa9803f5877b5a8e34895bf65202084e92cd4-thumb.avif",
+          "objectKey": "photos/4212fde6f65425c46fdcd23aa7afa9803f5877b5a8e34895bf65202084e92cd4-thumb.avif",
+          "width": 480,
+          "height": 315
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/4212fde6f65425c46fdcd23aa7afa9803f5877b5a8e34895bf65202084e92cd4-grid.avif",
+          "objectKey": "photos/4212fde6f65425c46fdcd23aa7afa9803f5877b5a8e34895bf65202084e92cd4-grid.avif",
+          "width": 960,
+          "height": 629
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/4212fde6f65425c46fdcd23aa7afa9803f5877b5a8e34895bf65202084e92cd4-large.avif",
+          "objectKey": "photos/4212fde6f65425c46fdcd23aa7afa9803f5877b5a8e34895bf65202084e92cd4-large.avif",
+          "width": 2048,
+          "height": 1342
+        }
+      }
+    },
+    {
+      "filename": "001611730034.jpg",
+      "roll": "2026-007",
+      "metadata": {
+        "date": "2026:03:28 19:22:30",
+        "aperture": 5.6,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Wolfen Color NC500",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "130bee4b0bf7a033b88463ff21898d8f6b286f03977fc44b866c91b3dc62db7f",
+      "sourcePath": "2026-007 - Yashica, Wolfen Color NC500/001611730034.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/130bee4b0bf7a033b88463ff21898d8f6b286f03977fc44b866c91b3dc62db7f-thumb.avif",
+          "objectKey": "photos/130bee4b0bf7a033b88463ff21898d8f6b286f03977fc44b866c91b3dc62db7f-thumb.avif",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/130bee4b0bf7a033b88463ff21898d8f6b286f03977fc44b866c91b3dc62db7f-grid.avif",
+          "objectKey": "photos/130bee4b0bf7a033b88463ff21898d8f6b286f03977fc44b866c91b3dc62db7f-grid.avif",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/130bee4b0bf7a033b88463ff21898d8f6b286f03977fc44b866c91b3dc62db7f-large.avif",
+          "objectKey": "photos/130bee4b0bf7a033b88463ff21898d8f6b286f03977fc44b866c91b3dc62db7f-large.avif",
+          "width": 2048,
+          "height": 1335
+        }
+      }
+    },
+    {
+      "filename": "001611730035.jpg",
+      "roll": "2026-007",
+      "metadata": {
+        "date": "2026:03:28 19:22:12",
+        "aperture": 5.6,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Wolfen Color NC500",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "8bbfb232738e06e1cc9afb2baccd8d0642678c81a594ca62169bf3c701dd994a",
+      "sourcePath": "2026-007 - Yashica, Wolfen Color NC500/001611730035.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/8bbfb232738e06e1cc9afb2baccd8d0642678c81a594ca62169bf3c701dd994a-thumb.avif",
+          "objectKey": "photos/8bbfb232738e06e1cc9afb2baccd8d0642678c81a594ca62169bf3c701dd994a-thumb.avif",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/8bbfb232738e06e1cc9afb2baccd8d0642678c81a594ca62169bf3c701dd994a-grid.avif",
+          "objectKey": "photos/8bbfb232738e06e1cc9afb2baccd8d0642678c81a594ca62169bf3c701dd994a-grid.avif",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/8bbfb232738e06e1cc9afb2baccd8d0642678c81a594ca62169bf3c701dd994a-large.avif",
+          "objectKey": "photos/8bbfb232738e06e1cc9afb2baccd8d0642678c81a594ca62169bf3c701dd994a-large.avif",
+          "width": 2048,
+          "height": 1336
+        }
+      }
+    },
+    {
+      "filename": "001611730036.jpg",
+      "roll": "2026-007",
+      "metadata": {
+        "date": "2026:03:28 19:20:28",
+        "aperture": 5.6,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Wolfen Color NC500",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "a927b82205c72a44649ce2e8a93d2629439f871170fc390d8b3a687f78ab61fe",
+      "sourcePath": "2026-007 - Yashica, Wolfen Color NC500/001611730036.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a927b82205c72a44649ce2e8a93d2629439f871170fc390d8b3a687f78ab61fe-thumb.avif",
+          "objectKey": "photos/a927b82205c72a44649ce2e8a93d2629439f871170fc390d8b3a687f78ab61fe-thumb.avif",
+          "width": 480,
+          "height": 317
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a927b82205c72a44649ce2e8a93d2629439f871170fc390d8b3a687f78ab61fe-grid.avif",
+          "objectKey": "photos/a927b82205c72a44649ce2e8a93d2629439f871170fc390d8b3a687f78ab61fe-grid.avif",
+          "width": 960,
+          "height": 633
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a927b82205c72a44649ce2e8a93d2629439f871170fc390d8b3a687f78ab61fe-large.avif",
+          "objectKey": "photos/a927b82205c72a44649ce2e8a93d2629439f871170fc390d8b3a687f78ab61fe-large.avif",
+          "width": 2048,
+          "height": 1351
+        }
+      }
+    },
+    {
+      "filename": "001611730038.jpg",
+      "roll": "2026-007",
+      "metadata": {
+        "date": "2026:03:28 19:19:11",
+        "aperture": 8,
+        "shutterSpeed": null,
+        "iso": 400,
+        "film": "Wolfen Color NC500",
+        "cameraModel": "Yashica Electro 35 CCN",
+        "lensModel": "Color-Yashinon DX 1:1.8 f=35mm",
+        "focalLength": "35.0 mm"
+      },
+      "id": "eb426c8028852aed279fa9327c1266746261793038adfc61abcde42d3849e4c6",
+      "sourcePath": "2026-007 - Yashica, Wolfen Color NC500/001611730038.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/eb426c8028852aed279fa9327c1266746261793038adfc61abcde42d3849e4c6-thumb.avif",
+          "objectKey": "photos/eb426c8028852aed279fa9327c1266746261793038adfc61abcde42d3849e4c6-thumb.avif",
+          "width": 480,
+          "height": 315
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/eb426c8028852aed279fa9327c1266746261793038adfc61abcde42d3849e4c6-grid.avif",
+          "objectKey": "photos/eb426c8028852aed279fa9327c1266746261793038adfc61abcde42d3849e4c6-grid.avif",
+          "width": 960,
+          "height": 630
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/eb426c8028852aed279fa9327c1266746261793038adfc61abcde42d3849e4c6-large.avif",
+          "objectKey": "photos/eb426c8028852aed279fa9327c1266746261793038adfc61abcde42d3849e4c6-large.avif",
+          "width": 2048,
+          "height": 1345
+        }
+      }
+    },
+    {
+      "filename": "001611740001.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:28 19:14:29",
+        "aperture": 8,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "a5bad283ac2a1887d49542117861be2acc139708ded53ba39593ad096236c44a",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740001.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a5bad283ac2a1887d49542117861be2acc139708ded53ba39593ad096236c44a-thumb.avif",
+          "objectKey": "photos/a5bad283ac2a1887d49542117861be2acc139708ded53ba39593ad096236c44a-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a5bad283ac2a1887d49542117861be2acc139708ded53ba39593ad096236c44a-grid.avif",
+          "objectKey": "photos/a5bad283ac2a1887d49542117861be2acc139708ded53ba39593ad096236c44a-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a5bad283ac2a1887d49542117861be2acc139708ded53ba39593ad096236c44a-large.avif",
+          "objectKey": "photos/a5bad283ac2a1887d49542117861be2acc139708ded53ba39593ad096236c44a-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740002.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:28 19:11:18",
+        "aperture": 11,
+        "shutterSpeed": "1/125",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "f0b4072f902b3a3ea138498c938c43c898dd0f867be8efebe411a1aad0c809ad",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740002.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/f0b4072f902b3a3ea138498c938c43c898dd0f867be8efebe411a1aad0c809ad-thumb.avif",
+          "objectKey": "photos/f0b4072f902b3a3ea138498c938c43c898dd0f867be8efebe411a1aad0c809ad-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/f0b4072f902b3a3ea138498c938c43c898dd0f867be8efebe411a1aad0c809ad-grid.avif",
+          "objectKey": "photos/f0b4072f902b3a3ea138498c938c43c898dd0f867be8efebe411a1aad0c809ad-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/f0b4072f902b3a3ea138498c938c43c898dd0f867be8efebe411a1aad0c809ad-large.avif",
+          "objectKey": "photos/f0b4072f902b3a3ea138498c938c43c898dd0f867be8efebe411a1aad0c809ad-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740003.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:28 19:08:58",
+        "aperture": 2,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "de1c1c1c5808e920ff7f7cd73e60a21aa3147eeab94d72a20ee3570d19d6a668",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740003.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/de1c1c1c5808e920ff7f7cd73e60a21aa3147eeab94d72a20ee3570d19d6a668-thumb.avif",
+          "objectKey": "photos/de1c1c1c5808e920ff7f7cd73e60a21aa3147eeab94d72a20ee3570d19d6a668-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/de1c1c1c5808e920ff7f7cd73e60a21aa3147eeab94d72a20ee3570d19d6a668-grid.avif",
+          "objectKey": "photos/de1c1c1c5808e920ff7f7cd73e60a21aa3147eeab94d72a20ee3570d19d6a668-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/de1c1c1c5808e920ff7f7cd73e60a21aa3147eeab94d72a20ee3570d19d6a668-large.avif",
+          "objectKey": "photos/de1c1c1c5808e920ff7f7cd73e60a21aa3147eeab94d72a20ee3570d19d6a668-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740004.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:28 19:07:20",
+        "aperture": 4,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "76261e22452791eb022347db0fb7ed5bde3be2732457163e0e95cc44cbf1a6d6",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740004.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/76261e22452791eb022347db0fb7ed5bde3be2732457163e0e95cc44cbf1a6d6-thumb.avif",
+          "objectKey": "photos/76261e22452791eb022347db0fb7ed5bde3be2732457163e0e95cc44cbf1a6d6-thumb.avif",
+          "width": 480,
+          "height": 308
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/76261e22452791eb022347db0fb7ed5bde3be2732457163e0e95cc44cbf1a6d6-grid.avif",
+          "objectKey": "photos/76261e22452791eb022347db0fb7ed5bde3be2732457163e0e95cc44cbf1a6d6-grid.avif",
+          "width": 960,
+          "height": 616
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/76261e22452791eb022347db0fb7ed5bde3be2732457163e0e95cc44cbf1a6d6-large.avif",
+          "objectKey": "photos/76261e22452791eb022347db0fb7ed5bde3be2732457163e0e95cc44cbf1a6d6-large.avif",
+          "width": 2048,
+          "height": 1315
+        }
+      }
+    },
+    {
+      "filename": "001611740007.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:28 19:02:19",
+        "aperture": 2.8,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "7a3a3dfa7f5b9f82edff1f206b321ed05b2b25ea505444203a12e8b4af95b39a",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740007.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/7a3a3dfa7f5b9f82edff1f206b321ed05b2b25ea505444203a12e8b4af95b39a-thumb.avif",
+          "objectKey": "photos/7a3a3dfa7f5b9f82edff1f206b321ed05b2b25ea505444203a12e8b4af95b39a-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/7a3a3dfa7f5b9f82edff1f206b321ed05b2b25ea505444203a12e8b4af95b39a-grid.avif",
+          "objectKey": "photos/7a3a3dfa7f5b9f82edff1f206b321ed05b2b25ea505444203a12e8b4af95b39a-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/7a3a3dfa7f5b9f82edff1f206b321ed05b2b25ea505444203a12e8b4af95b39a-large.avif",
+          "objectKey": "photos/7a3a3dfa7f5b9f82edff1f206b321ed05b2b25ea505444203a12e8b4af95b39a-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "001611740008.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:27 18:04:00",
+        "aperture": 1.4,
+        "shutterSpeed": "1/125",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "c9d97bca210f6d897889637ab648ac7dd27c24dd7400119cc0183aa5a41d302a",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740008.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/c9d97bca210f6d897889637ab648ac7dd27c24dd7400119cc0183aa5a41d302a-thumb.avif",
+          "objectKey": "photos/c9d97bca210f6d897889637ab648ac7dd27c24dd7400119cc0183aa5a41d302a-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/c9d97bca210f6d897889637ab648ac7dd27c24dd7400119cc0183aa5a41d302a-grid.avif",
+          "objectKey": "photos/c9d97bca210f6d897889637ab648ac7dd27c24dd7400119cc0183aa5a41d302a-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/c9d97bca210f6d897889637ab648ac7dd27c24dd7400119cc0183aa5a41d302a-large.avif",
+          "objectKey": "photos/c9d97bca210f6d897889637ab648ac7dd27c24dd7400119cc0183aa5a41d302a-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740009.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:27 18:35:00",
+        "aperture": 1.4,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "e212530e0dba12435cbd0b736c7eee358e53b737d5102aeca1f52a582b3bfe94",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740009.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/e212530e0dba12435cbd0b736c7eee358e53b737d5102aeca1f52a582b3bfe94-thumb.avif",
+          "objectKey": "photos/e212530e0dba12435cbd0b736c7eee358e53b737d5102aeca1f52a582b3bfe94-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/e212530e0dba12435cbd0b736c7eee358e53b737d5102aeca1f52a582b3bfe94-grid.avif",
+          "objectKey": "photos/e212530e0dba12435cbd0b736c7eee358e53b737d5102aeca1f52a582b3bfe94-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/e212530e0dba12435cbd0b736c7eee358e53b737d5102aeca1f52a582b3bfe94-large.avif",
+          "objectKey": "photos/e212530e0dba12435cbd0b736c7eee358e53b737d5102aeca1f52a582b3bfe94-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740010.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:27 18:34:00",
+        "aperture": 1.4,
+        "shutterSpeed": "1/60",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "cd4164f1cb86ef8d6bd8fd75ab4c3f21c783aad4eae68ebc2ab32cc6127cb639",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740010.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/cd4164f1cb86ef8d6bd8fd75ab4c3f21c783aad4eae68ebc2ab32cc6127cb639-thumb.avif",
+          "objectKey": "photos/cd4164f1cb86ef8d6bd8fd75ab4c3f21c783aad4eae68ebc2ab32cc6127cb639-thumb.avif",
+          "width": 480,
+          "height": 315
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/cd4164f1cb86ef8d6bd8fd75ab4c3f21c783aad4eae68ebc2ab32cc6127cb639-grid.avif",
+          "objectKey": "photos/cd4164f1cb86ef8d6bd8fd75ab4c3f21c783aad4eae68ebc2ab32cc6127cb639-grid.avif",
+          "width": 960,
+          "height": 629
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/cd4164f1cb86ef8d6bd8fd75ab4c3f21c783aad4eae68ebc2ab32cc6127cb639-large.avif",
+          "objectKey": "photos/cd4164f1cb86ef8d6bd8fd75ab4c3f21c783aad4eae68ebc2ab32cc6127cb639-large.avif",
+          "width": 2048,
+          "height": 1342
+        }
+      }
+    },
+    {
+      "filename": "001611740015.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:21 16:07:46",
+        "aperture": 2.8,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "3e5c74dfd552a00ae0143e8d92073412571a83934c828f29eaa235a7847452e2",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740015.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/3e5c74dfd552a00ae0143e8d92073412571a83934c828f29eaa235a7847452e2-thumb.avif",
+          "objectKey": "photos/3e5c74dfd552a00ae0143e8d92073412571a83934c828f29eaa235a7847452e2-thumb.avif",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/3e5c74dfd552a00ae0143e8d92073412571a83934c828f29eaa235a7847452e2-grid.avif",
+          "objectKey": "photos/3e5c74dfd552a00ae0143e8d92073412571a83934c828f29eaa235a7847452e2-grid.avif",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/3e5c74dfd552a00ae0143e8d92073412571a83934c828f29eaa235a7847452e2-large.avif",
+          "objectKey": "photos/3e5c74dfd552a00ae0143e8d92073412571a83934c828f29eaa235a7847452e2-large.avif",
+          "width": 2048,
+          "height": 1335
+        }
+      }
+    },
+    {
+      "filename": "001611740018.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:21 16:02:26",
+        "aperture": 5.6,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "5b2e9ca69c32f1bf67f9d7e102d136b90f131b3a5302da639692c6363bd26d1d",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740018.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/5b2e9ca69c32f1bf67f9d7e102d136b90f131b3a5302da639692c6363bd26d1d-thumb.avif",
+          "objectKey": "photos/5b2e9ca69c32f1bf67f9d7e102d136b90f131b3a5302da639692c6363bd26d1d-thumb.avif",
+          "width": 480,
+          "height": 312
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/5b2e9ca69c32f1bf67f9d7e102d136b90f131b3a5302da639692c6363bd26d1d-grid.avif",
+          "objectKey": "photos/5b2e9ca69c32f1bf67f9d7e102d136b90f131b3a5302da639692c6363bd26d1d-grid.avif",
+          "width": 960,
+          "height": 624
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/5b2e9ca69c32f1bf67f9d7e102d136b90f131b3a5302da639692c6363bd26d1d-large.avif",
+          "objectKey": "photos/5b2e9ca69c32f1bf67f9d7e102d136b90f131b3a5302da639692c6363bd26d1d-large.avif",
+          "width": 2048,
+          "height": 1330
+        }
+      }
+    },
+    {
+      "filename": "001611740019.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:21 16:00:35",
+        "aperture": 5.6,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "53c1544c70fa1eb1b0d4e3814953097ad1e9deeee164ed94b2865267cabdd8bb",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740019.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/53c1544c70fa1eb1b0d4e3814953097ad1e9deeee164ed94b2865267cabdd8bb-thumb.avif",
+          "objectKey": "photos/53c1544c70fa1eb1b0d4e3814953097ad1e9deeee164ed94b2865267cabdd8bb-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/53c1544c70fa1eb1b0d4e3814953097ad1e9deeee164ed94b2865267cabdd8bb-grid.avif",
+          "objectKey": "photos/53c1544c70fa1eb1b0d4e3814953097ad1e9deeee164ed94b2865267cabdd8bb-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/53c1544c70fa1eb1b0d4e3814953097ad1e9deeee164ed94b2865267cabdd8bb-large.avif",
+          "objectKey": "photos/53c1544c70fa1eb1b0d4e3814953097ad1e9deeee164ed94b2865267cabdd8bb-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740020.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:21 15:57:10",
+        "aperture": 4,
+        "shutterSpeed": "1/1000",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 100mm 1:2.8",
+        "focalLength": "100.0 mm"
+      },
+      "id": "4da8b8c5ee89976c5af4546bad522fa8d71855e3d639db7dc561f1b5f141cf37",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740020.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/4da8b8c5ee89976c5af4546bad522fa8d71855e3d639db7dc561f1b5f141cf37-thumb.avif",
+          "objectKey": "photos/4da8b8c5ee89976c5af4546bad522fa8d71855e3d639db7dc561f1b5f141cf37-thumb.avif",
+          "width": 480,
+          "height": 311
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/4da8b8c5ee89976c5af4546bad522fa8d71855e3d639db7dc561f1b5f141cf37-grid.avif",
+          "objectKey": "photos/4da8b8c5ee89976c5af4546bad522fa8d71855e3d639db7dc561f1b5f141cf37-grid.avif",
+          "width": 960,
+          "height": 623
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/4da8b8c5ee89976c5af4546bad522fa8d71855e3d639db7dc561f1b5f141cf37-large.avif",
+          "objectKey": "photos/4da8b8c5ee89976c5af4546bad522fa8d71855e3d639db7dc561f1b5f141cf37-large.avif",
+          "width": 2048,
+          "height": 1329
+        }
+      }
+    },
+    {
+      "filename": "001611740021.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:21 15:44:01",
+        "aperture": 2.8,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 100mm 1:2.8",
+        "focalLength": "100.0 mm"
+      },
+      "id": "a834975296398318e8f3825196c48ac31448fda410ce0750d95fae3f154906ff",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740021.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/a834975296398318e8f3825196c48ac31448fda410ce0750d95fae3f154906ff-thumb.avif",
+          "objectKey": "photos/a834975296398318e8f3825196c48ac31448fda410ce0750d95fae3f154906ff-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/a834975296398318e8f3825196c48ac31448fda410ce0750d95fae3f154906ff-grid.avif",
+          "objectKey": "photos/a834975296398318e8f3825196c48ac31448fda410ce0750d95fae3f154906ff-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/a834975296398318e8f3825196c48ac31448fda410ce0750d95fae3f154906ff-large.avif",
+          "objectKey": "photos/a834975296398318e8f3825196c48ac31448fda410ce0750d95fae3f154906ff-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740023.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:21 15:31:20",
+        "aperture": 1.4,
+        "shutterSpeed": "1/250",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "80577daf043f9d04aeb0ebc99ba4879cee44fcbfd87247d71a69993c8edf082b",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740023.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/80577daf043f9d04aeb0ebc99ba4879cee44fcbfd87247d71a69993c8edf082b-thumb.avif",
+          "objectKey": "photos/80577daf043f9d04aeb0ebc99ba4879cee44fcbfd87247d71a69993c8edf082b-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/80577daf043f9d04aeb0ebc99ba4879cee44fcbfd87247d71a69993c8edf082b-grid.avif",
+          "objectKey": "photos/80577daf043f9d04aeb0ebc99ba4879cee44fcbfd87247d71a69993c8edf082b-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/80577daf043f9d04aeb0ebc99ba4879cee44fcbfd87247d71a69993c8edf082b-large.avif",
+          "objectKey": "photos/80577daf043f9d04aeb0ebc99ba4879cee44fcbfd87247d71a69993c8edf082b-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740025.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:21 15:26:26",
+        "aperture": 2,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "b085556fd08d1caed69472b3679dc8da96843c40c699bda8fecd9351531e62a1",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740025.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/b085556fd08d1caed69472b3679dc8da96843c40c699bda8fecd9351531e62a1-thumb.avif",
+          "objectKey": "photos/b085556fd08d1caed69472b3679dc8da96843c40c699bda8fecd9351531e62a1-thumb.avif",
+          "width": 480,
+          "height": 307
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/b085556fd08d1caed69472b3679dc8da96843c40c699bda8fecd9351531e62a1-grid.avif",
+          "objectKey": "photos/b085556fd08d1caed69472b3679dc8da96843c40c699bda8fecd9351531e62a1-grid.avif",
+          "width": 960,
+          "height": 614
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/b085556fd08d1caed69472b3679dc8da96843c40c699bda8fecd9351531e62a1-large.avif",
+          "objectKey": "photos/b085556fd08d1caed69472b3679dc8da96843c40c699bda8fecd9351531e62a1-large.avif",
+          "width": 2048,
+          "height": 1310
+        }
+      }
+    },
+    {
+      "filename": "001611740028.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:21 15:15:09",
+        "aperture": 2,
+        "shutterSpeed": "1/1000",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "7f45d8daee5b07ef11e30064aa8868fdd14a059fb15e67d0ca7cbfbe693419cc",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740028.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/7f45d8daee5b07ef11e30064aa8868fdd14a059fb15e67d0ca7cbfbe693419cc-thumb.avif",
+          "objectKey": "photos/7f45d8daee5b07ef11e30064aa8868fdd14a059fb15e67d0ca7cbfbe693419cc-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/7f45d8daee5b07ef11e30064aa8868fdd14a059fb15e67d0ca7cbfbe693419cc-grid.avif",
+          "objectKey": "photos/7f45d8daee5b07ef11e30064aa8868fdd14a059fb15e67d0ca7cbfbe693419cc-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/7f45d8daee5b07ef11e30064aa8868fdd14a059fb15e67d0ca7cbfbe693419cc-large.avif",
+          "objectKey": "photos/7f45d8daee5b07ef11e30064aa8868fdd14a059fb15e67d0ca7cbfbe693419cc-large.avif",
+          "width": 2048,
+          "height": 1349
+        }
+      }
+    },
+    {
+      "filename": "001611740033.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:21 14:56:09",
+        "aperture": 4,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 100mm 1:2.8",
+        "focalLength": "100.0 mm"
+      },
+      "id": "3801d82ab89d65b8db5c8a506b623390295b2df9f81b006176c32c7cecf1e815",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740033.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/3801d82ab89d65b8db5c8a506b623390295b2df9f81b006176c32c7cecf1e815-thumb.avif",
+          "objectKey": "photos/3801d82ab89d65b8db5c8a506b623390295b2df9f81b006176c32c7cecf1e815-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/3801d82ab89d65b8db5c8a506b623390295b2df9f81b006176c32c7cecf1e815-grid.avif",
+          "objectKey": "photos/3801d82ab89d65b8db5c8a506b623390295b2df9f81b006176c32c7cecf1e815-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/3801d82ab89d65b8db5c8a506b623390295b2df9f81b006176c32c7cecf1e815-large.avif",
+          "objectKey": "photos/3801d82ab89d65b8db5c8a506b623390295b2df9f81b006176c32c7cecf1e815-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740034.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:15 18:14:21",
+        "aperture": 2.8,
+        "shutterSpeed": "1/125",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 100mm 1:2.8",
+        "focalLength": "100.0 mm"
+      },
+      "id": "900198c176dd14420fc3c6f73e6220deebc77427094f4e3edcbea8503e433cd7",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740034.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/900198c176dd14420fc3c6f73e6220deebc77427094f4e3edcbea8503e433cd7-thumb.avif",
+          "objectKey": "photos/900198c176dd14420fc3c6f73e6220deebc77427094f4e3edcbea8503e433cd7-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/900198c176dd14420fc3c6f73e6220deebc77427094f4e3edcbea8503e433cd7-grid.avif",
+          "objectKey": "photos/900198c176dd14420fc3c6f73e6220deebc77427094f4e3edcbea8503e433cd7-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/900198c176dd14420fc3c6f73e6220deebc77427094f4e3edcbea8503e433cd7-large.avif",
+          "objectKey": "photos/900198c176dd14420fc3c6f73e6220deebc77427094f4e3edcbea8503e433cd7-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611740035.jpg",
+      "roll": "2026-008",
+      "metadata": {
+        "date": "2026:03:15 16:59:49",
+        "aperture": 2.8,
+        "shutterSpeed": "1/250",
+        "iso": 400,
+        "film": "Candido 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 100mm 1:2.8",
+        "focalLength": "100.0 mm"
+      },
+      "id": "9656063706b510f018d792dbc5d0e1fd51be6070ca55009d8e423dd4c0af23b1",
+      "sourcePath": "2026-008 - Canon A-1, Candido 400/001611740035.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/9656063706b510f018d792dbc5d0e1fd51be6070ca55009d8e423dd4c0af23b1-thumb.avif",
+          "objectKey": "photos/9656063706b510f018d792dbc5d0e1fd51be6070ca55009d8e423dd4c0af23b1-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/9656063706b510f018d792dbc5d0e1fd51be6070ca55009d8e423dd4c0af23b1-grid.avif",
+          "objectKey": "photos/9656063706b510f018d792dbc5d0e1fd51be6070ca55009d8e423dd4c0af23b1-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/9656063706b510f018d792dbc5d0e1fd51be6070ca55009d8e423dd4c0af23b1-large.avif",
+          "objectKey": "photos/9656063706b510f018d792dbc5d0e1fd51be6070ca55009d8e423dd4c0af23b1-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "001611750001.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:15 14:59:19",
+        "aperture": 2.8,
+        "shutterSpeed": "1/1000",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "3e0a90d47cc5c677318c1157af08cc32a3bddf8e104d0c038a303cd3ff285980",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750001.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/3e0a90d47cc5c677318c1157af08cc32a3bddf8e104d0c038a303cd3ff285980-thumb.avif",
+          "objectKey": "photos/3e0a90d47cc5c677318c1157af08cc32a3bddf8e104d0c038a303cd3ff285980-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/3e0a90d47cc5c677318c1157af08cc32a3bddf8e104d0c038a303cd3ff285980-grid.avif",
+          "objectKey": "photos/3e0a90d47cc5c677318c1157af08cc32a3bddf8e104d0c038a303cd3ff285980-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/3e0a90d47cc5c677318c1157af08cc32a3bddf8e104d0c038a303cd3ff285980-large.avif",
+          "objectKey": "photos/3e0a90d47cc5c677318c1157af08cc32a3bddf8e104d0c038a303cd3ff285980-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611750002.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:15 14:56:27",
+        "aperture": 2.8,
+        "shutterSpeed": "1/60",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "8a1d2bf2e92b92c8d2ffd3aeb9c3075cc9c85ecb21dc06e6ef49381e114b1dcb",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750002.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/8a1d2bf2e92b92c8d2ffd3aeb9c3075cc9c85ecb21dc06e6ef49381e114b1dcb-thumb.avif",
+          "objectKey": "photos/8a1d2bf2e92b92c8d2ffd3aeb9c3075cc9c85ecb21dc06e6ef49381e114b1dcb-thumb.avif",
+          "width": 480,
+          "height": 728
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/8a1d2bf2e92b92c8d2ffd3aeb9c3075cc9c85ecb21dc06e6ef49381e114b1dcb-grid.avif",
+          "objectKey": "photos/8a1d2bf2e92b92c8d2ffd3aeb9c3075cc9c85ecb21dc06e6ef49381e114b1dcb-grid.avif",
+          "width": 960,
+          "height": 1455
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/8a1d2bf2e92b92c8d2ffd3aeb9c3075cc9c85ecb21dc06e6ef49381e114b1dcb-large.avif",
+          "objectKey": "photos/8a1d2bf2e92b92c8d2ffd3aeb9c3075cc9c85ecb21dc06e6ef49381e114b1dcb-large.avif",
+          "width": 2044,
+          "height": 3098
+        }
+      }
+    },
+    {
+      "filename": "001611750003.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:15 14:55:09",
+        "aperture": 2.8,
+        "shutterSpeed": "1/60",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "6a1ffbf415fccb6b134ce9a0e97193a4f47779d7efebbfb17d1f2e105b317f32",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750003.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/6a1ffbf415fccb6b134ce9a0e97193a4f47779d7efebbfb17d1f2e105b317f32-thumb.avif",
+          "objectKey": "photos/6a1ffbf415fccb6b134ce9a0e97193a4f47779d7efebbfb17d1f2e105b317f32-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/6a1ffbf415fccb6b134ce9a0e97193a4f47779d7efebbfb17d1f2e105b317f32-grid.avif",
+          "objectKey": "photos/6a1ffbf415fccb6b134ce9a0e97193a4f47779d7efebbfb17d1f2e105b317f32-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/6a1ffbf415fccb6b134ce9a0e97193a4f47779d7efebbfb17d1f2e105b317f32-large.avif",
+          "objectKey": "photos/6a1ffbf415fccb6b134ce9a0e97193a4f47779d7efebbfb17d1f2e105b317f32-large.avif",
+          "width": 2048,
+          "height": 3089
+        }
+      }
+    },
+    {
+      "filename": "001611750006.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:15 14:52:40",
+        "aperture": 2.8,
+        "shutterSpeed": "1/250",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "c8b4cb3eb14429a0d4411f26cf4dcff43e21ec63fa0786d372ef3b8ca047b27d",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750006.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/c8b4cb3eb14429a0d4411f26cf4dcff43e21ec63fa0786d372ef3b8ca047b27d-thumb.avif",
+          "objectKey": "photos/c8b4cb3eb14429a0d4411f26cf4dcff43e21ec63fa0786d372ef3b8ca047b27d-thumb.avif",
+          "width": 480,
+          "height": 317
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/c8b4cb3eb14429a0d4411f26cf4dcff43e21ec63fa0786d372ef3b8ca047b27d-grid.avif",
+          "objectKey": "photos/c8b4cb3eb14429a0d4411f26cf4dcff43e21ec63fa0786d372ef3b8ca047b27d-grid.avif",
+          "width": 960,
+          "height": 634
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/c8b4cb3eb14429a0d4411f26cf4dcff43e21ec63fa0786d372ef3b8ca047b27d-large.avif",
+          "objectKey": "photos/c8b4cb3eb14429a0d4411f26cf4dcff43e21ec63fa0786d372ef3b8ca047b27d-large.avif",
+          "width": 2048,
+          "height": 1352
+        }
+      }
+    },
+    {
+      "filename": "001611750009.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:15 14:48:04",
+        "aperture": 4,
+        "shutterSpeed": "1/1000",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "53dd0aa4ca16b536ac5bb6e823da82e548fca511f2779b86a3293bdfc209d2ce",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750009.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/53dd0aa4ca16b536ac5bb6e823da82e548fca511f2779b86a3293bdfc209d2ce-thumb.avif",
+          "objectKey": "photos/53dd0aa4ca16b536ac5bb6e823da82e548fca511f2779b86a3293bdfc209d2ce-thumb.avif",
+          "width": 480,
+          "height": 317
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/53dd0aa4ca16b536ac5bb6e823da82e548fca511f2779b86a3293bdfc209d2ce-grid.avif",
+          "objectKey": "photos/53dd0aa4ca16b536ac5bb6e823da82e548fca511f2779b86a3293bdfc209d2ce-grid.avif",
+          "width": 960,
+          "height": 634
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/53dd0aa4ca16b536ac5bb6e823da82e548fca511f2779b86a3293bdfc209d2ce-large.avif",
+          "objectKey": "photos/53dd0aa4ca16b536ac5bb6e823da82e548fca511f2779b86a3293bdfc209d2ce-large.avif",
+          "width": 2048,
+          "height": 1352
+        }
+      }
+    },
+    {
+      "filename": "001611750012.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:15 14:38:32",
+        "aperture": 4,
+        "shutterSpeed": "1/1000",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "e57fd2f1db77ae128f8be8423915b5783964cba37dc22847654e645d11292985",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750012.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/e57fd2f1db77ae128f8be8423915b5783964cba37dc22847654e645d11292985-thumb.avif",
+          "objectKey": "photos/e57fd2f1db77ae128f8be8423915b5783964cba37dc22847654e645d11292985-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/e57fd2f1db77ae128f8be8423915b5783964cba37dc22847654e645d11292985-grid.avif",
+          "objectKey": "photos/e57fd2f1db77ae128f8be8423915b5783964cba37dc22847654e645d11292985-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/e57fd2f1db77ae128f8be8423915b5783964cba37dc22847654e645d11292985-large.avif",
+          "objectKey": "photos/e57fd2f1db77ae128f8be8423915b5783964cba37dc22847654e645d11292985-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611750022.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:14 19:52:31",
+        "aperture": 2.8,
+        "shutterSpeed": "1/60",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "c9c389589eb31513e605f3d88f864c49cf973c0f93a2a851d63c9ce8076ed751",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750022.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/c9c389589eb31513e605f3d88f864c49cf973c0f93a2a851d63c9ce8076ed751-thumb.avif",
+          "objectKey": "photos/c9c389589eb31513e605f3d88f864c49cf973c0f93a2a851d63c9ce8076ed751-thumb.avif",
+          "width": 480,
+          "height": 316
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/c9c389589eb31513e605f3d88f864c49cf973c0f93a2a851d63c9ce8076ed751-grid.avif",
+          "objectKey": "photos/c9c389589eb31513e605f3d88f864c49cf973c0f93a2a851d63c9ce8076ed751-grid.avif",
+          "width": 960,
+          "height": 632
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/c9c389589eb31513e605f3d88f864c49cf973c0f93a2a851d63c9ce8076ed751-large.avif",
+          "objectKey": "photos/c9c389589eb31513e605f3d88f864c49cf973c0f93a2a851d63c9ce8076ed751-large.avif",
+          "width": 2048,
+          "height": 1349
+        }
+      }
+    },
+    {
+      "filename": "001611750024.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:12 17:39:41",
+        "aperture": 11,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon nFD 50mm f/1.4",
+        "focalLength": "50.0 mm"
+      },
+      "id": "e2b20fcdf267f91b4c337b86dcfdc040ccf5b0b6615ebefb0f593910a1b01130",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750024.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/e2b20fcdf267f91b4c337b86dcfdc040ccf5b0b6615ebefb0f593910a1b01130-thumb.avif",
+          "objectKey": "photos/e2b20fcdf267f91b4c337b86dcfdc040ccf5b0b6615ebefb0f593910a1b01130-thumb.avif",
+          "width": 480,
+          "height": 313
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/e2b20fcdf267f91b4c337b86dcfdc040ccf5b0b6615ebefb0f593910a1b01130-grid.avif",
+          "objectKey": "photos/e2b20fcdf267f91b4c337b86dcfdc040ccf5b0b6615ebefb0f593910a1b01130-grid.avif",
+          "width": 960,
+          "height": 626
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/e2b20fcdf267f91b4c337b86dcfdc040ccf5b0b6615ebefb0f593910a1b01130-large.avif",
+          "objectKey": "photos/e2b20fcdf267f91b4c337b86dcfdc040ccf5b0b6615ebefb0f593910a1b01130-large.avif",
+          "width": 2048,
+          "height": 1336
+        }
+      }
+    },
+    {
+      "filename": "001611750025.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:10 16:37:43",
+        "aperture": 5.6,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 100mm 1:2.8",
+        "focalLength": "100.0 mm"
+      },
+      "id": "660c1cd23953dbceb48a2b247e3df134a84c080270668499178f88c5827876ac",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750025.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/660c1cd23953dbceb48a2b247e3df134a84c080270668499178f88c5827876ac-thumb.avif",
+          "objectKey": "photos/660c1cd23953dbceb48a2b247e3df134a84c080270668499178f88c5827876ac-thumb.avif",
+          "width": 480,
+          "height": 318
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/660c1cd23953dbceb48a2b247e3df134a84c080270668499178f88c5827876ac-grid.avif",
+          "objectKey": "photos/660c1cd23953dbceb48a2b247e3df134a84c080270668499178f88c5827876ac-grid.avif",
+          "width": 960,
+          "height": 636
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/660c1cd23953dbceb48a2b247e3df134a84c080270668499178f88c5827876ac-large.avif",
+          "objectKey": "photos/660c1cd23953dbceb48a2b247e3df134a84c080270668499178f88c5827876ac-large.avif",
+          "width": 2048,
+          "height": 1358
+        }
+      }
+    },
+    {
+      "filename": "001611750032.jpg",
+      "roll": "2026-009",
+      "metadata": {
+        "date": "2026:03:10 16:11:35",
+        "aperture": 8,
+        "shutterSpeed": "1/500",
+        "iso": 400,
+        "film": "Ultramax 400",
+        "cameraModel": "Canon A-1",
+        "lensModel": "Canon FD 28mm 1:2.8",
+        "focalLength": "28.0 mm"
+      },
+      "id": "60e80c3d4b3ea783f5823a7f8ec9e823ea7bfc2352e246cbe9a835741186e50a",
+      "sourcePath": "2026-009 - Canon A-1, Ultramax 400/001611750032.jpg",
+      "images": {
+        "thumb": {
+          "url": "https://photos.geext.xyz/photos/60e80c3d4b3ea783f5823a7f8ec9e823ea7bfc2352e246cbe9a835741186e50a-thumb.avif",
+          "objectKey": "photos/60e80c3d4b3ea783f5823a7f8ec9e823ea7bfc2352e246cbe9a835741186e50a-thumb.avif",
+          "width": 480,
+          "height": 724
+        },
+        "grid": {
+          "url": "https://photos.geext.xyz/photos/60e80c3d4b3ea783f5823a7f8ec9e823ea7bfc2352e246cbe9a835741186e50a-grid.avif",
+          "objectKey": "photos/60e80c3d4b3ea783f5823a7f8ec9e823ea7bfc2352e246cbe9a835741186e50a-grid.avif",
+          "width": 960,
+          "height": 1448
+        },
+        "large": {
+          "url": "https://photos.geext.xyz/photos/60e80c3d4b3ea783f5823a7f8ec9e823ea7bfc2352e246cbe9a835741186e50a-large.avif",
+          "objectKey": "photos/60e80c3d4b3ea783f5823a7f8ec9e823ea7bfc2352e246cbe9a835741186e50a-large.avif",
           "width": 2048,
           "height": 3089
         }
