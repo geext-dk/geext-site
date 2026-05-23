@@ -16,7 +16,8 @@ import sharp from "sharp";
 const DEFAULT_SOURCE_DIR = path.join(os.homedir(), "iCloud/Data/darktable_exported");
 const SOURCE_DIR = process.env.PHOTO_SOURCE_DIR ?? DEFAULT_SOURCE_DIR;
 const OUTPUT_JSON = process.env.PHOTO_OUTPUT_JSON ?? "data/photos.json";
-const R2_PREFIX = normalizePrefix(process.env.R2_PREFIX ?? "photos");
+const PHOTO_R2_PREFIX = normalizePrefix(process.env.R2_PREFIX ?? "photos");
+const IMAGE_R2_PREFIX = normalizePrefix(process.env.IMAGE_R2_PREFIX ?? "images");
 const R2_BUCKET = process.env.R2_BUCKET;
 const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID;
 const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID;
@@ -36,7 +37,15 @@ const VARIANTS = [
 ];
 
 function usage() {
-  console.error(`Sync exported photos to Cloudflare R2 and write a JSON photo catalog.
+  console.error(`Sync images to Cloudflare R2.
+
+Usage:
+  node scripts/sync-photos-to-r2.mjs
+  node scripts/sync-photos-to-r2.mjs image <source-file>
+
+Commands:
+  photos               Sync exported photos and write data/photos.json. This is the default.
+  image <source-file>  Upload one image as AVIF without resizing and print its public URL.
 
 Required environment:
   R2_BUCKET             Cloudflare R2 bucket name
@@ -48,16 +57,25 @@ Required environment:
 Optional environment:
   PHOTO_SOURCE_DIR      Source hierarchy to walk
   PHOTO_OUTPUT_JSON     Output JSON path
-  R2_PREFIX             Object key prefix
+  R2_PREFIX             Photo object key prefix, default photos
+  IMAGE_R2_PREFIX       Single-image object key prefix, default images
   R2_UPLOAD_CONCURRENCY Number of simultaneous S3 uploads, default 6
 
-Example:
+Photo example:
   R2_BUCKET=my-bucket \\
   R2_ACCOUNT_ID=abc123 \\
   R2_ACCESS_KEY_ID=... \\
   R2_SECRET_ACCESS_KEY=... \\
   R2_PUBLIC_BASE_URL=https://photos.example.com \\
-  node scripts/sync-photos-to-r2.mjs`);
+  node scripts/sync-photos-to-r2.mjs
+
+Image example:
+  R2_BUCKET=my-bucket \\
+  R2_ACCOUNT_ID=abc123 \\
+  R2_ACCESS_KEY_ID=... \\
+  R2_SECRET_ACCESS_KEY=... \\
+  R2_PUBLIC_BASE_URL=https://photos.example.com \\
+  node scripts/sync-photos-to-r2.mjs image ./avatar.jpg`);
 }
 
 function log(message) {
@@ -148,6 +166,14 @@ async function pathExists(filePath) {
   try {
     await fs.access(filePath);
     return true;
+  } catch {
+    return false;
+  }
+}
+
+async function isFile(filePath) {
+  try {
+    return (await fs.stat(filePath)).isFile();
   } catch {
     return false;
   }
@@ -326,6 +352,14 @@ async function makeVariant(sourcePath, destinationPath, targetWidth) {
     .toFile(destinationPath);
 }
 
+async function makeUploadedImage(sourcePath, destinationPath) {
+  await sharp(sourcePath)
+    .rotate()
+    .keepIccProfile()
+    .avif({ quality: AVIF_QUALITY, effort: AVIF_EFFORT })
+    .toFile(destinationPath);
+}
+
 function createR2Client() {
   return new S3Client({
     region: "auto",
@@ -337,16 +371,16 @@ function createR2Client() {
   });
 }
 
-async function listExistingObjectKeys(client) {
+async function listExistingObjectKeys(client, prefix) {
   const keys = new Set();
   let continuationToken;
 
-  log(`list existing R2 objects: ${R2_PREFIX}/`);
+  log(`list existing R2 objects: ${prefix}/`);
 
   do {
     const response = await client.send(new ListObjectsV2Command({
       Bucket: R2_BUCKET,
-      Prefix: `${R2_PREFIX}/`,
+      Prefix: `${prefix}/`,
       ContinuationToken: continuationToken,
     }));
 
@@ -407,15 +441,28 @@ function scaledSize(originalSize, targetWidth) {
   };
 }
 
+function publicUrlForObjectKey(objectKey) {
+  return `${R2_PUBLIC_BASE_URL}/${encodeObjectKey(objectKey)}`;
+}
+
 function imageJsonForVariant(variant, sourceHash, size) {
-  const objectKey = `${R2_PREFIX}/${sourceHash}-${variant}${OUTPUT_EXTENSION}`;
-  const url = `${R2_PUBLIC_BASE_URL}/${encodeObjectKey(objectKey)}`;
+  const objectKey = `${PHOTO_R2_PREFIX}/${sourceHash}-${variant}${OUTPUT_EXTENSION}`;
+  const url = publicUrlForObjectKey(objectKey);
 
   return {
     url,
     objectKey,
     width: size.width,
     height: size.height,
+  };
+}
+
+function uploadedImageObjectForHash(sourceHash) {
+  const objectKey = `${IMAGE_R2_PREFIX}/${sourceHash}${OUTPUT_EXTENSION}`;
+
+  return {
+    objectKey,
+    url: publicUrlForObjectKey(objectKey),
   };
 }
 
@@ -475,12 +522,7 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
   };
 }
 
-async function main() {
-  if (process.argv.includes("-h") || process.argv.includes("--help")) {
-    usage();
-    return;
-  }
-
+function validateR2Environment(prefix, prefixName) {
   if (!R2_BUCKET) {
     die("R2_BUCKET is required");
   }
@@ -501,10 +543,13 @@ async function main() {
     die("R2_PUBLIC_BASE_URL is required");
   }
 
-  if (!R2_PREFIX) {
-    die("R2_PREFIX must not be empty");
+  if (!prefix) {
+    die(`${prefixName} must not be empty`);
   }
+}
 
+async function syncPhotos() {
+  validateR2Environment(PHOTO_R2_PREFIX, "R2_PREFIX");
   await requireCommand("exiftool");
 
   if (!(await pathExists(SOURCE_DIR))) {
@@ -521,7 +566,7 @@ async function main() {
     const photos = [];
     const uploadQueue = [];
     const sourceFiles = await walkImages(sourceRoot);
-    const existingObjectKeys = await listExistingObjectKeys(client);
+    const existingObjectKeys = await listExistingObjectKeys(client, PHOTO_R2_PREFIX);
 
     for (const sourcePath of sourceFiles) {
       photos.push(await photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue, existingObjectKeys));
@@ -554,6 +599,68 @@ async function main() {
   } finally {
     await fs.rm(tempRoot, { recursive: true, force: true });
   }
+}
+
+async function uploadImage(args) {
+  const [sourcePathArg] = args;
+
+  if (!sourcePathArg) {
+    die("image source file is required");
+  }
+
+  const sourcePath = path.resolve(sourcePathArg);
+
+  if (!(await isFile(sourcePath))) {
+    die(`image source file does not exist: ${sourcePath}`);
+  }
+
+  validateR2Environment(IMAGE_R2_PREFIX, "IMAGE_R2_PREFIX");
+  await requireCommand("exiftool");
+
+  const sourceHash = await hashFile(sourcePath);
+  const { objectKey, url } = uploadedImageObjectForHash(sourceHash);
+  const tempRoot = await fs.mkdtemp(path.join(os.tmpdir(), "image-r2-sync-"));
+  const sanitizedPath = path.join(tempRoot, `original${path.extname(sourcePath).toLowerCase()}`);
+  const imagePath = path.join(tempRoot, `image${OUTPUT_EXTENSION}`);
+  const client = createR2Client();
+
+  try {
+    const existingObjectKeys = await listExistingObjectKeys(client, IMAGE_R2_PREFIX);
+
+    if (existingObjectKeys.has(objectKey)) {
+      log(`skip existing: ${objectKey}`);
+      console.log(url);
+      return;
+    }
+
+    await sanitizeOriginal(sourcePath, sanitizedPath);
+    await makeUploadedImage(sanitizedPath, imagePath);
+    await uploadObject(client, objectKey, imagePath, OUTPUT_CONTENT_TYPE);
+    console.log(url);
+  } finally {
+    await fs.rm(tempRoot, { recursive: true, force: true });
+  }
+}
+
+async function main() {
+  const args = process.argv.slice(2);
+
+  if (args.includes("-h") || args.includes("--help")) {
+    usage();
+    return;
+  }
+
+  if (args.length === 0 || args[0] === "photos") {
+    await syncPhotos();
+    return;
+  }
+
+  if (args[0] === "image") {
+    await uploadImage(args.slice(1));
+    return;
+  }
+
+  die(`unknown command: ${args[0]}`);
 }
 
 main().catch((error) => {

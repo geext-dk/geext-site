@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "sync:photos": "node scripts/sync-photos-to-r2.mjs"
+    "sync:photos": "node scripts/sync-photos-to-r2.mjs",
+    "sync:image": "node scripts/sync-photos-to-r2.mjs image"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
