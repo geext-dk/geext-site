@@ -100,13 +100,17 @@ function metadataRows(photo: Photo) {
 	}
 
 	.photo-button {
-		display: block;
+		display: grid;
+		place-items: center;
+		position: relative;
 		width: 100%;
+		aspect-ratio: 1;
 		padding: 0;
 		border: 0;
 		border-radius: 0;
 		background: transparent;
 		cursor: zoom-in;
+		overflow: hidden;
 	}
 
 	.photo-button:focus-visible {
@@ -116,9 +120,11 @@ function metadataRows(photo: Photo) {
 
 	.photo-button img {
 		display: block;
+		position: absolute;
+		inset: 0;
 		width: 100%;
-		height: auto;
-		background: #e8e6df;
+		height: 100%;
+		object-fit: contain;
 	}
 
 	figcaption {
