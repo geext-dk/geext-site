@@ -61,7 +61,7 @@ const socialLinks = profile.socialLinks.map((link) => {
 			<div class="section-heading">
 				<div>
 					<h2 id="photography-title">Photography</h2>
-					<p>Five most recent photos from the archive.</p>
+					<p>Most recent photos from the archive.</p>
 				</div>
 				<a href="/photography/">View all</a>
 			</div>
@@ -72,7 +72,7 @@ const socialLinks = profile.socialLinks.map((link) => {
 						<img
 							src={photo.images.grid.url}
 							srcset={`${photo.images.thumb.url} 480w, ${photo.images.grid.url} 960w`}
-							sizes="(max-width: 720px) 45vw, (max-width: 1100px) 30vw, 14rem"
+							sizes="(max-width: 700px) 33vw, (max-width: 900px) 25vw, 14rem"
 							width={photo.images.grid.width ?? undefined}
 							height={photo.images.grid.height ?? undefined}
 							alt=""
@@ -332,7 +332,11 @@ const socialLinks = profile.socialLinks.map((link) => {
 
 	@media (max-width: 900px) {
 		.recent-photos {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+
+		.recent-photo:nth-child(n + 5) {
+			display: none;
 		}
 
 		.project-list {
@@ -369,8 +373,12 @@ const socialLinks = profile.socialLinks.map((link) => {
 		}
 
 		.recent-photos {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 			gap: 0.75rem;
+		}
+
+		.recent-photo:nth-child(n + 4) {
+			display: none;
 		}
 	}
 </style>
