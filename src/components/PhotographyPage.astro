@@ -17,7 +17,6 @@ const { title, subtitle, page, basePath, cameras, films } = Astro.props;
 
 <main class="photography-page">
 	<header class="page-header">
-		<a class="home-link" href="/">Home</a>
 		<h1>{title}</h1>
 		<p>{subtitle}</p>
 	</header>
@@ -60,13 +59,6 @@ const { title, subtitle, page, basePath, cameras, films } = Astro.props;
 		display: grid;
 		gap: 0.45rem;
 		margin-bottom: 2rem;
-	}
-
-	.home-link {
-		width: fit-content;
-		color: #555;
-		font-size: 0.9rem;
-		text-underline-offset: 0.18em;
 	}
 
 	h1,

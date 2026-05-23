@@ -1,24 +1,293 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { photos } from "../lib/photos";
+
+const recentPhotos = photos.slice(0, 5);
+
+const projects = [
+	{
+		name: "Project One",
+		description: "A short placeholder description for a featured project.",
+		href: "#",
+	},
+	{
+		name: "Project Two",
+		description: "A short placeholder description for another project.",
+		href: "#",
+	},
+	{
+		name: "Project Three",
+		description: "A short placeholder description for future work.",
+		href: "#",
+	},
+];
 ---
 
-<Layout>
-	<main>
-		<a href="/photography/">Photography</a>
+<Layout title="Denis Karpovskii">
+	<main class="dashboard">
+		<section class="profile-section" aria-labelledby="profile-title">
+			<div class="profile-content">
+				<div class="avatar-placeholder" aria-hidden="true"></div>
+				<h1 id="profile-title">Denis Karpovskii</h1>
+				<p>
+					About placeholder. A short personal introduction will live here soon.
+				</p>
+			</div>
+		</section>
+
+		<section class="dashboard-section photography-overview" aria-labelledby="photography-title">
+			<div class="section-heading">
+				<div>
+					<h2 id="photography-title">Photography</h2>
+					<p>Five most recent photos from the archive.</p>
+				</div>
+				<a href="/photography/">View all</a>
+			</div>
+
+			<div class="recent-photos">
+				{recentPhotos.map((photo, index) => (
+					<a class="recent-photo" href="/photography/" aria-label={`Open photography archive from recent photo ${index + 1}`}>
+						<img
+							src={photo.images.grid.url}
+							srcset={`${photo.images.thumb.url} 480w, ${photo.images.grid.url} 960w`}
+							sizes="(max-width: 720px) 45vw, (max-width: 1100px) 30vw, 14rem"
+							width={photo.images.grid.width ?? undefined}
+							height={photo.images.grid.height ?? undefined}
+							alt=""
+							loading="lazy"
+							decoding="async"
+						/>
+					</a>
+				))}
+			</div>
+		</section>
+
+		<section id="projects" class="dashboard-section projects-section" aria-labelledby="projects-title">
+			<div class="section-heading">
+				<div>
+					<h2 id="projects-title">Projects</h2>
+					<p>Selected work and experiments.</p>
+				</div>
+			</div>
+
+			<div class="project-list">
+				{projects.map((project) => (
+					<a class="project-entry" href={project.href}>
+						<span>{project.name}</span>
+						<p>{project.description}</p>
+					</a>
+				))}
+			</div>
+		</section>
 	</main>
 </Layout>
 
 <style>
-	main {
-		display: grid;
-		min-height: 100vh;
-		place-items: center;
-		padding: 1rem;
+	.dashboard {
+		width: min(100% - 2rem, 76rem);
+		margin: 0 auto;
+		padding: 0 0 4rem;
 	}
 
-	a {
+	.profile-section {
+		display: grid;
+		place-items: center;
+		min-height: min(32rem, calc(100vh - 10rem));
+		padding: 4rem 1.5rem;
+		border: 1px solid #ddd8ce;
+		background:
+			linear-gradient(rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.45)),
+			linear-gradient(135deg, #d8d2c5, #aeb7ab 48%, #6f7c7c);
+		background-position: center;
+		background-size: cover;
+		color: #fff;
+		text-align: center;
+	}
+
+	.profile-content {
+		display: grid;
+		justify-items: center;
+		gap: 0.75rem;
+		max-width: 38rem;
+	}
+
+	.avatar-placeholder {
+		width: clamp(7rem, 16vw, 10rem);
+		aspect-ratio: 1;
+		border: 2px solid rgba(255, 255, 255, 0.85);
+		border-radius: 50%;
+		background:
+			linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08)),
+			rgba(255, 255, 255, 0.18);
+		box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.18);
+	}
+
+	h1,
+	h2,
+	p {
+		margin: 0;
+	}
+
+	h1 {
+		font-size: clamp(2.25rem, 5vw, 5rem);
+		font-weight: 500;
+		letter-spacing: 0;
+		line-height: 1;
+	}
+
+	.profile-content p {
+		max-width: 34rem;
+		color: rgba(255, 255, 255, 0.86);
+		font-size: 1.05rem;
+		line-height: 1.6;
+	}
+
+	.dashboard-section {
+		padding: 4rem 0 0;
+	}
+
+	.section-heading {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-bottom: 1.25rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid #ddd8ce;
+	}
+
+	.section-heading div {
+		display: grid;
+		gap: 0.35rem;
+	}
+
+	h2 {
 		color: #111;
-		font-size: 1rem;
+		font-size: clamp(1.5rem, 3vw, 2.4rem);
+		font-weight: 500;
+		letter-spacing: 0;
+		line-height: 1.05;
+	}
+
+	.section-heading p {
+		color: #555;
+		font-size: 0.98rem;
+		line-height: 1.5;
+	}
+
+	.section-heading a {
+		flex: 0 0 auto;
+		color: #111;
+		font-size: 0.95rem;
 		text-underline-offset: 0.18em;
+	}
+
+	.recent-photos {
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.recent-photo {
+		display: block;
+		position: relative;
+		aspect-ratio: 1;
+		overflow: hidden;
+		background: #ece8df;
+	}
+
+	.recent-photo img {
+		display: block;
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 180ms ease;
+	}
+
+	.recent-photo:hover img {
+		transform: scale(1.03);
+	}
+
+	.project-list {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		border-top: 1px solid #ddd8ce;
+	}
+
+	.project-entry {
+		display: grid;
+		gap: 0.45rem;
+		min-width: 0;
+		padding: 1.25rem 1.25rem 1.35rem 0;
+		border-bottom: 1px solid #ddd8ce;
+		color: #111;
+		text-decoration: none;
+	}
+
+	.project-entry + .project-entry {
+		padding-left: 1.25rem;
+		border-left: 1px solid #ddd8ce;
+	}
+
+	.project-entry span {
+		font-size: 1.05rem;
+		font-weight: 600;
+		line-height: 1.25;
+	}
+
+	.project-entry p {
+		color: #555;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.project-entry:hover span {
+		text-decoration: underline;
+		text-underline-offset: 0.18em;
+	}
+
+	@media (max-width: 900px) {
+		.recent-photos {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+
+		.project-list {
+			grid-template-columns: 1fr;
+		}
+
+		.project-entry,
+		.project-entry + .project-entry {
+			padding-right: 0;
+			padding-left: 0;
+			border-left: 0;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.dashboard {
+			width: min(100% - 1.25rem, 76rem);
+			padding-bottom: 3rem;
+		}
+
+		.profile-section {
+			min-height: 28rem;
+			padding: 3rem 1rem;
+		}
+
+		.dashboard-section {
+			padding-top: 3rem;
+		}
+
+		.section-heading {
+			align-items: start;
+			flex-direction: column;
+		}
+
+		.recent-photos {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 0.75rem;
+		}
 	}
 </style>

@@ -6,7 +6,7 @@ import { cameras, films, paginate, photoCountLabel, photos } from "../../lib/pho
 const page = paginate(photos, 1);
 ---
 
-<Layout>
+<Layout title="Photography | Denis Karpovskii">
 	<PhotographyPage
 		title="Photography"
 		subtitle={`${photoCountLabel(page.totalPhotos)}`}

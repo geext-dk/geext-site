@@ -30,7 +30,7 @@ const { film, pageNumber } = Astro.props;
 const page = paginate(photosForFacet("film", film.slug), pageNumber);
 ---
 
-<Layout>
+<Layout title={`${film.name} Page ${page.currentPage} | Denis Karpovskii`}>
 	<PhotographyPage
 		title={film.name}
 		subtitle={`${photoCountLabel(page.totalPhotos)} shot on this film`}
