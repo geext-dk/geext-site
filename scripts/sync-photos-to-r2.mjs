@@ -239,16 +239,30 @@ function subjectValue(source, prefix) {
   return value ? value.replace(new RegExp(`^${prefix}\\s*`), "") : null;
 }
 
-function rollFilmFallback(roll) {
-  const commaIndex = roll.indexOf(",");
+function rollIdFromFolder(folder) {
+  return folder.trim().split(/\s+/, 1)[0] || folder;
+}
+
+function rollCameraFallback(folder) {
+  const [, afterDash] = folder.split(" - ");
+  if (!afterDash) {
+    return null;
+  }
+
+  const [camera] = afterDash.split(",");
+  return camera.trim() || null;
+}
+
+function rollFilmFallback(folder) {
+  const commaIndex = folder.indexOf(",");
   if (commaIndex === -1) {
     return null;
   }
 
-  return roll.slice(commaIndex + 1).trim() || null;
+  return folder.slice(commaIndex + 1).trim() || null;
 }
 
-async function metadataForSource(sourcePath, roll, filename) {
+async function metadataForSource(sourcePath, roll, rollFolder, filename) {
   const data = await exifJson(sourcePath, [
     "-DateTimeOriginal",
     "-CreateDate",
@@ -275,8 +289,11 @@ async function metadataForSource(sourcePath, roll, filename) {
       aperture: firstPresent(data, ["Aperture", "FNumber"]),
       shutterSpeed: firstPresent(data, ["ExposureTime", "ShutterSpeed"]),
       iso: data.ISO ?? null,
-      film: subjectValue(data, "Film:") ?? rollFilmFallback(roll),
-      cameraModel: firstPresent(data, ["CameraModelName", "Model"]) ?? subjectValue(data, "Camera:"),
+      film: subjectValue(data, "Film:") ?? rollFilmFallback(rollFolder),
+      cameraModel:
+        firstPresent(data, ["CameraModelName", "Model"]) ??
+        subjectValue(data, "Camera:") ??
+        rollCameraFallback(rollFolder),
       lensModel: firstPresent(data, ["LensModel", "Lens"]),
       focalLength: firstPresent(data, ["FocalLength"]),
     },
@@ -404,7 +421,8 @@ function imageJsonForVariant(variant, sourceHash, size) {
 
 async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue, existingObjectKeys) {
   const relativePath = path.relative(sourceRoot, sourcePath);
-  const roll = path.dirname(relativePath);
+  const rollFolder = path.basename(path.dirname(relativePath));
+  const roll = rollIdFromFolder(rollFolder);
   const filename = path.basename(sourcePath);
   const extension = path.extname(filename).toLowerCase();
   const sourceHash = await hashFile(sourcePath);
@@ -423,7 +441,7 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
 
   log(`process: ${relativePath}`);
 
-  const base = await metadataForSource(sourcePath, roll, filename);
+  const base = await metadataForSource(sourcePath, roll, rollFolder, filename);
 
   if (VARIANTS.every(([name]) => existingObjectKeys.has(images[name].objectKey))) {
     log(`skip existing variants: ${relativePath}`);

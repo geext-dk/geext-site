@@ -129,9 +129,17 @@ function normalizePhoto(photo: SourcePhoto): Photo {
   };
 }
 
+function comparePhotos(a: Photo, b: Photo) {
+  return (
+    b.roll.localeCompare(a.roll, undefined, { numeric: true, sensitivity: "base" }) ||
+    b.timestamp - a.timestamp ||
+    a.filename.localeCompare(b.filename)
+  );
+}
+
 export const photos = (catalog.photos as SourcePhoto[])
   .map(normalizePhoto)
-  .sort((a, b) => b.timestamp - a.timestamp || a.filename.localeCompare(b.filename));
+  .sort(comparePhotos);
 
 export function paginate(items: Photo[], page: number): PaginatedPhotos {
   const totalPages = Math.max(1, Math.ceil(items.length / PAGE_SIZE));

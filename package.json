@@ -13,6 +13,7 @@
     "sync:photos": "node scripts/sync-photos-to-r2.mjs"
   },
   "dependencies": {
+    "@lucide/astro": "^1.16.0",
     "astro": "^6.3.3"
   },
   "devDependencies": {

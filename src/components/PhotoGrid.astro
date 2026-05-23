@@ -8,14 +8,6 @@ interface Props {
 
 const { photos } = Astro.props;
 
-function imageSizeLabel(width: number | null, height: number | null) {
-	if (!width || !height) {
-		return null;
-	}
-
-	return `${width} x ${height}`;
-}
-
 function apertureLabel(value: string | number | null) {
 	if (!value) {
 		return null;
@@ -28,47 +20,35 @@ function apertureLabel(value: string | number | null) {
 
 function metadataRows(photo: Photo) {
 	const rows = [
-		["Filename", photo.filename],
-		["Roll", photo.roll],
-		["Date", photo.dateDisplay],
-		["Camera", photo.camera],
-		["Film", photo.film],
-		["Lens", photo.metadata.lensModel],
-		["Focal length", photo.metadata.focalLength],
-		["Aperture", apertureLabel(photo.metadata.aperture)],
-		["Shutter", photo.metadata.shutterSpeed],
-		["ISO", photo.metadata.iso ? String(photo.metadata.iso) : null],
-		["Large image", imageSizeLabel(photo.images.large.width, photo.images.large.height)],
-		[
-			"Original image",
-			photo.images.original
-				? imageSizeLabel(photo.images.original.width, photo.images.original.height)
-				: null,
-		],
+		{ icon: "camera", label: "Camera", value: photo.camera },
+		{ icon: "lens", label: "Lens", value: photo.metadata.lensModel },
+		{ icon: "film", label: "Film", value: photo.film },
+		{ icon: "date", label: "Date", value: photo.dateDisplay },
+		{ icon: "shutter", label: "Shutter", value: photo.metadata.shutterSpeed },
+		{ icon: "aperture", label: "Aperture", value: apertureLabel(photo.metadata.aperture) },
 	];
 
-	return rows
-		.filter(([, value]) => value)
-		.map(([label, value]) => ({ label, value }));
+	return rows.map((row) => ({
+		...row,
+		value: row.value ? String(row.value) : "-",
+	}));
 }
 ---
 
 <div class="photo-grid">
-	{photos.map((photo) => (
+	{photos.map((photo, index) => (
 		<figure class="photo">
 			<button
 				class="photo-button"
 				type="button"
-				aria-label={`View ${photo.filename}`}
+				aria-label={`View photo ${index + 1}`}
 				data-large-url={photo.images.large.url}
-				data-original-url={photo.images.original?.url ?? photo.images.large.url}
-				data-filename={photo.filename}
 				data-properties={JSON.stringify(metadataRows(photo))}
 			>
 				<img
 					src={photo.images.grid.url}
 					srcset={`${photo.images.thumb.url} 480w, ${photo.images.grid.url} 960w, ${photo.images.large.url} 2048w`}
-					sizes="(max-width: 720px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					sizes="(max-width: 720px) 50vw, (max-width: 1200px) 33vw, 25vw"
 					width={photo.images.grid.width ?? undefined}
 					height={photo.images.grid.height ?? undefined}
 					alt=""
@@ -76,11 +56,6 @@ function metadataRows(photo: Photo) {
 					decoding="async"
 				/>
 			</button>
-			<figcaption>
-				<span>{photo.dateDisplay}</span>
-				<span>{photo.camera}</span>
-				<span>{photo.film}</span>
-			</figcaption>
 		</figure>
 	))}
 </div>
@@ -90,8 +65,8 @@ function metadataRows(photo: Photo) {
 <style>
 	.photo-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-		gap: 2.25rem 1rem;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
 	}
 
 	.photo {
@@ -124,19 +99,12 @@ function metadataRows(photo: Photo) {
 		inset: 0;
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
+		object-fit: cover;
 	}
 
-	figcaption {
-		display: grid;
-		gap: 0.18rem;
-		padding-top: 0.65rem;
-		color: #333;
-		font-size: 0.82rem;
-		line-height: 1.35;
-	}
-
-	figcaption span:first-child {
-		color: #666;
+	@media (min-width: 42rem) {
+		.photo-grid {
+			grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+		}
 	}
 </style>

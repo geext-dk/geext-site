@@ -1,3 +1,12 @@
+---
+import { Aperture, Calendar, Camera, Film, LensConvex, Timer, X } from "@lucide/astro";
+
+const iconProps = {
+	size: 16,
+	"stroke-width": 1.75,
+};
+---
+
 <dialog class="photo-dialog" aria-label="Photo viewer">
 	<div class="photo-viewer">
 		<div class="viewer-image-wrap">
@@ -5,14 +14,20 @@
 		</div>
 		<aside class="viewer-details">
 			<div class="viewer-header">
-				<h2>Properties</h2>
-				<form method="dialog">
-					<button class="close-button" type="submit" aria-label="Close">x</button>
-				</form>
+				<button class="close-button" type="button" aria-label="Close">
+					<X {...iconProps} />
+				</button>
 			</div>
 			<dl class="property-list"></dl>
-			<a class="original-link" href="#" target="_blank" rel="noreferrer">Open original</a>
 		</aside>
+	</div>
+	<div class="property-icon-templates" hidden>
+		<template data-property-icon="date"><Calendar {...iconProps} /></template>
+		<template data-property-icon="camera"><Camera {...iconProps} /></template>
+		<template data-property-icon="film"><Film {...iconProps} /></template>
+		<template data-property-icon="lens"><LensConvex {...iconProps} /></template>
+		<template data-property-icon="aperture"><Aperture {...iconProps} /></template>
+		<template data-property-icon="shutter"><Timer {...iconProps} /></template>
 	</div>
 </dialog>
 
@@ -20,7 +35,45 @@
 	const dialog = document.querySelector(".photo-dialog");
 	const viewerImage = dialog?.querySelector(".viewer-image");
 	const propertyList = dialog?.querySelector(".property-list");
-	const originalLink = dialog?.querySelector(".original-link");
+	const closeButton = dialog?.querySelector(".close-button");
+	let isClosing = false;
+	let isScrollLocked = false;
+	let scrollY = 0;
+	const iconTemplates = new Map(
+		[...(dialog?.querySelectorAll("template[data-property-icon]") ?? [])].map((template) => [
+			template.dataset.propertyIcon,
+			template,
+		]),
+	);
+
+	function propertyTerm(icon, label) {
+		const term = document.createElement("dt");
+		const template = iconTemplates.get(icon);
+
+		term.className = "property-icon";
+		term.title = label;
+
+		if (template instanceof HTMLTemplateElement) {
+			const iconNode = template.content.cloneNode(true);
+			const svg = iconNode.firstElementChild;
+
+			if (svg) {
+				svg.setAttribute("aria-hidden", "true");
+				svg.setAttribute("focusable", "false");
+			}
+
+			term.append(iconNode);
+		} else {
+			term.textContent = label;
+		}
+
+		const accessibleLabel = document.createElement("span");
+		accessibleLabel.className = "visually-hidden";
+		accessibleLabel.textContent = label;
+		term.append(accessibleLabel);
+
+		return term;
+	}
 
 	function setProperties(properties) {
 		if (!propertyList) {
@@ -28,17 +81,73 @@
 		}
 
 		propertyList.replaceChildren(
-			...properties.flatMap(({ label, value }) => {
-				const term = document.createElement("dt");
+			...properties.map(({ icon, label, value }) => {
+				const property = document.createElement("div");
 				const description = document.createElement("dd");
 
-				term.textContent = label;
-				description.textContent = value;
+				property.className = "property";
+				description.textContent = value || "-";
+				property.append(propertyTerm(icon, label), description);
 
-				return [term, description];
+				return property;
 			}),
 		);
 	}
+
+	function closeDialog() {
+		if (!(dialog instanceof HTMLDialogElement) || isClosing || !dialog.open) {
+			return;
+		}
+
+		isClosing = true;
+		dialog.dataset.closing = "true";
+
+		window.setTimeout(() => {
+			dialog.close();
+			isClosing = false;
+			delete dialog.dataset.closing;
+			unlockPageScroll();
+		}, 180);
+	}
+
+	function lockPageScroll() {
+		if (isScrollLocked) {
+			return;
+		}
+
+		isScrollLocked = true;
+		scrollY = window.scrollY;
+		document.body.style.position = "fixed";
+		document.body.style.top = `-${scrollY}px`;
+		document.body.style.left = "0";
+		document.body.style.right = "0";
+		document.body.style.width = "100%";
+	}
+
+	function unlockPageScroll() {
+		if (!isScrollLocked) {
+			return;
+		}
+
+		isScrollLocked = false;
+		document.body.style.position = "";
+		document.body.style.top = "";
+		document.body.style.left = "";
+		document.body.style.right = "";
+		document.body.style.width = "";
+		window.scrollTo(0, scrollY);
+	}
+
+	dialog?.addEventListener("close", () => {
+		isClosing = false;
+		delete dialog.dataset.closing;
+		unlockPageScroll();
+	});
+
+	closeButton?.addEventListener("click", (event) => {
+		event.stopPropagation();
+		closeDialog();
+	});
 
 	document.querySelectorAll(".photo-button").forEach((button) => {
 		button.addEventListener("click", () => {
@@ -47,25 +156,25 @@
 			}
 
 			const properties = JSON.parse(button.dataset.properties ?? "[]");
-			const filename = button.dataset.filename ?? "";
-			const originalUrl = button.dataset.originalUrl ?? button.dataset.largeUrl ?? "#";
 
 			viewerImage.src = button.dataset.largeUrl ?? "";
-			viewerImage.alt = filename;
+			viewerImage.alt = "";
 			setProperties(properties);
 
-			if (originalLink instanceof HTMLAnchorElement) {
-				originalLink.href = originalUrl;
-			}
-
+			lockPageScroll();
 			dialog.showModal();
 		});
 	});
 
 	dialog?.addEventListener("click", (event) => {
 		if (event.target === dialog && dialog instanceof HTMLDialogElement) {
-			dialog.close();
+			closeDialog();
 		}
+	});
+
+	dialog?.addEventListener("cancel", (event) => {
+		event.preventDefault();
+		closeDialog();
 	});
 </script>
 
@@ -79,58 +188,71 @@
 		border: 0;
 		background: #111;
 		color: #fbfaf6;
+		opacity: 0;
+		transform: scale(0.96);
+	}
+
+	.photo-dialog[open] {
+		animation: modal-enter 180ms ease-out forwards;
+	}
+
+	.photo-dialog[data-closing="true"] {
+		animation: modal-exit 160ms ease-in forwards;
 	}
 
 	.photo-dialog::backdrop {
 		background: rgb(0 0 0 / 0.72);
+		animation: backdrop-enter 180ms ease-out forwards;
+	}
+
+	.photo-dialog[data-closing="true"]::backdrop {
+		animation: backdrop-exit 160ms ease-in forwards;
 	}
 
 	.photo-viewer {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(17rem, 21rem);
+		grid-template-rows: minmax(0, 1fr) auto;
 		width: 100%;
 		height: 100%;
 	}
 
 	.viewer-image-wrap {
-		display: grid;
+		position: relative;
 		min-height: 0;
-		place-items: center;
+		min-width: 0;
 		background: #0b0b0b;
+		overflow: hidden;
 	}
 
 	.viewer-image {
 		display: block;
-		max-width: 100%;
-		max-height: 100%;
-		width: auto;
-		height: auto;
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 
 	.viewer-details {
 		display: grid;
-		grid-template-rows: auto 1fr auto;
+		grid-template-rows: auto;
 		gap: 1rem;
 		min-width: 0;
 		padding: 1.25rem;
 		overflow: auto;
-		background: #fbfaf6;
-		color: #111;
+		background: #0b0b0b;
+		color: #fbfaf6;
 	}
 
 	.viewer-header {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-end;
 		gap: 1rem;
-	}
-
-	.viewer-header h2 {
-		margin: 0;
-		font-size: 0.9rem;
-		font-weight: 650;
-		letter-spacing: 0;
-		text-transform: uppercase;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 1;
 	}
 
 	.close-button {
@@ -139,59 +261,140 @@
 		height: 2rem;
 		place-items: center;
 		padding: 0;
-		border: 1px solid #d8d3c8;
-		background: transparent;
-		color: #111;
+		border: 0;
+		background: rgb(11 11 11 / 0.55);
+		color: #fbfaf6;
 		cursor: pointer;
 		font: inherit;
 		line-height: 1;
 	}
 
-	.close-button:focus-visible,
-	.original-link:focus-visible {
-		outline: 2px solid #111;
+	.close-button:focus-visible {
+		outline: 2px solid #fbfaf6;
 		outline-offset: 3px;
 	}
 
 	.property-list {
 		display: grid;
-		grid-template-columns: max-content minmax(0, 1fr);
-		gap: 0.65rem 1rem;
+		grid-template-columns: repeat(3, 18rem);
+		gap: 1.35rem 1.5rem;
 		align-content: start;
-		margin: 0;
-		font-size: 0.9rem;
+		justify-content: center;
+		width: min(100%, 58.5rem);
+		margin: 0 auto;
+		font-size: 1.35rem;
 		line-height: 1.35;
 	}
 
-	.property-list dt {
-		color: #666;
+	:global(.property) {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		align-items: center;
+		gap: 0.45rem;
+		min-width: 0;
 	}
 
-	.property-list dd {
+	.property-list :global(dt) {
+		color: #fbfaf6;
+	}
+
+	:global(.property-icon) {
+		display: grid;
+		width: 1.875rem;
+		height: 1.875rem;
+		place-items: center;
+	}
+
+	:global(.property-icon svg) {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.property-list :global(dd) {
 		margin: 0;
 		min-width: 0;
 		overflow-wrap: anywhere;
 	}
 
-	.original-link {
-		color: #111;
-		font-size: 0.92rem;
-		text-underline-offset: 0.18em;
+	:global(.visually-hidden) {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
 	}
 
-	@media (max-width: 760px) {
+	@media (max-width: 980px) {
 		.photo-dialog {
 			width: 100%;
 			height: 100%;
 		}
 
-		.photo-viewer {
-			grid-template-columns: 1fr;
-			grid-template-rows: minmax(0, 1fr) auto;
-		}
-
 		.viewer-details {
 			max-height: 42vh;
+		}
+
+		.property-list {
+			width: 100%;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			justify-content: stretch;
+		}
+	}
+
+	@keyframes modal-enter {
+		from {
+			opacity: 0;
+			transform: scale(0.96);
+		}
+
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes modal-exit {
+		from {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		to {
+			opacity: 0;
+			transform: scale(0.96);
+		}
+	}
+
+	@keyframes backdrop-enter {
+		from {
+			background: rgb(0 0 0 / 0);
+		}
+
+		to {
+			background: rgb(0 0 0 / 0.72);
+		}
+	}
+
+	@keyframes backdrop-exit {
+		from {
+			background: rgb(0 0 0 / 0.72);
+		}
+
+		to {
+			background: rgb(0 0 0 / 0);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.photo-dialog[open],
+		.photo-dialog[data-closing="true"],
+		.photo-dialog::backdrop,
+		.photo-dialog[data-closing="true"]::backdrop {
+			animation-duration: 1ms;
 		}
 	}
 </style>
