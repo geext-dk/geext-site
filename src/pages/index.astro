@@ -95,20 +95,17 @@ const socialLinks = profile.socialLinks.map((link) => {
 
 			<div class="project-list">
 				{featuredProjects.map((project) => {
-					const content = (
-						<>
-							<span>{project.title}</span>
-							<p>{project.description}</p>
-						</>
-					);
-
-					return project.url ? (
-						<a class="project-entry" href={project.url}>
-							{content}
-						</a>
-					) : (
+					return (
 						<article class="project-entry">
-							{content}
+							{project.url ? (
+								<a class="project-title-link" href={project.url}>{project.title}</a>
+							) : (
+								<span>{project.title}</span>
+							)}
+							<p>{project.description}</p>
+							{project.sourceUrl ? (
+								<a class="project-source" href={project.sourceUrl} target="_blank" rel="noreferrer">Source code</a>
+							) : null}
 						</article>
 					);
 				})}
@@ -300,12 +297,14 @@ const socialLinks = profile.socialLinks.map((link) => {
 
 	.project-entry {
 		display: grid;
+		justify-items: center;
 		gap: 0.45rem;
 		min-width: 0;
 		padding: 0 1.25rem 1.35rem 0;
 		margin-bottom: 1.25rem;
 		color: #111;
 		text-decoration: none;
+		text-align: center;
 	}
 
 	.project-entry + .project-entry {
@@ -313,10 +312,13 @@ const socialLinks = profile.socialLinks.map((link) => {
 		border-left: 1px solid #ddd8ce;
 	}
 
-	.project-entry span {
+	.project-entry span,
+	.project-title-link {
+		color: #111;
 		font-size: 1.05rem;
 		font-weight: 600;
 		line-height: 1.25;
+		text-decoration: none;
 	}
 
 	.project-entry p {
@@ -325,9 +327,33 @@ const socialLinks = profile.socialLinks.map((link) => {
 		line-height: 1.5;
 	}
 
-	a.project-entry:hover span {
+	.project-source {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.25rem;
+		margin-top: 0.15rem;
+		padding: 0 0.8rem;
+		border: 1px solid #111;
+		border-radius: 999px;
+		color: #111;
+		font-size: 0.95rem;
+		text-decoration: none;
+		transition:
+			background 180ms ease,
+			color 180ms ease;
+	}
+
+	.project-title-link:hover,
+	.project-title-link:focus-visible {
 		text-decoration: underline;
 		text-underline-offset: 0.18em;
+	}
+
+	.project-source:hover,
+	.project-source:focus-visible {
+		background: #111;
+		color: #fff;
 	}
 
 	@media (max-width: 900px) {

@@ -2,9 +2,10 @@
   "generatedAt": "2026-05-23T00:00:00.000Z",
   "projects": [
     {
-      "title": "Geext Site",
+      "title": "This website",
       "description": "My personal website with my protography and projects",
-      "image": "https://photos.geext.xyz/images/109cb2c22dcdbe34ab6d02725798a8fa6462a120dee2efb3c9731b4eea7b19cd.avif"
+      "image": "https://photos.geext.xyz/images/109cb2c22dcdbe34ab6d02725798a8fa6462a120dee2efb3c9731b4eea7b19cd.avif",
+      "sourceUrl": "https://github.com/geext-dk/geext-site"
     },
     {
       "title": "Grain Story",

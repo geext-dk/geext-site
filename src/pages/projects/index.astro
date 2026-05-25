@@ -19,9 +19,14 @@ import { projects } from "../../lib/projects";
 					<div class="project-copy">
 						<h2 id={`project-${project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{project.title}</h2>
 						<p>{project.description}</p>
-						{project.url ? (
-							<a class="learn-more" href={project.url}>Learn more</a>
-						) : null}
+						<div class="project-actions">
+							{project.url ? (
+								<a class="project-action" href={project.url}>Learn more</a>
+							) : null}
+							{project.sourceUrl ? (
+								<a class="project-action" href={project.sourceUrl} target="_blank" rel="noreferrer">Source code</a>
+							) : null}
+						</div>
 					</div>
 				</section>
 			))}
@@ -113,11 +118,38 @@ import { projects } from "../../lib/projects";
 		line-height: 1.05;
 	}
 
-	.learn-more {
+	.project-actions {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.75rem;
 		margin-top: 0.25rem;
+	}
+
+	.project-action {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.35rem;
+		padding: 0 0.9rem;
+		border: 1px solid #111;
+		border-radius: 999px;
 		color: #111;
 		font-size: 0.95rem;
-		text-underline-offset: 0.18em;
+		text-decoration: none;
+		transition:
+			background 180ms ease,
+			color 180ms ease;
+	}
+
+	.project-action:hover,
+	.project-action:focus-visible {
+		background: #111;
+		color: #fff;
+	}
+
+	.project-action:only-child {
+		margin-top: 0.25rem;
 	}
 
 	@media (max-width: 700px) {
