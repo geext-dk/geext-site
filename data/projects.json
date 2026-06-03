@@ -10,7 +10,9 @@
     {
       "title": "Grain Story",
       "description": "Shot logger & film roll tracker for film photographers",
-      "image": "/grain-story-icon.svg"
+      "image": "/grain-story-icon.svg",
+      "url": "https://apps.apple.com/app/id6766061193",
+      "linkType": "appstore"
     }
   ]
 }

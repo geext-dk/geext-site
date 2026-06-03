@@ -1,6 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { projects } from "../../lib/projects";
+
+const getProjectActionLabel = (linkType: "appstore" | "simple" | undefined) =>
+	linkType === "appstore" ? "Download on the App Store" : "Learn more";
 ---
 
 <Layout title="Projects | Denis Karpovskii">
@@ -21,7 +24,17 @@ import { projects } from "../../lib/projects";
 						<p>{project.description}</p>
 						<div class="project-actions">
 							{project.url ? (
-								<a class="project-action" href={project.url}>Learn more</a>
+								<a
+									class:list={["project-action", { "project-action-appstore": project.linkType === "appstore" }]}
+									href={project.url}
+									aria-label={`${getProjectActionLabel(project.linkType)}: ${project.title}`}
+								>
+									{project.linkType === "appstore" ? (
+										<img src="/download-on-appstore-icon.svg" alt="" width="120" height="40" loading="lazy" decoding="async" />
+									) : (
+										getProjectActionLabel(project.linkType)
+									)}
+								</a>
 							) : null}
 							{project.sourceUrl ? (
 								<a class="project-action" href={project.sourceUrl} target="_blank" rel="noreferrer">Source code</a>
@@ -142,10 +155,30 @@ import { projects } from "../../lib/projects";
 			color 180ms ease;
 	}
 
+	.project-action-appstore {
+		min-height: 2.5rem;
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+	}
+
+	.project-action-appstore img {
+		display: block;
+		width: 7.5rem;
+		height: 2.5rem;
+	}
+
 	.project-action:hover,
 	.project-action:focus-visible {
 		background: #111;
 		color: #fff;
+	}
+
+	.project-action-appstore:hover,
+	.project-action-appstore:focus-visible {
+		background: transparent;
+		color: inherit;
 	}
 
 	.project-action:only-child {

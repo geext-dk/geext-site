@@ -32,6 +32,9 @@ const socialLinks = profile.socialLinks.map((link) => {
 	};
 });
 
+const getProjectActionLabel = (linkType: "appstore" | "simple" | undefined) =>
+	linkType === "appstore" ? "Download on the App Store" : "Learn more";
+
 ---
 
 <Layout title={name}>
@@ -103,6 +106,19 @@ const socialLinks = profile.socialLinks.map((link) => {
 								<span>{project.title}</span>
 							)}
 							<p>{project.description}</p>
+							{project.url ? (
+								<a
+									class:list={["project-action", { "project-action-appstore": project.linkType === "appstore" }]}
+									href={project.url}
+									aria-label={`${getProjectActionLabel(project.linkType)}: ${project.title}`}
+								>
+									{project.linkType === "appstore" ? (
+										<img src="/download-on-appstore-icon.svg" alt="" width="120" height="40" loading="lazy" decoding="async" />
+									) : (
+										getProjectActionLabel(project.linkType)
+									)}
+								</a>
+							) : null}
 							{project.sourceUrl ? (
 								<a class="project-source" href={project.sourceUrl} target="_blank" rel="noreferrer">Source code</a>
 							) : null}
@@ -327,6 +343,7 @@ const socialLinks = profile.socialLinks.map((link) => {
 		line-height: 1.5;
 	}
 
+	.project-action,
 	.project-source {
 		display: inline-flex;
 		align-items: center;
@@ -344,16 +361,38 @@ const socialLinks = profile.socialLinks.map((link) => {
 			color 180ms ease;
 	}
 
+	.project-action-appstore {
+		min-height: 2.5rem;
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+	}
+
+	.project-action-appstore img {
+		display: block;
+		width: 7.5rem;
+		height: 2.5rem;
+	}
+
 	.project-title-link:hover,
 	.project-title-link:focus-visible {
 		text-decoration: underline;
 		text-underline-offset: 0.18em;
 	}
 
+	.project-action:hover,
+	.project-action:focus-visible,
 	.project-source:hover,
 	.project-source:focus-visible {
 		background: #111;
 		color: #fff;
+	}
+
+	.project-action-appstore:hover,
+	.project-action-appstore:focus-visible {
+		background: transparent;
+		color: inherit;
 	}
 
 	@media (max-width: 900px) {
