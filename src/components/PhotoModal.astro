@@ -1,5 +1,13 @@
 ---
-import { Aperture, Calendar, Camera, Film, LensConvex, Timer, X } from "@lucide/astro";
+import {
+	Aperture,
+	Calendar,
+	Camera,
+	Film,
+	LensConvex,
+	Timer,
+	X,
+} from "@lucide/astro";
 
 const iconProps = {
 	size: 16,
@@ -15,7 +23,11 @@ const iconProps = {
 			</div>
 			<aside class="viewer-details">
 				<div class="viewer-header">
-					<button class="close-button" type="button" aria-label="Close">
+					<button
+						class="close-button"
+						type="button"
+						aria-label="Close"
+					>
 						<X {...iconProps} />
 					</button>
 				</div>
@@ -24,12 +36,22 @@ const iconProps = {
 		</div>
 	</div>
 	<div class="property-icon-templates" hidden>
-		<template data-property-icon="date"><Calendar {...iconProps} /></template>
-		<template data-property-icon="camera"><Camera {...iconProps} /></template>
+		<template data-property-icon="date"
+			><Calendar {...iconProps} /></template
+		>
+		<template data-property-icon="camera"
+			><Camera {...iconProps} /></template
+		>
 		<template data-property-icon="film"><Film {...iconProps} /></template>
-		<template data-property-icon="lens"><LensConvex {...iconProps} /></template>
-		<template data-property-icon="aperture"><Aperture {...iconProps} /></template>
-		<template data-property-icon="shutter"><Timer {...iconProps} /></template>
+		<template data-property-icon="lens"
+			><LensConvex {...iconProps} /></template
+		>
+		<template data-property-icon="aperture"
+			><Aperture {...iconProps} /></template
+		>
+		<template data-property-icon="shutter"
+			><Timer {...iconProps} /></template
+		>
 	</div>
 </dialog>
 
@@ -44,10 +66,9 @@ const iconProps = {
 	let isScrollLocked = false;
 	let scrollY = 0;
 	const iconTemplates = new Map(
-		[...(dialog?.querySelectorAll("template[data-property-icon]") ?? [])].map((template) => [
-			template.dataset.propertyIcon,
-			template,
-		]),
+		[
+			...(dialog?.querySelectorAll("template[data-property-icon]") ?? []),
+		].map((template) => [template.dataset.propertyIcon, template]),
 	);
 
 	function propertyTerm(icon, label) {
@@ -131,7 +152,10 @@ const iconProps = {
 		const availableHeight = isPortrait
 			? contentBounds.height
 			: Math.max(0, contentBounds.height - detailsBounds.height);
-		let imageWidth = Math.min(availableWidth, availableHeight * aspectRatio);
+		let imageWidth = Math.min(
+			availableWidth,
+			availableHeight * aspectRatio,
+		);
 		let imageHeight = imageWidth / aspectRatio;
 
 		if (imageHeight > availableHeight) {
@@ -141,12 +165,18 @@ const iconProps = {
 
 		if (imageWidth > 0 && imageHeight > 0) {
 			dialog.style.setProperty("--viewer-image-width", `${imageWidth}px`);
-			dialog.style.setProperty("--viewer-image-height", `${imageHeight}px`);
+			dialog.style.setProperty(
+				"--viewer-image-height",
+				`${imageHeight}px`,
+			);
 		}
 	}
 
 	function setViewerDimensions(width, height) {
-		if (!(dialog instanceof HTMLDialogElement) || !(viewerImage instanceof HTMLImageElement)) {
+		if (
+			!(dialog instanceof HTMLDialogElement) ||
+			!(viewerImage instanceof HTMLImageElement)
+		) {
 			return;
 		}
 
@@ -160,7 +190,11 @@ const iconProps = {
 	}
 
 	function closeDialog() {
-		if (!(dialog instanceof HTMLDialogElement) || isClosing || !dialog.open) {
+		if (
+			!(dialog instanceof HTMLDialogElement) ||
+			isClosing ||
+			!dialog.open
+		) {
 			return;
 		}
 
@@ -216,7 +250,10 @@ const iconProps = {
 
 	document.querySelectorAll(".photo-button").forEach((button) => {
 		button.addEventListener("click", () => {
-			if (!(dialog instanceof HTMLDialogElement) || !(viewerImage instanceof HTMLImageElement)) {
+			if (
+				!(dialog instanceof HTMLDialogElement) ||
+				!(viewerImage instanceof HTMLImageElement)
+			) {
 				return;
 			}
 
@@ -312,6 +349,7 @@ const iconProps = {
 
 	.viewer-image-wrap {
 		display: flex;
+		justify-content: center;
 		position: relative;
 		height: 100%;
 		min-height: 0;
@@ -323,12 +361,13 @@ const iconProps = {
 	.viewer-image {
 		display: block;
 		position: relative;
-		width: 100%;
+		width: auto;
 		height: 100%;
 		max-width: 100%;
 		max-height: 100%;
-		background: rgb(11 11 11 / 0.76);
+		background: white;
 		object-fit: contain;
+		padding: 1.5rem;
 	}
 
 	.viewer-details {
@@ -419,7 +458,10 @@ const iconProps = {
 	}
 
 	.photo-dialog[data-orientation="portrait"] .viewer-content {
-		grid-template-columns: minmax(0, var(--viewer-image-width)) minmax(10rem, 16rem);
+		grid-template-columns: minmax(0, var(--viewer-image-width)) minmax(
+				10rem,
+				16rem
+			);
 		grid-template-rows: minmax(0, var(--viewer-image-height));
 		align-items: stretch;
 		justify-content: center;
@@ -459,7 +501,10 @@ const iconProps = {
 		}
 
 		.photo-dialog[data-orientation="portrait"] .viewer-content {
-			grid-template-columns: minmax(0, var(--viewer-image-width)) minmax(8.5rem, 40%);
+			grid-template-columns: minmax(0, var(--viewer-image-width)) minmax(
+					8.5rem,
+					40%
+				);
 			width: 100%;
 		}
 
@@ -496,7 +541,6 @@ const iconProps = {
 		}
 
 		.viewer-image {
-			width: 100%;
 			height: auto;
 		}
 
