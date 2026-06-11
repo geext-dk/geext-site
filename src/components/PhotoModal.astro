@@ -135,41 +135,11 @@ const iconProps = {
 		if (!naturalWidth || !naturalHeight) {
 			return;
 		}
-
-		if (window.matchMedia("(max-width: 700px)").matches) {
-			dialog.style.removeProperty("--viewer-image-width");
-			dialog.style.removeProperty("--viewer-image-height");
-			return;
-		}
-
-		const aspectRatio = naturalWidth / naturalHeight;
-		const contentBounds = viewerContent.getBoundingClientRect();
-		const detailsBounds = viewerDetails.getBoundingClientRect();
-		const isPortrait = naturalHeight > naturalWidth;
-		const availableWidth = isPortrait
-			? Math.max(0, contentBounds.width - detailsBounds.width)
-			: contentBounds.width;
-		const availableHeight = isPortrait
-			? contentBounds.height
-			: Math.max(0, contentBounds.height - detailsBounds.height);
-		let imageWidth = Math.min(
-			availableWidth,
-			availableHeight * aspectRatio,
-		);
-		let imageHeight = imageWidth / aspectRatio;
-
-		if (imageHeight > availableHeight) {
-			imageHeight = availableHeight;
-			imageWidth = imageHeight * aspectRatio;
-		}
-
-		if (imageWidth > 0 && imageHeight > 0) {
-			dialog.style.setProperty("--viewer-image-width", `${imageWidth}px`);
+			dialog.style.setProperty("--viewer-image-width", `${naturalWidth}px`);
 			dialog.style.setProperty(
 				"--viewer-image-height",
-				`${imageHeight}px`,
+				`${naturalHeight}px`,
 			);
-		}
 	}
 
 	function setViewerDimensions(width, height) {
@@ -336,7 +306,7 @@ const iconProps = {
 
 	.viewer-content {
 		display: grid;
-		grid-template-rows: minmax(0, var(--viewer-image-height)) auto;
+		grid-template-rows: auto auto;
 		align-content: center;
 		justify-items: stretch;
 		width: 100%;
@@ -367,7 +337,8 @@ const iconProps = {
 		max-height: 100%;
 		background: white;
 		object-fit: contain;
-		padding: 1.5rem;
+		padding: 2rem;
+		aspect-ratio: calc(var(--viewer-image-width) + 3rem) / calc(var(--viewer-image-height) + 3rem);
 	}
 
 	.viewer-details {
