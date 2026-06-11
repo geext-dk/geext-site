@@ -302,8 +302,8 @@ const iconProps = {
 		grid-template-rows: minmax(0, var(--viewer-image-height)) auto;
 		align-content: center;
 		justify-items: stretch;
-		width: min(100%, var(--viewer-image-width));
-		height: min(100%, calc(var(--viewer-image-height) + 10rem));
+		width: 100%;
+		height: 100%;
 		max-width: 100%;
 		max-height: 100%;
 		min-width: 0;
@@ -313,8 +313,6 @@ const iconProps = {
 	.viewer-image-wrap {
 		display: flex;
 		position: relative;
-		width: var(--viewer-image-width);
-		height: var(--viewer-image-height);
 		height: 100%;
 		min-height: 0;
 		min-width: 0;
@@ -337,7 +335,7 @@ const iconProps = {
 		display: grid;
 		grid-template-rows: auto;
 		gap: 1rem;
-		width: min(100%, var(--viewer-image-width));
+		width: 100%;
 		min-width: 0;
 		padding: 1.25rem;
 		overflow: auto;
@@ -425,18 +423,14 @@ const iconProps = {
 		grid-template-rows: minmax(0, var(--viewer-image-height));
 		align-items: stretch;
 		justify-content: center;
-		width: min(100%, calc(var(--viewer-image-width) + 16rem));
-		height: min(100%, var(--viewer-image-height));
-	}
-
-	.photo-dialog[data-orientation="portrait"] .viewer-image-wrap {
-		width: var(--viewer-image-width);
+		width: 100%;
+		height: 100%;
 	}
 
 	.photo-dialog[data-orientation="portrait"] .viewer-details {
 		width: 100%;
-		height: min(100%, var(--viewer-image-height));
-		max-height: min(100%, var(--viewer-image-height));
+		height: 100%;
+		max-height: 100%;
 	}
 
 	.photo-dialog[data-orientation="portrait"] .property-list {
@@ -466,11 +460,11 @@ const iconProps = {
 
 		.photo-dialog[data-orientation="portrait"] .viewer-content {
 			grid-template-columns: minmax(0, var(--viewer-image-width)) minmax(8.5rem, 40%);
-			width: min(100%, calc(var(--viewer-image-width) + 40%));
+			width: 100%;
 		}
 
 		.photo-dialog[data-orientation="portrait"] .viewer-details {
-			max-height: min(100%, var(--viewer-image-height));
+			max-height: 100%;
 		}
 
 		.photo-dialog[data-orientation="portrait"] .property-list {
