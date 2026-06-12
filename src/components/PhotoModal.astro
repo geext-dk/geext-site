@@ -18,8 +18,10 @@ const iconProps = {
 <dialog class="photo-dialog" aria-label="Photo viewer">
 	<div class="photo-viewer">
 		<div class="viewer-content">
-			<div class="viewer-image-wrap">
-				<img class="viewer-image" alt="" />
+			<div class="viewer-image-frame">
+				<div class="viewer-image-wrap">
+					<img class="viewer-image" alt="" />
+				</div>
 			</div>
 			<aside class="viewer-details">
 				<div class="viewer-header">
@@ -314,28 +316,30 @@ const iconProps = {
 		min-height: 0;
 	}
 
+	.viewer-image-frame {
+		padding: 1.5rem;
+		background: white;
+	}
+
 	.viewer-image-wrap {
-		display: flex;
+		display: grid;
 		justify-content: center;
 		position: relative;
-		height: auto;
+		height: 100%;
 		min-height: 0;
 		min-width: 0;
-		background: transparent;
 		overflow: hidden;
+		aspect-ratio: calc(var(--viewer-image-width) / var(--viewer-image-height));
 	}
 
 	.viewer-image {
+		grid-area: 1/1;
 		display: block;
-		position: relative;
-		width: auto;
+		width: 100%;
 		height: 100%;
 		max-width: 100%;
 		max-height: 100%;
-		background: white;
 		object-fit: contain;
-		padding: 2rem;
-		aspect-ratio: calc(var(--viewer-image-width) + 3rem) / calc(var(--viewer-image-height) + 3rem);
 	}
 
 	.viewer-details {
@@ -489,6 +493,10 @@ const iconProps = {
 			width: 100%;
 			height: 100%;
 			flex-direction: column;
+		}
+
+		.viewer-image-frame {
+			padding: 1rem;
 		}
 
 		.photo-dialog[data-orientation="portrait"] .viewer-image-wrap,
