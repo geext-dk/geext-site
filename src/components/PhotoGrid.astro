@@ -43,10 +43,14 @@ function metadataRows(photo: Photo) {
 				type="button"
 				aria-label={`View photo ${index + 1}`}
 				data-large-url={photo.images.large.url}
+				data-blur-url={photo.images.blur.url}
 				data-large-width={photo.images.large.width ?? photo.images.grid.width}
 				data-large-height={photo.images.large.height ?? photo.images.grid.height}
 				data-properties={JSON.stringify(metadataRows(photo))}
 			>
+				<img src={photo.images.blur.url} 
+					 alt=""
+					 aria-hidden="true" />
 				<img
 					src={photo.images.grid.url}
 					srcset={`${photo.images.thumb.url} 480w, ${photo.images.grid.url} 960w, ${photo.images.large.url} 2048w`}
