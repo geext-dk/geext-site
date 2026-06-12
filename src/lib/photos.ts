@@ -25,6 +25,7 @@ type SourcePhoto = {
   id: string;
   sourcePath: string;
   images: {
+    blur: ImageVariant;
     thumb: ImageVariant;
     grid: ImageVariant;
     large: ImageVariant;

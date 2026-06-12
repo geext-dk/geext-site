@@ -483,6 +483,21 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
     ]),
   );
 
+  const blurImageBuffer = await sharp(sourcePath)
+    .rotate()
+    .resize({ width: 24, withoutEnlargement: true })
+    .keepIccProfile()
+    .webp({ quality: 25, effort: 0 })
+    .toBuffer();
+
+  const blurImageMetadata = await sharp(blurImageBuffer).metadata();
+
+  images['blur'] = {
+    url: `data:image/webp;base64,${blurImageBuffer.toString("base64")}`,
+    width: blurImageMetadata.width,
+    height: blurImageMetadata.height
+  }
+
   log(`process: ${relativePath}`);
 
   const base = await metadataForSource(sourcePath, roll, rollFolder, filename);
