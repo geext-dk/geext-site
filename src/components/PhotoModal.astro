@@ -18,24 +18,26 @@ const iconProps = {
 <dialog class="photo-dialog" aria-label="Photo viewer">
 	<div class="photo-viewer">
 		<div class="viewer-content">
-			<div class="viewer-image-frame">
-				<div class="viewer-image-wrap">
-					<img class="viewer-image image-placeholder" alt="" />
-					<img class="viewer-image image-main" alt="" />
+			<div class="viewer-stack">
+				<div class="viewer-image-frame">
+					<div class="viewer-image-wrap">
+						<img class="viewer-image image-placeholder" alt="" />
+						<img class="viewer-image image-main" alt="" />
+					</div>
 				</div>
+				<aside class="viewer-details">
+					<div class="viewer-header">
+						<button
+							class="close-button"
+							type="button"
+							aria-label="Close"
+						>
+							<X {...iconProps} />
+						</button>
+					</div>
+					<dl class="property-list"></dl>
+				</aside>
 			</div>
-			<aside class="viewer-details">
-				<div class="viewer-header">
-					<button
-						class="close-button"
-						type="button"
-						aria-label="Close"
-					>
-						<X {...iconProps} />
-					</button>
-				</div>
-				<dl class="property-list"></dl>
-			</aside>
 		</div>
 	</div>
 	<div class="property-icon-templates" hidden>
@@ -63,20 +65,29 @@ const iconProps = {
 	const viewerImage = dialog?.querySelector(".viewer-image.image-main");
 	const viewerImagePlaceholder = dialog?.querySelector(".viewer-image.image-placeholder");
 	const viewerContent = dialog?.querySelector(".viewer-content");
-	const viewerDetails = dialog?.querySelector(".viewer-details");
-	const viewerImageFrame = dialog?.querySelector(".viewer-image-frame");
 	const propertyList = dialog?.querySelector(".property-list");
 	const closeButton = dialog?.querySelector(".close-button");
 	let isClosing = false;
 	let isScrollLocked = false;
 	let scrollY = 0;
-	let measurementFrameId = 0;
-	const stackedLayoutQuery = "(max-width: 760px)";
 	const iconTemplates = new Map(
 		[
 			...(dialog?.querySelectorAll("template[data-property-icon]") ?? []),
 		].map((template) => [template.dataset.propertyIcon, template]),
 	);
+
+	function updateViewerImageLoadedState() {
+		if (
+			!(dialog instanceof HTMLDialogElement) ||
+			!(viewerImage instanceof HTMLImageElement)
+		) {
+			return;
+		}
+
+		if (viewerImage.complete && viewerImage.naturalWidth > 0) {
+			dialog.dataset.imageLoaded = "true";
+		}
+	}
 
 	function propertyTerm(icon, label) {
 		const term = document.createElement("dt");
@@ -126,95 +137,6 @@ const iconProps = {
 		);
 	}
 
-	function syncViewerMeasurements() {
-		if (
-			!(dialog instanceof HTMLDialogElement) ||
-			!(viewerImage instanceof HTMLImageElement) ||
-			!(viewerDetails instanceof HTMLElement) ||
-			!(viewerImageFrame instanceof HTMLElement)
-		) {
-			return;
-		}
-
-		const naturalWidth = Number(viewerImage.getAttribute("width"));
-		const naturalHeight = Number(viewerImage.getAttribute("height"));
-
-		if (!naturalWidth || !naturalHeight) {
-			return;
-		}
-
-		setViewerMeasurementProperties(naturalWidth, naturalHeight);
-	}
-
-	function scheduleViewerMeasurements() {
-		if (measurementFrameId) {
-			window.cancelAnimationFrame(measurementFrameId);
-		}
-
-		measurementFrameId = window.requestAnimationFrame(() => {
-			measurementFrameId = 0;
-			syncViewerMeasurements();
-		});
-	}
-
-	function setViewerMeasurementProperties(width, height) {
-		if (!(dialog instanceof HTMLDialogElement)) {
-			return;
-		}
-
-		dialog.style.setProperty("--viewer-image-width", String(width));
-		dialog.style.setProperty("--viewer-image-height", String(height));
-
-		if (!dialog.open) {
-			return;
-		}
-
-		syncViewerFrameSize(width, height);
-	}
-
-	function syncViewerFrameSize(width, height) {
-		if (
-			!(dialog instanceof HTMLDialogElement) ||
-			!(viewerDetails instanceof HTMLElement) ||
-			!(viewerImageFrame instanceof HTMLElement)
-		) {
-			return;
-		}
-
-		const dialogWidth = dialog.clientWidth;
-		const dialogHeight = dialog.clientHeight;
-		const detailsWidth = viewerDetails.offsetWidth;
-		const detailsHeight = viewerDetails.offsetHeight;
-		const frameStyle = window.getComputedStyle(viewerImageFrame);
-		const paddingX =
-			Number.parseFloat(frameStyle.paddingLeft) +
-			Number.parseFloat(frameStyle.paddingRight);
-		const paddingY =
-			Number.parseFloat(frameStyle.paddingTop) +
-			Number.parseFloat(frameStyle.paddingBottom);
-		const isStackedLayout =
-			window.matchMedia(stackedLayoutQuery).matches || width >= height;
-		const availableWidth = isStackedLayout
-			? dialogWidth
-			: dialogWidth - detailsWidth;
-		const availableHeight = isStackedLayout
-			? dialogHeight - detailsHeight
-			: dialogHeight;
-		const maxImageWidth = Math.max(0, availableWidth - paddingX);
-		const maxImageHeight = Math.max(0, availableHeight - paddingY);
-		const imageAspect = width / height;
-		let imageWidth = maxImageWidth;
-		let imageHeight = imageWidth / imageAspect;
-
-		if (imageHeight > maxImageHeight) {
-			imageHeight = maxImageHeight;
-			imageWidth = imageHeight * imageAspect;
-		}
-
-		dialog.style.setProperty("--viewer-frame-width", `${imageWidth + paddingX}px`);
-		dialog.style.setProperty("--viewer-frame-height", `${imageHeight + paddingY}px`);
-	}
-
 	function setViewerDimensions(width, height) {
 		if (
 			!(dialog instanceof HTMLDialogElement) ||
@@ -232,7 +154,9 @@ const iconProps = {
 		viewerImage.setAttribute("height", String(height));
 		viewerImagePlaceholder.setAttribute("width", String(width));
 		viewerImagePlaceholder.setAttribute("height", String(height));
-		setViewerMeasurementProperties(width, height);
+		dialog.style.setProperty("--viewer-image-aspect-ratio", `${width} / ${height}`);
+		dialog.style.setProperty("--viewer-image-ratio", String(width / height));
+		dialog.style.setProperty("--viewer-natural-width", `${width}px`);
 		dialog.dataset.orientation = height > width ? "portrait" : "landscape";
 	}
 
@@ -303,6 +227,8 @@ const iconProps = {
 		closeDialog();
 	});
 
+	viewerImage?.addEventListener("load", updateViewerImageLoadedState);
+
 	document.querySelectorAll(".photo-button").forEach((button) => {
 		button.addEventListener("click", () => {
 			if (
@@ -318,16 +244,16 @@ const iconProps = {
 			const imageHeight = Number(button.dataset.largeHeight);
 
 			delete dialog.dataset.orientation;
-			dialog.style.removeProperty("--viewer-image-width");
-			dialog.style.removeProperty("--viewer-image-height");
-			dialog.style.removeProperty("--viewer-frame-width");
-			dialog.style.removeProperty("--viewer-frame-height");
+			delete dialog.dataset.imageLoaded;
+			dialog.style.removeProperty("--viewer-image-aspect-ratio");
+			dialog.style.removeProperty("--viewer-image-ratio");
+			dialog.style.removeProperty("--viewer-natural-width");
 			dialog.style.removeProperty("--viewer-placeholder-image");
 			setProperties(properties);
 			setViewerDimensions(imageWidth, imageHeight);
 			viewerImage.src = button.dataset.largeUrl ?? "";
 			viewerImage.alt = "";
-			viewerImagePlaceholder.removeAttribute("src");
+			viewerImagePlaceholder.src = button.dataset.blurUrl ?? "";
 			dialog.style.setProperty(
 				"--viewer-placeholder-image",
 				cssImageUrl(button.dataset.blurUrl ?? ""),
@@ -335,12 +261,9 @@ const iconProps = {
 
 			lockPageScroll();
 			dialog.showModal();
-			syncViewerMeasurements();
-			scheduleViewerMeasurements();
+			updateViewerImageLoadedState();
 		});
 	});
-
-	window.addEventListener("resize", syncViewerMeasurements);
 
 	dialog?.addEventListener("click", (event) => {
 		if (
@@ -361,10 +284,10 @@ const iconProps = {
 
 <style>
 	.photo-dialog {
-		--viewer-image-height: 1;
-		--viewer-image-width: 1;
-		--viewer-frame-width: auto;
-		--viewer-frame-height: auto;
+		--viewer-image-aspect-ratio: 1 / 1;
+		--viewer-image-ratio: 1;
+		--viewer-natural-width: 1px;
+		--viewer-details-reserve: 6rem;
 		--viewer-placeholder-image: none;
 		width: min(100% - 2rem, 86rem);
 		max-width: none;
@@ -379,7 +302,8 @@ const iconProps = {
 	}
 
 	.photo-dialog[open] {
-		animation: modal-enter 180ms ease-out forwards;
+		opacity: 1;
+		transform: scale(1);
 	}
 
 	.photo-dialog[data-closing="true"] {
@@ -404,10 +328,21 @@ const iconProps = {
 
 	.viewer-content {
 		display: grid;
-		grid-template-rows: minmax(0, 1fr) auto;
+		place-items: center;
 		width: 100%;
 		height: 100%;
 		max-width: 100%;
+		max-height: 100%;
+		min-width: 0;
+		min-height: 0;
+	}
+
+	.viewer-stack {
+		display: grid;
+		grid-template-rows: minmax(0, 1fr) auto;
+		width: fit-content;
+		max-width: 100%;
+		height: 100%;
 		max-height: 100%;
 		min-width: 0;
 		min-height: 0;
@@ -417,8 +352,14 @@ const iconProps = {
 		display: grid;
 		place-items: center;
 		place-self: center;
-		width: var(--viewer-frame-width);
-		height: var(--viewer-frame-height);
+		box-sizing: border-box;
+		width: min(
+			var(--viewer-natural-width),
+			calc(100vw - 2rem),
+			calc((min(calc(100dvh - 2rem), 52rem) - var(--viewer-details-reserve)) * var(--viewer-image-ratio))
+		);
+		height: auto;
+		aspect-ratio: var(--viewer-image-aspect-ratio);
 		max-width: 100%;
 		max-height: 100%;
 		min-width: 0;
@@ -443,31 +384,41 @@ const iconProps = {
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		aspect-ratio: calc(var(--viewer-image-width) / var(--viewer-image-height));
+		aspect-ratio: var(--viewer-image-aspect-ratio);
 	}
 
 	.viewer-image {
 		grid-area: 1/1;
 		display: block;
-		width: 100%;
-		height: 100%;
+		width: auto;
+		height: auto;
 		max-width: 100%;
 		max-height: 100%;
 		object-fit: contain;
 		object-position: center;
-		aspect-ratio: calc(var(--viewer-image-width) / var(--viewer-image-height));
+		aspect-ratio: var(--viewer-image-aspect-ratio);
 	}
 
 	.viewer-image.image-placeholder {
-		display: none;
+		filter: blur(10px);
+		opacity: 1;
+		transform: scale(1.02);
+	}
+
+	.photo-dialog[data-image-loaded="true"] .viewer-image.image-placeholder {
+		opacity: 0;
+	}
+
+	.photo-dialog[data-image-loaded="true"] .viewer-image-wrap {
+		background-image: none;
 	}
 
 	.viewer-details {
 		display: grid;
 		grid-template-rows: auto;
 		gap: 1rem;
-		justify-self: center;
-		width: var(--viewer-frame-width);
+		box-sizing: border-box;
+		width: 100%;
 		max-width: 100%;
 		min-width: 0;
 		padding: 1.25rem;
@@ -552,8 +503,14 @@ const iconProps = {
 	}
 
 	.photo-dialog[data-orientation="portrait"] .viewer-content {
+		display: grid;
+		place-items: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	.photo-dialog[data-orientation="portrait"] .viewer-stack {
 		display: flex;
-		flex-direction: row;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
@@ -561,17 +518,21 @@ const iconProps = {
 	}
 
 	.photo-dialog[data-orientation="portrait"] .viewer-details {
-		justify-self: auto;
+		flex: 0 0 auto;
 		width: auto;
 		height: 100%;
 		max-height: 100%;
 	}
 
 	.photo-dialog[data-orientation="portrait"] .viewer-image-frame {
-		flex: 0 0 auto;
-		width: var(--viewer-frame-width);
-		height: var(--viewer-frame-height);
-		max-width: 100%;
+		flex: 0 1 auto;
+		width: min(
+			var(--viewer-natural-width),
+			calc(((min(calc(100dvh - 2rem), 52rem) - 3rem) * var(--viewer-image-ratio)) + 3rem),
+			calc(100vw - 14rem)
+		);
+		height: 100%;
+		max-width: calc(100% - 12rem);
 		max-height: 100%;
 	}
 
@@ -592,6 +553,10 @@ const iconProps = {
 	}
 
 	@media (max-width: 980px) {
+		.photo-dialog {
+			--viewer-details-reserve: 8rem;
+		}
+
 		.viewer-details {
 			max-height: 42vh;
 		}
@@ -600,7 +565,7 @@ const iconProps = {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
-		.photo-dialog[data-orientation="portrait"] .viewer-content {
+		.photo-dialog[data-orientation="portrait"] .viewer-stack {
 			width: 100%;
 		}
 
@@ -623,6 +588,14 @@ const iconProps = {
 		.photo-dialog[data-orientation="portrait"] .viewer-content,
 		.viewer-content {
 			display: grid;
+			place-items: stretch;
+			width: 100%;
+			height: 100%;
+		}
+
+		.photo-dialog[data-orientation="portrait"] .viewer-stack,
+		.viewer-stack {
+			display: grid;
 			grid-template-rows: minmax(0, 1fr) auto;
 			align-items: stretch;
 			justify-content: normal;
@@ -635,7 +608,14 @@ const iconProps = {
 		}
 
 		.photo-dialog[data-orientation="portrait"] .viewer-image-frame {
-			flex: 0 0 auto;
+			width: min(
+				var(--viewer-natural-width),
+				calc(100vw - 2rem),
+				calc((100dvh - var(--viewer-details-reserve)) * var(--viewer-image-ratio))
+			);
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
 		}
 
 		.photo-dialog[data-orientation="portrait"] .viewer-image-wrap,
@@ -655,18 +635,6 @@ const iconProps = {
 		.photo-dialog[data-orientation="portrait"] .property-list,
 		.property-list {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
-	}
-
-	@keyframes modal-enter {
-		from {
-			opacity: 0;
-			transform: scale(0.96);
-		}
-
-		to {
-			opacity: 1;
-			transform: scale(1);
 		}
 	}
 
@@ -703,7 +671,6 @@ const iconProps = {
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.photo-dialog[open],
 		.photo-dialog[data-closing="true"],
 		.photo-dialog::backdrop,
 		.photo-dialog[data-closing="true"]::backdrop {
