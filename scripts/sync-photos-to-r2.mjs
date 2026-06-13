@@ -302,6 +302,13 @@ async function metadataForSource(sourcePath, roll, rollFolder, filename) {
     "-LensModel",
     "-Lens",
     "-FocalLength",
+    "-City",
+    "-LocationCreatedCity",
+    "-LocationShownCity",
+    "-Country",
+    "-Country-PrimaryLocationName",
+    "-LocationCreatedCountryName",
+    "-LocationShownCountryName",
   ]);
 
   return {
@@ -319,6 +326,16 @@ async function metadataForSource(sourcePath, roll, rollFolder, filename) {
         rollCameraFallback(rollFolder),
       lensModel: firstPresent(data, ["LensModel", "Lens"]),
       focalLength: firstPresent(data, ["FocalLength"]),
+      city:
+        firstPresent(data, ["City", "LocationCreatedCity", "LocationShownCity"]) ??
+        subjectValue(data, "City:"),
+      country:
+        firstPresent(data, [
+          "Country",
+          "Country-PrimaryLocationName",
+          "LocationCreatedCountryName",
+          "LocationShownCountryName",
+        ]) ?? subjectValue(data, "Country:"),
     },
   };
 }

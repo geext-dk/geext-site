@@ -5,6 +5,7 @@ import {
 	Camera,
 	Film,
 	LensConvex,
+	MapPin,
 	Timer,
 	X,
 } from "@lucide/astro";
@@ -43,6 +44,9 @@ const iconProps = {
 	<div class="property-icon-templates" hidden>
 		<template data-property-icon="date"
 			><Calendar {...iconProps} /></template
+		>
+		<template data-property-icon="location"
+			><MapPin {...iconProps} /></template
 		>
 		<template data-property-icon="camera"
 			><Camera {...iconProps} /></template

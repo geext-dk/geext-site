@@ -21,6 +21,8 @@ type SourcePhoto = {
     cameraModel: string | null;
     lensModel: string | null;
     focalLength: string | null;
+    city?: string | null;
+    country?: string | null;
   };
   id: string;
   sourcePath: string;

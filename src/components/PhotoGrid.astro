@@ -18,20 +18,29 @@ function apertureLabel(value: string | number | null) {
 	return text.startsWith("f/") ? text : `f/${text}`;
 }
 
+function locationLabel(photo: Photo) {
+	const parts = [photo.metadata.city, photo.metadata.country].filter(Boolean);
+
+	return parts.length > 0 ? parts.join(", ") : null;
+}
+
 function metadataRows(photo: Photo) {
 	const rows = [
 		{ icon: "camera", label: "Camera", value: photo.camera },
 		{ icon: "lens", label: "Lens", value: photo.metadata.lensModel },
 		{ icon: "film", label: "Film", value: photo.film },
 		{ icon: "date", label: "Date", value: photo.dateDisplay },
+		{ icon: "location", label: "Location", value: locationLabel(photo) },
 		{ icon: "shutter", label: "Shutter", value: photo.metadata.shutterSpeed },
 		{ icon: "aperture", label: "Aperture", value: apertureLabel(photo.metadata.aperture) },
 	];
 
-	return rows.map((row) => ({
-		...row,
-		value: row.value ? String(row.value) : "-",
-	}));
+	return rows
+		.filter((row) => row.icon !== "location" || row.value)
+		.map((row) => ({
+			...row,
+			value: row.value ? String(row.value) : "-",
+		}));
 }
 ---
 
