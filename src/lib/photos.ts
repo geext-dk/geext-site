@@ -31,6 +31,7 @@ type SourcePhoto = {
     thumb: ImageVariant;
     grid: ImageVariant;
     large: ImageVariant;
+    telegram?: ImageVariant;
     original?: ImageVariant;
   };
 };

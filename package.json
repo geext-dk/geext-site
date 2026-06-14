@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "test": "node --test workers/telegram-photo-publisher/test/*.test.js",
     "sync:photos": "node scripts/sync-photos-to-r2.mjs",
     "sync:image": "node scripts/sync-photos-to-r2.mjs image"
   },

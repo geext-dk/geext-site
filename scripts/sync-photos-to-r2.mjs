@@ -30,10 +30,12 @@ const OUTPUT_EXTENSION = ".avif";
 const OUTPUT_CONTENT_TYPE = "image/avif";
 const AVIF_QUALITY = 70;
 const AVIF_EFFORT = 6;
+const JPEG_QUALITY = 88;
 const VARIANTS = [
-  ["thumb", 480],
-  ["grid", 960],
-  ["large", 2048],
+  { name: "thumb", width: 480, extension: ".avif", contentType: "image/avif", format: "avif" },
+  { name: "grid", width: 960, extension: ".avif", contentType: "image/avif", format: "avif" },
+  { name: "large", width: 2048, extension: ".avif", contentType: "image/avif", format: "avif" },
+  { name: "telegram", width: 1600, extension: ".jpg", contentType: "image/jpeg", format: "jpeg" },
 ];
 
 function usage() {
@@ -357,13 +359,18 @@ async function sanitizeOriginal(sourcePath, destinationPath) {
   await stripSensitiveMetadata(destinationPath);
 }
 
-async function makeVariant(sourcePath, destinationPath, targetWidth) {
-  await sharp(sourcePath)
+async function makeVariant(sourcePath, destinationPath, variant) {
+  const image = sharp(sourcePath)
     .rotate()
-    .resize({ width: targetWidth, withoutEnlargement: true })
-    .keepIccProfile()
-    .avif({ quality: AVIF_QUALITY, effort: AVIF_EFFORT })
-    .toFile(destinationPath);
+    .resize({ width: variant.width, withoutEnlargement: true })
+    .keepIccProfile();
+
+  if (variant.format === "jpeg") {
+    await image.jpeg({ quality: JPEG_QUALITY, mozjpeg: true }).toFile(destinationPath);
+    return;
+  }
+
+  await image.avif({ quality: AVIF_QUALITY, effort: AVIF_EFFORT }).toFile(destinationPath);
 }
 
 async function makeUploadedImage(sourcePath, destinationPath) {
@@ -460,7 +467,7 @@ function publicUrlForObjectKey(objectKey) {
 }
 
 function imageJsonForVariant(variant, sourceHash, size) {
-  const objectKey = `${PHOTO_R2_PREFIX}/${sourceHash}-${variant}${OUTPUT_EXTENSION}`;
+  const objectKey = `${PHOTO_R2_PREFIX}/${sourceHash}-${variant.name}${variant.extension}`;
   const url = publicUrlForObjectKey(objectKey);
 
   return {
@@ -491,12 +498,12 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
   const workDir = path.join(tempRoot, createHash("sha256").update(relativePath).digest("hex"));
   const sanitizedPath = path.join(workDir, `original${extension}`);
   const variantPaths = Object.fromEntries(
-    VARIANTS.map(([name]) => [name, path.join(workDir, `${name}${OUTPUT_EXTENSION}`)]),
+    VARIANTS.map((variant) => [variant.name, path.join(workDir, `${variant.name}${variant.extension}`)]),
   );
   const images = Object.fromEntries(
-    VARIANTS.map(([name, width]) => [
-      name,
-      imageJsonForVariant(name, sourceHash, scaledSize(sourceSize, width)),
+    VARIANTS.map((variant) => [
+      variant.name,
+      imageJsonForVariant(variant, sourceHash, scaledSize(sourceSize, variant.width)),
     ]),
   );
 
@@ -519,7 +526,9 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
 
   const base = await metadataForSource(sourcePath, roll, rollFolder, filename);
 
-  if (VARIANTS.every(([name]) => existingObjectKeys.has(images[name].objectKey))) {
+  const missingVariants = VARIANTS.filter((variant) => !existingObjectKeys.has(images[variant.name].objectKey));
+
+  if (missingVariants.length === 0) {
     log(`skip existing variants: ${relativePath}`);
     return {
       ...base,
@@ -529,17 +538,19 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
     };
   }
 
+  log(`missing variants for ${relativePath}: ${missingVariants.map((variant) => variant.name).join(", ")}`);
+
   await fs.mkdir(workDir, { recursive: true });
   await sanitizeOriginal(sourcePath, sanitizedPath);
-  for (const [name, width] of VARIANTS) {
-    await makeVariant(sanitizedPath, variantPaths[name], width);
+  for (const variant of missingVariants) {
+    await makeVariant(sanitizedPath, variantPaths[variant.name], variant);
   }
 
-  for (const [name] of VARIANTS) {
+  for (const variant of missingVariants) {
     uploadQueue.push({
-      objectKey: images[name].objectKey,
-      filePath: variantPaths[name],
-      contentType: OUTPUT_CONTENT_TYPE,
+      objectKey: images[variant.name].objectKey,
+      filePath: variantPaths[variant.name],
+      contentType: variant.contentType,
     });
   }
 
