@@ -182,9 +182,11 @@ export function buildRolls(photos) {
 
 export function formatCaption(roll) {
   return [
-    `Film: ${roll.film || "Unknown Film"}`,
-    `Camera: ${roll.camera || "Unknown Camera"}`,
-    `Dates: ${roll.dateRange || "Unknown dates"}`,
+    `Новая партия фоточек!`,
+    ``,
+    `Плёнка: ${roll.film || "?"}`,
+    `Камера: ${roll.camera || "?"}`,
+    `Даты: ${roll.dateRange || "?"}`,
   ].join("\n");
 }
 
