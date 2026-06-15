@@ -25,6 +25,7 @@ const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY;
 const R2_PUBLIC_BASE_URL = normalizeBaseUrl(process.env.R2_PUBLIC_BASE_URL ?? "");
 const CACHE_CONTROL = "public, max-age=31536000, immutable";
 const UPLOAD_CONCURRENCY = parsePositiveInteger(process.env.R2_UPLOAD_CONCURRENCY ?? "6", "R2_UPLOAD_CONCURRENCY");
+const PROCESS_CONCURRENCY = parsePositiveInteger(process.env.PHOTO_PROCESS_CONCURRENCY ?? "2", "PHOTO_PROCESS_CONCURRENCY");
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".heic", ".heif", ".tif", ".tiff"]);
 const OUTPUT_EXTENSION = ".avif";
 const OUTPUT_CONTENT_TYPE = "image/avif";
@@ -61,7 +62,10 @@ Required for photo sync:
 
 Optional environment:
   PHOTO_OUTPUT_JSON     Output JSON path
-  R2_UPLOAD_CONCURRENCY Number of simultaneous S3 uploads, default 6
+  PHOTO_PROCESS_CONCURRENCY
+                        Number of photos to process simultaneously, default 2
+  R2_UPLOAD_CONCURRENCY
+                        Number of simultaneous S3 uploads, default 6
 
 Photo example:
   R2_BUCKET=my-bucket \\
@@ -226,8 +230,38 @@ async function exifJson(filePath, tags) {
   return parsed[0] ?? {};
 }
 
-async function imageSize(filePath) {
-  const data = await exifJson(filePath, ["-ImageWidth", "-ImageHeight"]);
+const PHOTO_EXIF_TAGS = [
+  "-ImageWidth",
+  "-ImageHeight",
+  "-DateTimeOriginal",
+  "-CreateDate",
+  "-ModifyDate",
+  "-FileModifyDate",
+  "-Aperture",
+  "-FNumber",
+  "-ExposureTime",
+  "-ShutterSpeed",
+  "-ISO",
+  "-Subject",
+  "-CameraModelName",
+  "-Model",
+  "-LensModel",
+  "-Lens",
+  "-FocalLength",
+  "-City",
+  "-LocationCreatedCity",
+  "-LocationShownCity",
+  "-Country",
+  "-Country-PrimaryLocationName",
+  "-LocationCreatedCountryName",
+  "-LocationShownCountryName",
+];
+
+async function exifDataForSource(filePath) {
+  return exifJson(filePath, PHOTO_EXIF_TAGS);
+}
+
+function imageSizeFromExif(data) {
   return {
     width: numberOrNull(data.ImageWidth),
     height: numberOrNull(data.ImageHeight),
@@ -287,32 +321,7 @@ function rollFilmFallback(folder) {
   return folder.slice(commaIndex + 1).trim() || null;
 }
 
-async function metadataForSource(sourcePath, roll, rollFolder, filename) {
-  const data = await exifJson(sourcePath, [
-    "-DateTimeOriginal",
-    "-CreateDate",
-    "-ModifyDate",
-    "-FileModifyDate",
-    "-Aperture",
-    "-FNumber",
-    "-ExposureTime",
-    "-ShutterSpeed",
-    "-ISO",
-    "-Subject",
-    "-CameraModelName",
-    "-Model",
-    "-LensModel",
-    "-Lens",
-    "-FocalLength",
-    "-City",
-    "-LocationCreatedCity",
-    "-LocationShownCity",
-    "-Country",
-    "-Country-PrimaryLocationName",
-    "-LocationCreatedCountryName",
-    "-LocationShownCountryName",
-  ]);
-
+function metadataForSource(data, roll, rollFolder, filename) {
   return {
     filename,
     roll,
@@ -340,23 +349,6 @@ async function metadataForSource(sourcePath, roll, rollFolder, filename) {
         ]) ?? subjectValue(data, "Country:"),
     },
   };
-}
-
-async function stripSensitiveMetadata(filePath) {
-  await run("exiftool", [
-    "-overwrite_original",
-    "-all=",
-    "-tagsFromFile",
-    "@",
-    "-icc_profile:all",
-    "-Orientation",
-    filePath,
-  ]);
-}
-
-async function sanitizeOriginal(sourcePath, destinationPath) {
-  await fs.copyFile(sourcePath, destinationPath);
-  await stripSensitiveMetadata(destinationPath);
 }
 
 async function makeVariant(sourcePath, destinationPath, variant) {
@@ -492,11 +484,10 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
   const rollFolder = path.basename(path.dirname(relativePath));
   const roll = rollIdFromFolder(rollFolder);
   const filename = path.basename(sourcePath);
-  const extension = path.extname(filename).toLowerCase();
   const sourceHash = await hashFile(sourcePath);
-  const sourceSize = await imageSize(sourcePath);
+  const sourceExif = await exifDataForSource(sourcePath);
+  const sourceSize = imageSizeFromExif(sourceExif);
   const workDir = path.join(tempRoot, createHash("sha256").update(relativePath).digest("hex"));
-  const sanitizedPath = path.join(workDir, `original${extension}`);
   const variantPaths = Object.fromEntries(
     VARIANTS.map((variant) => [variant.name, path.join(workDir, `${variant.name}${variant.extension}`)]),
   );
@@ -516,15 +507,15 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
 
   const blurImageMetadata = await sharp(blurImageBuffer).metadata();
 
-  images['blur'] = {
+  images.blur = {
     url: `data:image/webp;base64,${blurImageBuffer.toString("base64")}`,
     width: blurImageMetadata.width,
-    height: blurImageMetadata.height
-  }
+    height: blurImageMetadata.height,
+  };
 
   log(`process: ${relativePath}`);
 
-  const base = await metadataForSource(sourcePath, roll, rollFolder, filename);
+  const base = metadataForSource(sourceExif, roll, rollFolder, filename);
 
   const missingVariants = VARIANTS.filter((variant) => !existingObjectKeys.has(images[variant.name].objectKey));
 
@@ -541,9 +532,8 @@ async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue,
   log(`missing variants for ${relativePath}: ${missingVariants.map((variant) => variant.name).join(", ")}`);
 
   await fs.mkdir(workDir, { recursive: true });
-  await sanitizeOriginal(sourcePath, sanitizedPath);
   for (const variant of missingVariants) {
-    await makeVariant(sanitizedPath, variantPaths[variant.name], variant);
+    await makeVariant(sourcePath, variantPaths[variant.name], variant);
   }
 
   for (const variant of missingVariants) {
@@ -603,14 +593,13 @@ async function syncPhotos() {
   const client = createR2Client();
 
   try {
-    const photos = [];
     const uploadQueue = [];
     const sourceFiles = await walkImages(sourceRoot);
     const existingObjectKeys = await listExistingObjectKeys(client, PHOTO_R2_PREFIX);
 
-    for (const sourcePath of sourceFiles) {
-      photos.push(await photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue, existingObjectKeys));
-    }
+    const photos = await runWithConcurrency(sourceFiles, PROCESS_CONCURRENCY, async (sourcePath) => (
+      photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue, existingObjectKeys)
+    ));
 
     const missingUploads = uploadQueue.filter((upload) => {
       if (existingObjectKeys.has(upload.objectKey)) {
@@ -655,12 +644,10 @@ async function uploadImage(args) {
   }
 
   validateR2Environment();
-  await requireCommand("exiftool");
 
   const sourceHash = await hashFile(sourcePath);
   const { objectKey, url } = uploadedImageObjectForHash(sourceHash);
   const tempRoot = await fs.mkdtemp(path.join(os.tmpdir(), "image-r2-sync-"));
-  const sanitizedPath = path.join(tempRoot, `original${path.extname(sourcePath).toLowerCase()}`);
   const imagePath = path.join(tempRoot, `image${OUTPUT_EXTENSION}`);
   const client = createR2Client();
 
@@ -673,8 +660,7 @@ async function uploadImage(args) {
       return;
     }
 
-    await sanitizeOriginal(sourcePath, sanitizedPath);
-    await makeUploadedImage(sanitizedPath, imagePath);
+    await makeUploadedImage(sourcePath, imagePath);
     await uploadObject(client, objectKey, imagePath, OUTPUT_CONTENT_TYPE);
     console.log(url);
   } finally {

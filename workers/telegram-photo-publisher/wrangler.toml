@@ -3,12 +3,12 @@ main = "src/index.js"
 compatibility_date = "2026-06-14"
 
 [vars]
-TELEGRAM_CHAT_ID = ""
+TELEGRAM_CHAT_ID = "@geextchan"
 PHOTO_CATALOG_URL = "https://geext.xyz/photos.json"
 
 [[kv_namespaces]]
 binding = "PHOTO_PUBLISHER_STATE"
-id = "replace-with-kv-namespace-id"
+id = "feab9a5e915a4adf8af5d0f6449e569b"
 
 [triggers]
 crons = ["0 9 */2 * *"]
