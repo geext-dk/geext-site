@@ -82,9 +82,9 @@ test("formats captions with film, camera, and a compact date range", () => {
     formatCaption({
       film: "Kodak Gold 200",
       camera: "Canon A-1",
-      dateRange: "Apr 1, 2026 - Apr 9, 2026",
+      dateRange: "1 апр. - 9 апр. 2026 г.",
     }),
-    "Film: Kodak Gold 200\nCamera: Canon A-1\nDates: Apr 1, 2026 - Apr 9, 2026",
+    "<b>Новая партия фоточек!</b>\n\nПлёнка: Kodak Gold 200\nКамера: Canon A-1\nДаты: 1 апр. - 9 апр. 2026 г.",
   );
 });
 
@@ -93,7 +93,31 @@ test("formats a single known photo date without a range", () => {
 
   assert.equal(
     formatCaption(builtRoll),
-    "Film: Kodak Gold 200\nCamera: Canon A-1\nDates: Apr 1, 2026",
+    "<b>Новая партия фоточек!</b>\n\nПлёнка: Kodak Gold 200\nКамера: Canon A-1\nДаты: 1 апр. 2026 г.",
+  );
+});
+
+test("keeps both years in date ranges that cross years", () => {
+  const [builtRoll] = buildRolls([
+    {
+      ...photo("2024-001", 1),
+      metadata: {
+        ...photo("2024-001", 1).metadata,
+        date: "2025:12:30 12:00:00",
+      },
+    },
+    {
+      ...photo("2024-001", 2),
+      metadata: {
+        ...photo("2024-001", 2).metadata,
+        date: "2026:01:02 12:00:00",
+      },
+    },
+  ]);
+
+  assert.equal(
+    formatCaption(builtRoll),
+    "<b>Новая партия фоточек!</b>\n\nПлёнка: Kodak Gold 200\nКамера: Canon A-1\nДаты: 30 дек. 2025 г. - 2 янв. 2026 г.",
   );
 });
 
@@ -108,7 +132,21 @@ test("formats missing film, camera, and dates with fallbacks", () => {
 
   assert.equal(
     formatCaption(builtRoll),
-    "Film: Unknown Film\nCamera: Unknown Camera\nDates: Unknown dates",
+    "<b>Новая партия фоточек!</b>\n\nПлёнка: Unknown Film\nКамера: Unknown Camera\nДаты: даты неизвестны",
+  );
+});
+
+test("formats captions from a template and escapes dynamic values", () => {
+  assert.equal(
+    formatCaption(
+      {
+        film: "Cinestill <800T> & Friends",
+        camera: "Canon A-1",
+        dateRange: "1 апр. 2026 г.",
+      },
+      "<b>{{ film }}</b>\n{{camera}}\n{{dateRange}}",
+    ),
+    "<b>Cinestill &lt;800T&gt; &amp; Friends</b>\nCanon A-1\n1 апр. 2026 г.",
   );
 });
 
@@ -121,6 +159,7 @@ test("uses sendPhoto for one image", () => {
   assert.equal(request.method, "sendPhoto");
   assert.equal(request.payload.photo, "https://photos.example/2024-001-001.jpg");
   assert.equal(request.payload.caption, "Caption");
+  assert.equal(request.payload.parse_mode, "HTML");
 });
 
 test("uses sendMediaGroup for 2-10 images and captions only the first item", () => {
@@ -132,7 +171,9 @@ test("uses sendMediaGroup for 2-10 images and captions only the first item", () 
   assert.equal(request.method, "sendMediaGroup");
   assert.equal(request.payload.media.length, 2);
   assert.equal(request.payload.media[0].caption, "Caption");
+  assert.equal(request.payload.media[0].parse_mode, "HTML");
   assert.equal(request.payload.media[1].caption, undefined);
+  assert.equal(request.payload.media[1].parse_mode, undefined);
 });
 
 function catalogWith(rolls) {

@@ -1,11 +1,25 @@
 export const STATE_KEY = "telegram-photo-publisher:state";
 export const STATE_SCHEMA_VERSION = 1;
 export const BATCH_SIZE = 10;
+export const DEFAULT_CAPTION_TEMPLATE = `<b>Новая партия фоточек!</b>
 
-const dateFormatter = new Intl.DateTimeFormat("en", {
+Плёнка: {{film}}
+Камера: {{camera}}
+Даты: {{dateRange}}`;
+
+const dateFormatter = new Intl.DateTimeFormat("ru-RU", {
   year: "numeric",
   month: "short",
   day: "numeric",
+  timeZone: "UTC",
+});
+const dateWithoutYearFormatter = new Intl.DateTimeFormat("ru-RU", {
+  month: "short",
+  day: "numeric",
+  timeZone: "UTC",
+});
+const yearFormatter = new Intl.DateTimeFormat("ru-RU", {
+  year: "numeric",
   timeZone: "UTC",
 });
 
@@ -15,7 +29,10 @@ export async function publishNextBatch(env, options = {}) {
 
   const catalog = await fetchCatalog(env.PHOTO_CATALOG_URL, fetchImpl);
   const state = await readState(env);
-  const plan = planNextPublish(catalog, state, { now });
+  const plan = planNextPublish(catalog, state, {
+    now,
+    captionTemplate: env.CAPTION_TEMPLATE,
+  });
 
   if (plan.status !== "ready") {
     return {
@@ -79,7 +96,11 @@ export async function writeState(env, state) {
 }
 
 export function planNextPublish(catalog, state = {}, options = {}) {
-  const { batchSize = BATCH_SIZE, now = new Date() } = options;
+  const {
+    batchSize = BATCH_SIZE,
+    now = new Date(),
+    captionTemplate = DEFAULT_CAPTION_TEMPLATE,
+  } = options;
   const rolls = buildRolls(catalog?.photos ?? []);
   const currentState = normalizeState(state);
 
@@ -130,7 +151,7 @@ export function planNextPublish(catalog, state = {}, options = {}) {
         film: roll.film,
         camera: roll.camera,
         dateRange: roll.dateRange,
-        caption: formatCaption(roll),
+        caption: formatCaption(roll, captionTemplate),
         photos,
       },
       nextState,
@@ -180,14 +201,17 @@ export function buildRolls(photos) {
     .sort((a, b) => naturalCompare(a.roll, b.roll));
 }
 
-export function formatCaption(roll) {
-  return [
-    `Новая партия фоточек!`,
-    ``,
-    `Плёнка: ${roll.film || "?"}`,
-    `Камера: ${roll.camera || "?"}`,
-    `Даты: ${roll.dateRange || "?"}`,
-  ].join("\n");
+export function formatCaption(roll, template = DEFAULT_CAPTION_TEMPLATE) {
+  const values = {
+    film: roll.film || "?",
+    camera: roll.camera || "?",
+    dateRange: roll.dateRange || "?",
+  };
+
+  return String(template || DEFAULT_CAPTION_TEMPLATE).replace(
+    /\{\{\s*(film|camera|dateRange)\s*\}\}/g,
+    (_placeholder, key) => escapeTelegramHtml(values[key]),
+  );
 }
 
 export function telegramRequestForBatch(chatId, batch) {
@@ -202,6 +226,7 @@ export function telegramRequestForBatch(chatId, batch) {
         chat_id: chatId,
         photo: telegramUrlForPhoto(batch.photos[0]),
         caption: batch.caption,
+        parse_mode: "HTML",
       },
     };
   }
@@ -213,7 +238,7 @@ export function telegramRequestForBatch(chatId, batch) {
       media: batch.photos.map((photo, index) => ({
         type: "photo",
         media: telegramUrlForPhoto(photo),
-        ...(index === 0 ? { caption: batch.caption } : {}),
+        ...(index === 0 ? { caption: batch.caption, parse_mode: "HTML" } : {}),
       })),
     },
   };
@@ -353,6 +378,13 @@ function telegramUrlForPhoto(photo) {
   return photo.images?.telegram?.url ?? "";
 }
 
+function escapeTelegramHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
 function cameraFromRoll(sourcePath) {
   const folder = String(sourcePath ?? "").split("/").at(-2) ?? "";
   const [, afterDash] = folder.split(" - ");
@@ -389,11 +421,26 @@ function parsePhotoDate(value) {
 
 function formatDateRange(datedPhotos) {
   if (datedPhotos.length === 0) {
-    return "Unknown dates";
+    return "даты неизвестны";
   }
 
   const first = dateFormatter.format(datedPhotos[0].date);
-  const last = dateFormatter.format(datedPhotos.at(-1).date);
+  const lastDate = datedPhotos.at(-1).date;
+  const last = dateFormatter.format(lastDate);
 
-  return first === last ? first : `${first} - ${last}`;
+  if (first === last) {
+    return first;
+  }
+
+  const firstYear = yearFormatter.format(datedPhotos[0].date);
+  const lastYear = yearFormatter.format(lastDate);
+
+  if (firstYear === lastYear) {
+    const firstWithoutYear = dateWithoutYearFormatter.format(datedPhotos[0].date);
+    const lastWithoutYear = dateWithoutYearFormatter.format(lastDate);
+
+    return `${firstWithoutYear} - ${lastWithoutYear} ${lastYear} г.`;
+  }
+
+  return `${first} - ${last}`;
 }

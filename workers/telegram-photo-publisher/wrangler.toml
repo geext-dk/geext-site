@@ -5,6 +5,11 @@ compatibility_date = "2026-06-14"
 [vars]
 TELEGRAM_CHAT_ID = "@geextchan"
 PHOTO_CATALOG_URL = "https://geext.xyz/photos.json"
+CAPTION_TEMPLATE = """<b>Новая партия фоточек!</b>
+
+🎞️ Плёнка: {{film}}
+📷 Камера: {{camera}}
+🗓️ Даты: {{dateRange}}"""
 
 [[kv_namespaces]]
 binding = "PHOTO_PUBLISHER_STATE"
