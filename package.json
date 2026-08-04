@@ -10,9 +10,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "node --test workers/telegram-photo-publisher/test/*.test.js",
+    "test": "node --test workers/telegram-photo-publisher/test/*.test.js scripts/*.test.mjs",
     "sync:photos": "node scripts/sync-photos-to-r2.mjs",
-    "sync:image": "node scripts/sync-photos-to-r2.mjs image"
+    "sync:image": "node scripts/sync-photos-to-r2.mjs image",
+    "photos:privacy": "node scripts/set-photo-privacy.mjs"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.2.0",

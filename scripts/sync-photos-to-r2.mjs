@@ -6,7 +6,9 @@ import { createReadStream } from "node:fs";
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import {
+  DeleteObjectCommand,
   ListObjectsV2Command,
   PutObjectCommand,
   S3Client,
@@ -38,6 +40,7 @@ const VARIANTS = [
   { name: "large", width: 2048, extension: ".avif", contentType: "image/avif", format: "avif" },
   { name: "telegram", width: 1600, extension: ".jpg", contentType: "image/jpeg", format: "jpeg" },
 ];
+const PRIVATE_TAG = "Private";
 
 function usage() {
   console.error(`Sync images to Cloudflare R2.
@@ -49,6 +52,11 @@ Usage:
 Commands:
   photos               Sync exported photos and write data/photos.json. This is the default.
   image <source-file>  Upload one image as AVIF without resizing and print its public URL.
+
+Privacy:
+  node scripts/set-photo-privacy.mjs private <file-or-directory...>
+  node scripts/set-photo-privacy.mjs public <file-or-directory...>
+  Add the exact Subject metadata value "Private" to exclude a photo from the catalog.
 
 Required environment:
   R2_BUCKET             Cloudflare R2 bucket name
@@ -298,6 +306,22 @@ function subjectValue(source, prefix) {
   return value ? value.replace(new RegExp(`^${prefix}\\s*`), "") : null;
 }
 
+function subjectValues(source) {
+  if (Array.isArray(source.Subject)) {
+    return source.Subject.filter((item) => typeof item === "string");
+  }
+
+  if (typeof source.Subject === "string") {
+    return [source.Subject];
+  }
+
+  return [];
+}
+
+export function isPrivatePhoto(source) {
+  return subjectValues(source).includes(PRIVATE_TAG);
+}
+
 function rollIdFromFolder(folder) {
   return folder.trim().split(/\s+/, 1)[0] || folder;
 }
@@ -422,6 +446,15 @@ async function uploadObject(client, objectKey, filePath, contentType) {
   }));
 }
 
+async function deleteObject(client, objectKey) {
+  log(`delete: ${objectKey}`);
+
+  await client.send(new DeleteObjectCommand({
+    Bucket: R2_BUCKET,
+    Key: objectKey,
+  }));
+}
+
 async function runWithConcurrency(items, concurrency, worker) {
   const results = new Array(items.length);
   let nextIndex = 0;
@@ -479,13 +512,63 @@ function uploadedImageObjectForHash(sourceHash) {
   };
 }
 
-async function photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue, existingObjectKeys) {
+export function photoVariantObjectKeys(sourceHash) {
+  return VARIANTS.map(
+    (variant) => `${PHOTO_R2_PREFIX}/${sourceHash}-${variant.name}${variant.extension}`,
+  );
+}
+
+async function readPreviousCatalog(outputPath) {
+  try {
+    const content = await fs.readFile(outputPath, "utf8");
+    const catalog = JSON.parse(content);
+    const photosBySourcePath = new Map();
+
+    for (const photo of catalog.photos ?? []) {
+      if (photo?.sourcePath && photo?.id) {
+        photosBySourcePath.set(photo.sourcePath, photo.id);
+      }
+    }
+
+    return photosBySourcePath;
+  } catch (error) {
+    if (error.code !== "ENOENT") {
+      log(`warning: unable to read previous catalog; private-photo cleanup is disabled: ${error.message}`);
+    }
+
+    return new Map();
+  }
+}
+
+async function photoJsonForSource(
+  sourcePath,
+  sourceRoot,
+  tempRoot,
+  uploadQueue,
+  existingObjectKeys,
+  previousPhotoIds,
+  cleanupQueue,
+) {
   const relativePath = path.relative(sourceRoot, sourcePath);
   const rollFolder = path.basename(path.dirname(relativePath));
   const roll = rollIdFromFolder(rollFolder);
   const filename = path.basename(sourcePath);
-  const sourceHash = await hashFile(sourcePath);
   const sourceExif = await exifDataForSource(sourcePath);
+
+  if (isPrivatePhoto(sourceExif)) {
+    const previousId = previousPhotoIds.get(relativePath);
+
+    if (previousId) {
+      cleanupQueue.push(...photoVariantObjectKeys(previousId));
+      log(`skip private photo and schedule cleanup: ${relativePath}`);
+    } else {
+      log(`skip private photo (no previous catalog entry): ${relativePath}`);
+    }
+
+    return null;
+  }
+
+  const sourceHash = await hashFile(sourcePath);
   const sourceSize = imageSizeFromExif(sourceExif);
   const workDir = path.join(tempRoot, createHash("sha256").update(relativePath).digest("hex"));
   const variantPaths = Object.fromEntries(
@@ -594,12 +677,22 @@ async function syncPhotos() {
 
   try {
     const uploadQueue = [];
+    const cleanupQueue = [];
     const sourceFiles = await walkImages(sourceRoot);
+    const previousPhotoIds = await readPreviousCatalog(outputPath);
     const existingObjectKeys = await listExistingObjectKeys(client, PHOTO_R2_PREFIX);
 
     const photos = await runWithConcurrency(sourceFiles, PROCESS_CONCURRENCY, async (sourcePath) => (
-      photoJsonForSource(sourcePath, sourceRoot, tempRoot, uploadQueue, existingObjectKeys)
-    ));
+      photoJsonForSource(
+        sourcePath,
+        sourceRoot,
+        tempRoot,
+        uploadQueue,
+        existingObjectKeys,
+        previousPhotoIds,
+        cleanupQueue,
+      )
+    )).then((items) => items.filter(Boolean));
 
     const missingUploads = uploadQueue.filter((upload) => {
       if (existingObjectKeys.has(upload.objectKey)) {
@@ -613,6 +706,14 @@ async function syncPhotos() {
     log(`missing uploads: ${missingUploads.length}`);
     await runWithConcurrency(missingUploads, UPLOAD_CONCURRENCY, async (upload) => {
       await uploadObject(client, upload.objectKey, upload.filePath, upload.contentType);
+    });
+
+    const cleanupKeys = [...new Set(cleanupQueue)].filter((objectKey) =>
+      existingObjectKeys.has(objectKey),
+    );
+    log(`private-photo cleanup: ${cleanupKeys.length}`);
+    await runWithConcurrency(cleanupKeys, UPLOAD_CONCURRENCY, async (objectKey) => {
+      await deleteObject(client, objectKey);
     });
 
     const catalog = {
@@ -689,6 +790,8 @@ async function main() {
   die(`unknown command: ${args[0]}`);
 }
 
-main().catch((error) => {
-  die(error.message);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((error) => {
+    die(error.message);
+  });
+}

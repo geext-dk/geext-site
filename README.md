@@ -44,3 +44,18 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Photo privacy
+
+Use the privacy helper to add or remove the exact `Private` value in a photo's
+`Subject` metadata:
+
+```sh
+npm run photos:privacy -- private ~/Pictures/darktable_exported/2025-001
+npm run photos:privacy -- public ~/Pictures/darktable_exported/2025-001/photo.jpg
+npm run photos:privacy -- --dry-run private ~/Pictures/darktable_exported
+```
+
+The photo sync skips private files, omits them from `data/photos.json`, and
+removes their previously generated R2 variants when the previous catalog can
+identify them.
