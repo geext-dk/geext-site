@@ -1,0 +1,111 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("tech");
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<"tech">;
+}
+
+const { post } = Astro.props as Props;
+const { Content } = await render(post);
+const publishedDate = post.data.pubDate.toISOString();
+const publishedDateLabel = post.data.pubDate.toLocaleDateString("en-US", {
+  day: "numeric",
+  month: "short",
+  timeZone: "UTC",
+  year: "numeric",
+});
+---
+
+<Layout title={`${post.data.title} | Tech | Denis Karpovskii`}>
+  <main class="post-page">
+    <a class="back-link" href="/tech/">← All tech posts</a>
+    <article>
+      <header class="post-header">
+        <h1>{post.data.title}</h1>
+        <p>{post.data.description}</p>
+        <time datetime={publishedDate}>{publishedDateLabel}</time>
+      </header>
+      <div class="post-content"><Content /></div>
+    </article>
+  </main>
+</Layout>
+
+<style>
+  .post-page {
+    width: min(100%, 48rem);
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    text-underline-offset: 0.18em;
+  }
+
+  .post-header {
+    display: grid;
+    gap: 0.75rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd8ce;
+  }
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    color: #111;
+    font-size: clamp(2.25rem, 7vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .post-header p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.55;
+  }
+
+  time {
+    color: #76716a;
+    font-size: 0.9rem;
+  }
+
+  .post-content {
+    padding-top: 2rem;
+    color: #222;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .post-content :global(h2),
+  .post-content :global(h3),
+  .post-content :global(p),
+  .post-content :global(ul),
+  .post-content :global(ol) {
+    margin: 0 0 1.25rem;
+  }
+
+  .post-content :global(h2),
+  .post-content :global(h3) {
+    color: #111;
+    line-height: 1.2;
+  }
+
+  .post-content :global(a) {
+    text-underline-offset: 0.18em;
+  }
+</style>

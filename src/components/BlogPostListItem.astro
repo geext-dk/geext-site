@@ -1,0 +1,89 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  post: CollectionEntry<"tech"> | CollectionEntry<"life">;
+  href: string;
+}
+
+const { post, href } = Astro.props;
+const publishedDate = post.data.pubDate.toISOString();
+const publishedDateLabel = post.data.pubDate.toLocaleDateString("en-US", {
+  day: "numeric",
+  month: "short",
+  timeZone: "UTC",
+  year: "numeric",
+});
+---
+
+<article class="post-item">
+  <div class="post-heading">
+    <h2><a href={href}>{post.data.title}</a></h2>
+    <time datetime={publishedDate}>{publishedDateLabel}</time>
+  </div>
+  <p>{post.data.description}</p>
+</article>
+
+<style>
+  .post-item {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1.45rem 0;
+  }
+
+  h2,
+  p {
+    margin: 0;
+  }
+
+  .post-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  h2 {
+    min-width: 0;
+    font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  h2 a {
+    color: #111;
+    text-decoration: none;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+
+  h2 a:hover,
+  h2 a:focus-visible {
+    text-decoration: underline;
+  }
+
+  time {
+    flex: 0 0 auto;
+    color: #76716a;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 520px) {
+    .post-heading {
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    time {
+      font-size: 0.85rem;
+    }
+  }
+</style>

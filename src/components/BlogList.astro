@@ -1,0 +1,98 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import BlogPostListItem from "./BlogPostListItem.astro";
+import PageHeader from "./PageHeader.astro";
+import ProfileHeader from "./ProfileHeader.astro";
+import { photos } from "../lib/photos";
+import { siteConfig } from "../site.config";
+
+const { profile } = siteConfig;
+const profileBackgroundPhoto = photos.find(
+  (photo) => photo.id === profile.backgroundPhotoId,
+);
+
+if (!profileBackgroundPhoto) {
+  throw new Error(
+    `Profile background photo not found: ${profile.backgroundPhotoId}`,
+  );
+}
+
+interface Props {
+  posts: Array<CollectionEntry<"tech"> | CollectionEntry<"life">>;
+  title: string;
+  basePath: "/tech" | "/life";
+}
+
+const { posts, title, basePath } = Astro.props;
+const postCountLabel = `${posts.length} ${posts.length === 1 ? "post" : "posts"}`;
+---
+
+<Layout title=`${title} | Denis Karpovskii`>
+  <div class="profile-header-spacing">
+    <ProfileHeader
+      backgroundUrl={profileBackgroundPhoto.images.large.url}
+      isCompact
+    />
+  </div>
+  <div class="blog-content">
+    <div class="page-title-spacing">
+      <PageHeader title={title} subtitle={postCountLabel} />
+    </div>
+    <main class="blog-list-container">
+      {
+        posts.length > 0 ? (
+          <ol class="blog-list">
+            {posts.map((post) => (
+              <li>
+                <BlogPostListItem
+                  post={post}
+                  href={`${basePath}/${post.id.split("/").map(encodeURIComponent).join("/")}/`}
+                />
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p class="empty-state">No posts published yet.</p>
+        )
+      }
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .profile-header-spacing {
+    padding-top: 2rem;
+  }
+
+  .blog-content {
+    width: min(100%, 48rem);
+    margin: 0 auto;
+  }
+
+  .page-title-spacing {
+    padding-top: 2rem;
+  }
+
+  .blog-list-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .blog-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .blog-list li + li {
+    border-top: 1px solid #ddd8ce;
+  }
+
+  .empty-state {
+    margin: 0;
+    color: #76716a;
+    line-height: 1.5;
+  }
+</style>

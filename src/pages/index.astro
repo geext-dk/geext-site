@@ -1,465 +1,358 @@
 ---
-import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Layout from "../layouts/Layout.astro";
 import { photos } from "../lib/photos";
 import { projects } from "../lib/projects";
 import { siteConfig } from "../site.config";
+import ProfileHeader from "../components/ProfileHeader.astro";
 
 const recentPhotos = photos.slice(0, 5);
 const featuredProjects = projects.slice(0, 3);
 const { name, profile } = siteConfig;
-const profileBackgroundPhoto = photos.find((photo) => photo.id === profile.backgroundPhotoId);
+const profileBackgroundPhoto = photos.find(
+  (photo) => photo.id === profile.backgroundPhotoId,
+);
 
 if (!profileBackgroundPhoto) {
-	throw new Error(`Profile background photo not found: ${profile.backgroundPhotoId}`);
+  throw new Error(
+    `Profile background photo not found: ${profile.backgroundPhotoId}`,
+  );
 }
 
-const profileBackgroundStyle = `--profile-background-image: url("${profileBackgroundPhoto.images.large.url}");`;
-const socialIcons = {
-	github: faGithub,
-	instagram: faInstagram,
-	linkedin: faLinkedin,
-};
-const socialLinks = profile.socialLinks.map((link) => {
-	const icon = socialIcons[link.icon];
-	const [width, height, , , pathData] = icon.icon;
-
-	return {
-		...link,
-		height,
-		pathData: Array.isArray(pathData) ? pathData : [pathData],
-		width,
-	};
-});
-
 const getProjectActionLabel = (linkType: "appstore" | "simple" | undefined) =>
-	linkType === "appstore" ? "Download on the App Store" : "Learn more";
-
+  linkType === "appstore" ? "Download on the App Store" : "Learn more";
 ---
 
 <Layout title={name}>
-	<main class="dashboard">
-		<section class="profile-section" style={profileBackgroundStyle} aria-labelledby="profile-title">
-			<div class="profile-content">
-				<div class="avatar">
-					{profile.avatarUrl ? (
-						<img src={profile.avatarUrl} alt="" width="512" height="512" loading="eager" decoding="async" />
-					) : null}
-				</div>
-				<h1 id="profile-title">{name}</h1>
-				<p>{profile.about}</p>
-				<nav class="profile-links" aria-label="Social links">
-					{socialLinks.map((link) => (
-						<a href={link.href} target="_blank" rel="noreferrer" aria-label={link.label} title={link.label}>
-							<svg aria-hidden="true" viewBox={`0 0 ${link.width} ${link.height}`} width="20" height="20">
-								{link.pathData.map((path) => <path d={path}></path>)}
-							</svg>
-						</a>
-					))}
-				</nav>
-			</div>
-		</section>
+  <main class="dashboard">
+    <ProfileHeader backgroundUrl={profileBackgroundPhoto.images.large.url} />
 
-		<section class="dashboard-section photography-overview" aria-labelledby="photography-title">
-			<div class="section-heading">
-				<div>
-					<h2 id="photography-title">Photography</h2>
-					<p>Most recent photos from the archive.</p>
-				</div>
-				<a href="/photography/">View all</a>
-			</div>
+    <section
+      class="dashboard-section photography-overview"
+      aria-labelledby="photography-title"
+    >
+      <div class="section-heading">
+        <div>
+          <h2 id="photography-title">Photography</h2>
+          <p>Most recent photos from the archive.</p>
+        </div>
+        <a href="/photography/">View all</a>
+      </div>
 
-			<div class="recent-photos">
-				{recentPhotos.map((photo, index) => (
-					<a class="recent-photo" href="/photography/" aria-label={`Open photography archive from recent photo ${index + 1}`}>
-						<img
-							src={photo.images.grid.url}
-							srcset={`${photo.images.thumb.url} 480w, ${photo.images.grid.url} 960w`}
-							sizes="(max-width: 700px) 33vw, (max-width: 900px) 25vw, 14rem"
-							width={photo.images.grid.width ?? undefined}
-							height={photo.images.grid.height ?? undefined}
-							alt=""
-							loading="lazy"
-							decoding="async"
-						/>
-					</a>
-				))}
-			</div>
-		</section>
+      <div class="recent-photos">
+        {
+          recentPhotos.map((photo, index) => (
+            <a
+              class="recent-photo"
+              href="/photography/"
+              aria-label={`Open photography archive from recent photo ${index + 1}`}
+            >
+              <img
+                src={photo.images.grid.url}
+                srcset={`${photo.images.thumb.url} 480w, ${photo.images.grid.url} 960w`}
+                sizes="(max-width: 700px) 33vw, (max-width: 900px) 25vw, 14rem"
+                width={photo.images.grid.width ?? undefined}
+                height={photo.images.grid.height ?? undefined}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          ))
+        }
+      </div>
+    </section>
 
-		<section id="projects" class="dashboard-section projects-section" aria-labelledby="projects-title">
-			<div class="section-heading">
-				<div>
-					<h2 id="projects-title">Projects</h2>
-					<p>Selected work and experiments.</p>
-				</div>
-				<a href="/projects/">View all</a>
-			</div>
+    <section
+      id="projects"
+      class="dashboard-section projects-section"
+      aria-labelledby="projects-title"
+    >
+      <div class="section-heading">
+        <div>
+          <h2 id="projects-title">Projects</h2>
+          <p>Selected work and experiments.</p>
+        </div>
+        <a href="/projects/">View all</a>
+      </div>
 
-			<div class="project-list">
-				{featuredProjects.map((project) => {
-					return (
-						<article class="project-entry">
-							{project.url ? (
-								<a class="project-title-link" href={project.url}>{project.title}</a>
-							) : (
-								<span>{project.title}</span>
-							)}
-							<p>{project.description}</p>
-							{project.url ? (
-								<a
-									class:list={["project-action", { "project-action-appstore": project.linkType === "appstore" }]}
-									href={project.url}
-									aria-label={`${getProjectActionLabel(project.linkType)}: ${project.title}`}
-								>
-									{project.linkType === "appstore" ? (
-										<img src="/download-on-appstore-icon.svg" alt="" width="120" height="40" loading="lazy" decoding="async" />
-									) : (
-										getProjectActionLabel(project.linkType)
-									)}
-								</a>
-							) : null}
-							{project.sourceUrl ? (
-								<a class="project-source" href={project.sourceUrl} target="_blank" rel="noreferrer">Source code</a>
-							) : null}
-						</article>
-					);
-				})}
-			</div>
-		</section>
-	</main>
+      <div class="project-list">
+        {
+          featuredProjects.map((project) => {
+            return (
+              <article class="project-entry">
+                {project.url ? (
+                  <a class="project-title-link" href={project.url}>
+                    {project.title}
+                  </a>
+                ) : (
+                  <span>{project.title}</span>
+                )}
+                <p>{project.description}</p>
+                {project.url ? (
+                  <a
+                    class:list={[
+                      "project-action",
+                      {
+                        "project-action-appstore":
+                          project.linkType === "appstore",
+                      },
+                    ]}
+                    href={project.url}
+                    aria-label={`${getProjectActionLabel(project.linkType)}: ${project.title}`}
+                  >
+                    {project.linkType === "appstore" ? (
+                      <img
+                        src="/download-on-appstore-icon.svg"
+                        alt=""
+                        width="120"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    ) : (
+                      getProjectActionLabel(project.linkType)
+                    )}
+                  </a>
+                ) : null}
+                {project.sourceUrl ? (
+                  <a
+                    class="project-source"
+                    href={project.sourceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Source code
+                  </a>
+                ) : null}
+              </article>
+            );
+          })
+        }
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
-	.dashboard {
-		width: min(100% - 2rem, 76rem);
-		margin: 0 auto;
-		padding: 0 0 4rem;
-	}
+  h1,
+  h2,
+  p {
+    margin: 0;
+  }
 
-	.profile-section {
-		display: grid;
-		place-items: center;
-		min-height: min(32rem, calc(100vh - 10rem));
-		padding: 4rem 1.5rem;
-		border: 1px solid #ddd8ce;
-		background-color: #343633;
-		background:
-			linear-gradient(rgba(17, 17, 17, 0.18), rgba(17, 17, 17, 0.5)),
-			var(--profile-background-image);
-		background-position: center;
-		background-size: cover;
-		color: #fff;
-		text-align: center;
-	}
+  h1 {
+    font-size: clamp(2.25rem, 5vw, 5rem);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1;
+  }
 
-	.profile-content {
-		display: grid;
-		justify-items: center;
-		gap: 0.75rem;
-		max-width: 38rem;
-	}
+  .dashboard-section {
+    padding: 4rem 0 0;
+  }
 
-	.avatar {
-		width: clamp(7rem, 16vw, 10rem);
-		aspect-ratio: 1;
-		border: 2px solid rgba(255, 255, 255, 0.85);
-		border-radius: 50%;
-		background:
-			linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08)),
-			rgba(255, 255, 255, 0.18);
-		box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.18);
-		overflow: hidden;
-	}
+  .section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+  }
 
-	.avatar img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
+  .section-heading div {
+    display: grid;
+    gap: 0.35rem;
+  }
 
-	h1,
-	h2,
-	p {
-		margin: 0;
-	}
+  h2 {
+    color: #111;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.05;
+  }
 
-	h1 {
-		font-size: clamp(2.25rem, 5vw, 5rem);
-		font-weight: 500;
-		letter-spacing: 0;
-		line-height: 1;
-	}
+  .section-heading p {
+    color: #555;
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
 
-	.profile-content p {
-		max-width: 34rem;
-		color: rgba(255, 255, 255, 0.86);
-		font-size: 1.05rem;
-		line-height: 1.6;
-	}
+  .section-heading a {
+    flex: 0 0 auto;
+    color: #111;
+    font-size: 0.95rem;
+    text-underline-offset: 0.18em;
+  }
 
-	.profile-links {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 0.65rem;
-		margin-top: 0.15rem;
-	}
+  .recent-photos {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+  }
 
-	.profile-links a {
-		display: grid;
-		place-items: center;
-		width: 2.35rem;
-		aspect-ratio: 1;
-		border: 1px solid rgba(255, 255, 255, 0.28);
-		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.08);
-		color: rgba(255, 255, 255, 0.92);
-		text-decoration: none;
-		transition:
-			background 180ms ease,
-			border-color 180ms ease,
-			color 180ms ease,
-			transform 180ms ease;
-	}
+  .recent-photo {
+    display: block;
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #ece8df;
+  }
 
-	.profile-links svg {
-		width: 1.1rem;
-		height: 1.1rem;
-		fill: currentColor;
-	}
+  .recent-photo img {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 180ms ease;
+  }
 
-	.profile-links a:hover,
-	.profile-links a:focus-visible {
-		background: rgba(255, 255, 255, 0.16);
-		border-color: rgba(255, 255, 255, 0.52);
-		color: #fff;
-		transform: translateY(-1px);
-	}
+  .recent-photo:hover img {
+    transform: scale(1.03);
+  }
 
-	.dashboard-section {
-		padding: 4rem 0 0;
-	}
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 
-	.section-heading {
-		display: flex;
-		align-items: end;
-		justify-content: space-between;
-		gap: 1rem;
-		margin-bottom: 1.25rem;
-		padding-bottom: 1rem;
-	}
+  .project-entry {
+    display: grid;
+    justify-items: center;
+    gap: 0.45rem;
+    min-width: 0;
+    padding: 0 1.25rem 1.35rem 0;
+    margin-bottom: 1.25rem;
+    color: #111;
+    text-decoration: none;
+    text-align: center;
+  }
 
-	.section-heading div {
-		display: grid;
-		gap: 0.35rem;
-	}
+  .project-entry + .project-entry {
+    padding-left: 1.25rem;
+    border-left: 1px solid #ddd8ce;
+  }
 
-	h2 {
-		color: #111;
-		font-size: clamp(1.5rem, 3vw, 2.4rem);
-		font-weight: 500;
-		letter-spacing: 0;
-		line-height: 1.05;
-	}
+  .project-entry span,
+  .project-title-link {
+    color: #111;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-decoration: none;
+  }
 
-	.section-heading p {
-		color: #555;
-		font-size: 0.98rem;
-		line-height: 1.5;
-	}
+  .project-entry p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 
-	.section-heading a {
-		flex: 0 0 auto;
-		color: #111;
-		font-size: 0.95rem;
-		text-underline-offset: 0.18em;
-	}
+  .project-action,
+  .project-source {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.25rem;
+    margin-top: 0.15rem;
+    padding: 0 0.8rem;
+    border: 1px solid #111;
+    border-radius: 999px;
+    color: #111;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition:
+      background 180ms ease,
+      color 180ms ease;
+  }
 
-	.recent-photos {
-		display: grid;
-		grid-template-columns: repeat(5, minmax(0, 1fr));
-		gap: 1rem;
-	}
+  .project-action-appstore {
+    min-height: 2.5rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
 
-	.recent-photo {
-		display: block;
-		position: relative;
-		aspect-ratio: 1;
-		overflow: hidden;
-		background: #ece8df;
-	}
+  .project-action-appstore img {
+    display: block;
+    width: 7.5rem;
+    height: 2.5rem;
+  }
 
-	.recent-photo img {
-		display: block;
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		transition: transform 180ms ease;
-	}
+  .project-title-link:hover,
+  .project-title-link:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
 
-	.recent-photo:hover img {
-		transform: scale(1.03);
-	}
+  .project-action:hover,
+  .project-action:focus-visible,
+  .project-source:hover,
+  .project-source:focus-visible {
+    background: #111;
+    color: #fff;
+  }
 
-	.project-list {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-	}
+  .project-action-appstore:hover,
+  .project-action-appstore:focus-visible {
+    background: transparent;
+    color: inherit;
+  }
 
-	.project-entry {
-		display: grid;
-		justify-items: center;
-		gap: 0.45rem;
-		min-width: 0;
-		padding: 0 1.25rem 1.35rem 0;
-		margin-bottom: 1.25rem;
-		color: #111;
-		text-decoration: none;
-		text-align: center;
-	}
+  @media (max-width: 900px) {
+    .recent-photos {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 
-	.project-entry + .project-entry {
-		padding-left: 1.25rem;
-		border-left: 1px solid #ddd8ce;
-	}
+    .recent-photo:nth-child(n + 5) {
+      display: none;
+    }
 
-	.project-entry span,
-	.project-title-link {
-		color: #111;
-		font-size: 1.05rem;
-		font-weight: 600;
-		line-height: 1.25;
-		text-decoration: none;
-	}
+    .project-list {
+      grid-template-columns: 1fr;
+    }
 
-	.project-entry p {
-		color: #555;
-		font-size: 0.95rem;
-		line-height: 1.5;
-	}
+    .project-entry,
+    .project-entry + .project-entry {
+      padding-right: 0;
+      padding-left: 0;
+      border-bottom: 1px solid #ddd8ce;
+      border-left: 0;
+    }
+  }
 
-	.project-action,
-	.project-source {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 2.25rem;
-		margin-top: 0.15rem;
-		padding: 0 0.8rem;
-		border: 1px solid #111;
-		border-radius: 999px;
-		color: #111;
-		font-size: 0.95rem;
-		text-decoration: none;
-		transition:
-			background 180ms ease,
-			color 180ms ease;
-	}
+  @media (max-width: 700px) {
+    .dashboard-section {
+      display: flex;
+      flex-direction: column;
+      padding-top: 3rem;
+    }
 
-	.project-action-appstore {
-		min-height: 2.5rem;
-		padding: 0;
-		border: 0;
-		border-radius: 0;
-		background: transparent;
-	}
+    .section-heading {
+      display: contents;
+    }
 
-	.project-action-appstore img {
-		display: block;
-		width: 7.5rem;
-		height: 2.5rem;
-	}
+    .section-heading div {
+      margin-bottom: 1.25rem;
+    }
 
-	.project-title-link:hover,
-	.project-title-link:focus-visible {
-		text-decoration: underline;
-		text-underline-offset: 0.18em;
-	}
+    .section-heading a {
+      align-self: start;
+      margin-top: 1rem;
+      order: 1;
+    }
 
-	.project-action:hover,
-	.project-action:focus-visible,
-	.project-source:hover,
-	.project-source:focus-visible {
-		background: #111;
-		color: #fff;
-	}
+    .recent-photos {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
 
-	.project-action-appstore:hover,
-	.project-action-appstore:focus-visible {
-		background: transparent;
-		color: inherit;
-	}
-
-	@media (max-width: 900px) {
-		.profile-section {
-			margin-inline: calc(50% - 50vw);
-			border-inline: 0;
-		}
-
-		.recent-photos {
-			grid-template-columns: repeat(4, minmax(0, 1fr));
-		}
-
-		.recent-photo:nth-child(n + 5) {
-			display: none;
-		}
-
-		.project-list {
-			grid-template-columns: 1fr;
-		}
-
-		.project-entry,
-		.project-entry + .project-entry {
-			padding-right: 0;
-			padding-left: 0;
-			border-bottom: 1px solid #ddd8ce;
-			border-left: 0;
-		}
-	}
-
-	@media (max-width: 700px) {
-		.dashboard {
-			width: min(100% - 1.25rem, 76rem);
-			padding-bottom: 3rem;
-		}
-
-		.profile-section {
-			min-height: 28rem;
-			padding: 3rem 1rem;
-		}
-
-		.dashboard-section {
-			display: flex;
-			flex-direction: column;
-			padding-top: 3rem;
-		}
-
-		.section-heading {
-			display: contents;
-		}
-
-		.section-heading div {
-			margin-bottom: 1.25rem;
-		}
-
-		.section-heading a {
-			align-self: start;
-			margin-top: 1rem;
-			order: 1;
-		}
-
-		.recent-photos {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			gap: 0.75rem;
-		}
-
-		.recent-photo:nth-child(n + 4) {
-			display: none;
-		}
-	}
+    .recent-photo:nth-child(n + 4) {
+      display: none;
+    }
+  }
 </style>
