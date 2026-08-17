@@ -1,18 +1,24 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PhotographyPage from "../../components/PhotographyPage.astro";
-import { cameras, films, paginate, photoCountLabel, photos } from "../../lib/photos";
+import {
+  cameras,
+  films,
+  paginate,
+  photoCountLabel,
+  photos,
+} from "../../lib/photos";
 
 const page = paginate(photos, 1);
 ---
 
-<Layout title="Photography | Denis Karpovskii">
-	<PhotographyPage
-		title="Photography"
-		subtitle={`${photoCountLabel(page.totalPhotos)}`}
-		page={page}
-		basePath="/photography"
-		cameras={cameras}
-		films={films}
-	/>
+<Layout title="Film | Denis Karpovskii">
+  <PhotographyPage
+    title="Film photography"
+    subtitle={`${photoCountLabel(page.totalPhotos)}`}
+    page={page}
+    basePath="/photography"
+    cameras={cameras}
+    films={films}
+  />
 </Layout>
