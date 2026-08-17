@@ -59,3 +59,10 @@ npm run photos:privacy -- --dry-run private ~/Pictures/darktable_exported
 The photo sync skips private files, omits them from `data/photos.json`, and
 removes their previously generated R2 variants when the previous catalog can
 identify them.
+
+## Microblog
+
+The microblog is fetched from the public posts of `@geext@social.geext.xyz`
+during the Astro build. Configure a GoToSocial read-only token with
+`read:accounts` and `read:statuses` scopes as `GOTOSOCIAL_ACCESS_TOKEN` in the
+build environment. The token is never sent to the browser.

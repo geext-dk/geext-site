@@ -1,32 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import ProfileHeader from "../../components/ProfileHeader.astro";
-import { photos } from "../../lib/photos";
-import { siteConfig } from "../../site.config";
+import MicroblogPage from "../../components/MicroblogPage.astro";
+import { getMicroblogPosts, paginateMicroblogPosts } from "../../lib/microblog";
 
-const { profile } = siteConfig;
-const profileBackgroundPhoto = photos.find(
-  (photo) => photo.id === profile.backgroundPhotoId,
-);
-
-if (!profileBackgroundPhoto) {
-  throw new Error(
-    `Profile background photo not found: ${profile.backgroundPhotoId}`,
-  );
-}
+const page = paginateMicroblogPosts(await getMicroblogPosts(), 1);
 ---
 
 <Layout title="Microblog | Denis Karpovskii">
-  <div class="profile-header-spacing">
-    <ProfileHeader
-      backgroundUrl={profileBackgroundPhoto.images.large.url}
-      isCompact
-    />
-  </div>
+  <MicroblogPage page={page} title="Microblog" />
 </Layout>
-
-<style>
-  .profile-header-spacing {
-    padding-top: 2rem;
-  }
-</style>

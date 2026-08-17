@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "node --test workers/telegram-photo-publisher/test/*.test.js scripts/*.test.mjs",
+    "test": "node --experimental-strip-types --test workers/telegram-photo-publisher/test/*.test.js scripts/*.test.mjs src/lib/*.test.ts",
     "sync:photos": "node scripts/sync-photos-to-r2.mjs",
     "sync:image": "node scripts/sync-photos-to-r2.mjs image",
     "photos:privacy": "node scripts/set-photo-privacy.mjs"
@@ -19,7 +19,8 @@
     "@astrojs/sitemap": "^3.7.3",
     "@fortawesome/free-brands-svg-icons": "^7.3.1",
     "@lucide/astro": "^1.31.0",
-    "astro": "^7.2.2"
+    "astro": "^7.2.2",
+    "ultrahtml": "^1.6.0"
   },
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.1111.0",

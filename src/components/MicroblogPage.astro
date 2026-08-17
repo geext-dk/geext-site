@@ -1,0 +1,344 @@
+---
+import ProfileHeader from "./ProfileHeader.astro";
+import Pagination from "./Pagination.astro";
+import { photos } from "../lib/photos";
+import type { PaginatedMicroblogPosts } from "../lib/microblog";
+import { siteConfig } from "../site.config";
+
+interface Props {
+  page: PaginatedMicroblogPosts;
+  title: string;
+}
+
+const { page, title } = Astro.props;
+const { profile } = siteConfig;
+const profileBackgroundPhoto = photos.find(
+  (photo) => photo.id === profile.backgroundPhotoId,
+);
+
+if (!profileBackgroundPhoto) {
+  throw new Error(
+    `Profile background photo not found: ${profile.backgroundPhotoId}`,
+  );
+}
+
+function pollTotalVotes(options: Array<{ votes_count: number | null }>) {
+  return options.reduce(
+    (total, option) => total + (option.votes_count ?? 0),
+    0,
+  );
+}
+
+function pollPercent(votes: number | null, total: number) {
+  if (!votes || total === 0) {
+    return 0;
+  }
+
+  return Math.round((votes / total) * 100);
+}
+---
+
+<div class="profile-header-spacing">
+  <ProfileHeader
+    backgroundUrl={profileBackgroundPhoto.images.large.url}
+    isCompact
+  />
+</div>
+
+<main class="microblog-content">
+  <div class="microblog-heading">
+    <h1>{title}</h1>
+    <p>{page.totalPosts} posts</p>
+  </div>
+
+  {
+    page.posts.length > 0 ? (
+      <ol class="posts-grid">
+        {page.posts.map((post) => {
+          const pollTotal = post.poll ? pollTotalVotes(post.poll.options) : 0;
+          const statusUrl =
+            post.url ??
+            `${siteConfig.microblog.instanceUrl}/@${post.account.acct}/statuses/${post.id}`;
+
+          return (
+            <li>
+              <article
+                class:list={["post", { "post-sensitive": post.sensitive }]}
+              >
+                <header class="post-header">
+                  <a
+                    class="post-date"
+                    href={statusUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <time datetime={post.created_at} data-local-time>
+                      {post.created_at}
+                    </time>
+                  </a>
+                </header>
+
+                {post.spoiler_text || post.sensitive ? (
+                  <details class="post-disclosure">
+                    <summary>
+                      {post.spoiler_text || "Sensitive content"}
+                    </summary>
+                    <div class="post-body">
+                      <div class="post-content" set:html={post.contentHtml} />
+                      {post.poll && (
+                        <div class="post-poll" aria-label="Poll results">
+                          <ul>
+                            {post.poll.options.map((option) => {
+                              const votes = option.votes_count ?? 0;
+                              const percent = pollPercent(
+                                option.votes_count,
+                                pollTotal,
+                              );
+
+                              return (
+                                <li>
+                                  <div class="poll-option-heading">
+                                    <span>{option.title}</span>
+                                    <span>{percent}%</span>
+                                  </div>
+                                  <div
+                                    class="poll-option-bar"
+                                    aria-hidden="true"
+                                  >
+                                    <span style={`width: ${percent}%`} />
+                                  </div>
+                                  <small>{votes} votes</small>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                          <p class="poll-note">
+                            {post.poll.expired
+                              ? "Poll ended"
+                              : "Poll results at build time"}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </details>
+                ) : (
+                  <div class="post-body">
+                    <div class="post-content" set:html={post.contentHtml} />
+                    {post.poll && (
+                      <div class="post-poll" aria-label="Poll results">
+                        <ul>
+                          {post.poll.options.map((option) => {
+                            const votes = option.votes_count ?? 0;
+                            const percent = pollPercent(
+                              option.votes_count,
+                              pollTotal,
+                            );
+
+                            return (
+                              <li>
+                                <div class="poll-option-heading">
+                                  <span>{option.title}</span>
+                                  <span>{percent}%</span>
+                                </div>
+                                <div class="poll-option-bar" aria-hidden="true">
+                                  <span style={`width: ${percent}%`} />
+                                </div>
+                                <small>{votes} votes</small>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                        <p class="poll-note">
+                          {post.poll.expired
+                            ? "Poll ended"
+                            : "Poll results at build time"}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </article>
+            </li>
+          );
+        })}
+      </ol>
+    ) : (
+      <p class="empty-state">No public posts yet.</p>
+    )
+  }
+
+  <Pagination
+    currentPage={page.currentPage}
+    totalPages={page.totalPages}
+    basePath="/microblog"
+  />
+</main>
+
+<script>
+  import { formatLocalDateTime } from "../lib/local-time";
+
+  document.querySelectorAll("time[data-local-time]").forEach((timeElement) => {
+    const value = timeElement.getAttribute("datetime");
+    if (!value) {
+      return;
+    }
+
+    timeElement.textContent = formatLocalDateTime(value);
+  });
+</script>
+
+<style>
+  .profile-header-spacing {
+    padding-top: 2rem;
+  }
+
+  .microblog-content {
+    padding-top: 2rem;
+  }
+
+  .microblog-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1,
+  .microblog-heading p,
+  .post p {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .microblog-heading p,
+  .post-date,
+  .poll-note,
+  .post-poll small {
+    color: #76716a;
+    font-size: 0.85rem;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .post {
+    min-height: 10rem;
+    padding: 1.1rem;
+    border: 1px solid #ddd8ce;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .post-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .post-date {
+    line-height: 1.3;
+    text-underline-offset: 0.18em;
+  }
+
+  .post-content {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  :global(.post-content p) {
+    margin: 0 0 0.8rem;
+  }
+
+  :global(.post-content p:last-child) {
+    margin-bottom: 0;
+  }
+
+  :global(.post-content a) {
+    text-underline-offset: 0.18em;
+  }
+
+  :global(.post-content img) {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: -0.2em;
+    object-fit: contain;
+  }
+
+  .post-disclosure summary {
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .post-disclosure[open] summary {
+    margin-bottom: 1rem;
+  }
+
+  .post-poll {
+    margin-top: 1.25rem;
+  }
+
+  .post-poll ul {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .poll-option-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .poll-option-bar {
+    height: 0.35rem;
+    margin: 0.3rem 0 0.2rem;
+    overflow: hidden;
+    background: #e5e1d9;
+  }
+
+  .poll-option-bar span {
+    display: block;
+    height: 100%;
+    background: #76716a;
+  }
+
+  .poll-note {
+    margin-top: 0.8rem !important;
+  }
+
+  .empty-state {
+    padding: 2rem 0;
+    color: #76716a;
+  }
+
+  @media (max-width: 900px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 700px) {
+    .microblog-content {
+      padding-top: 1.5rem;
+    }
+
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

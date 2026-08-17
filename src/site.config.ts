@@ -1,5 +1,11 @@
 export const siteConfig = {
   name: "Denis Karpovskii",
+  microblog: {
+    instanceUrl: "https://social.geext.xyz",
+    account: "geext",
+    pageSize: 18,
+    fetchLimit: 100,
+  },
   profile: {
     about:
       "A proud software engineer from Russia, living in Georgia 🇬🇪. Also a film photographer, a gamer, a music lover and a sweet tooth",

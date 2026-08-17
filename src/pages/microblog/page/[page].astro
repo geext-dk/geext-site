@@ -1,0 +1,29 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import MicroblogPage from "../../../components/MicroblogPage.astro";
+import {
+  getMicroblogPosts,
+  paginateMicroblogPosts,
+} from "../../../lib/microblog";
+
+export async function getStaticPaths() {
+  const posts = await getMicroblogPosts();
+  const totalPages = paginateMicroblogPosts(posts, 1).totalPages;
+
+  return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
+    const pageNumber = index + 2;
+
+    return {
+      params: { page: String(pageNumber) },
+      props: { pageNumber },
+    };
+  });
+}
+
+const { pageNumber } = Astro.props;
+const page = paginateMicroblogPosts(await getMicroblogPosts(), pageNumber);
+---
+
+<Layout title={`Microblog, page ${page.currentPage} | Denis Karpovskii`}>
+  <MicroblogPage page={page} title={`Microblog, page ${page.currentPage}`} />
+</Layout>
