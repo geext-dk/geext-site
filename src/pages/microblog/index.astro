@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProfileHeader from "../../components/ProfileHeader.astro";
+import { photos } from "../../lib/photos";
+import { siteConfig } from "../../site.config";
+
+const { profile } = siteConfig;
+const profileBackgroundPhoto = photos.find(
+  (photo) => photo.id === profile.backgroundPhotoId,
+);
+
+if (!profileBackgroundPhoto) {
+  throw new Error(
+    `Profile background photo not found: ${profile.backgroundPhotoId}`,
+  );
+}
+---
+
+<Layout title="Microblog | Denis Karpovskii">
+  <div class="profile-header-spacing">
+    <ProfileHeader
+      backgroundUrl={profileBackgroundPhoto.images.large.url}
+      isCompact
+    />
+  </div>
+</Layout>
+
+<style>
+  .profile-header-spacing {
+    padding-top: 2rem;
+  }
+</style>
