@@ -47,8 +47,20 @@ function pollPercent(votes: number | null, total: number) {
 
 <main class="microblog-content">
   <div class="microblog-heading">
-    <h1>{title}</h1>
-    <p>{page.totalPosts} posts</p>
+    <div class="microblog-title">
+      <h1>{title}</h1>
+      <p class="microblog-subtitle">
+        powered by{" "}
+        <a
+          href="https://gotosocial.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GoToSocial
+        </a>
+      </p>
+    </div>
+    <p class="microblog-count">{page.totalPosts} posts</p>
   </div>
 
   {
@@ -56,6 +68,9 @@ function pollPercent(votes: number | null, total: number) {
       <ol class="posts-grid">
         {page.posts.map((post) => {
           const pollTotal = post.poll ? pollTotalVotes(post.poll.options) : 0;
+          const imageAttachment = post.media_attachments.find(
+            (attachment) => attachment.type === "image",
+          );
           const statusUrl =
             post.url ??
             `${siteConfig.microblog.instanceUrl}/@${post.account.acct}/statuses/${post.id}`;
@@ -83,7 +98,93 @@ function pollPercent(votes: number | null, total: number) {
                     <summary>
                       {post.spoiler_text || "Sensitive content"}
                     </summary>
-                    <div class="post-body">
+                    <div
+                      class:list={[
+                        "post-body",
+                        { "post-body-with-media": imageAttachment },
+                      ]}
+                    >
+                      {imageAttachment && (
+                        <a
+                          class="post-media"
+                          href={imageAttachment.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={
+                              imageAttachment.preview_url || imageAttachment.url
+                            }
+                            alt={
+                              imageAttachment.description || "Attached image"
+                            }
+                            loading="lazy"
+                          />
+                        </a>
+                      )}
+                      <div class="post-body-content">
+                        <div class="post-content" set:html={post.contentHtml} />
+                        {post.poll && (
+                          <div class="post-poll" aria-label="Poll results">
+                            <ul>
+                              {post.poll.options.map((option) => {
+                                const votes = option.votes_count ?? 0;
+                                const percent = pollPercent(
+                                  option.votes_count,
+                                  pollTotal,
+                                );
+
+                                return (
+                                  <li>
+                                    <div class="poll-option-heading">
+                                      <span>{option.title}</span>
+                                      <span>{percent}%</span>
+                                    </div>
+                                    <div
+                                      class="poll-option-bar"
+                                      aria-hidden="true"
+                                    >
+                                      <span style={`width: ${percent}%`} />
+                                    </div>
+                                    <small>{votes} votes</small>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                            <p class="poll-note">
+                              {post.poll.expired
+                                ? "Poll ended"
+                                : "Poll results at build time"}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </details>
+                ) : (
+                  <div
+                    class:list={[
+                      "post-body",
+                      { "post-body-with-media": imageAttachment },
+                    ]}
+                  >
+                    {imageAttachment && (
+                      <a
+                        class="post-media"
+                        href={imageAttachment.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={
+                            imageAttachment.preview_url || imageAttachment.url
+                          }
+                          alt={imageAttachment.description || "Attached image"}
+                          loading="lazy"
+                        />
+                      </a>
+                    )}
+                    <div class="post-body-content">
                       <div class="post-content" set:html={post.contentHtml} />
                       {post.poll && (
                         <div class="post-poll" aria-label="Poll results">
@@ -120,41 +221,6 @@ function pollPercent(votes: number | null, total: number) {
                         </div>
                       )}
                     </div>
-                  </details>
-                ) : (
-                  <div class="post-body">
-                    <div class="post-content" set:html={post.contentHtml} />
-                    {post.poll && (
-                      <div class="post-poll" aria-label="Poll results">
-                        <ul>
-                          {post.poll.options.map((option) => {
-                            const votes = option.votes_count ?? 0;
-                            const percent = pollPercent(
-                              option.votes_count,
-                              pollTotal,
-                            );
-
-                            return (
-                              <li>
-                                <div class="poll-option-heading">
-                                  <span>{option.title}</span>
-                                  <span>{percent}%</span>
-                                </div>
-                                <div class="poll-option-bar" aria-hidden="true">
-                                  <span style={`width: ${percent}%`} />
-                                </div>
-                                <small>{votes} votes</small>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                        <p class="poll-note">
-                          {post.poll.expired
-                            ? "Poll ended"
-                            : "Poll results at build time"}
-                        </p>
-                      </div>
-                    )}
                   </div>
                 )}
               </article>
@@ -204,6 +270,11 @@ function pollPercent(votes: number | null, total: number) {
     margin-bottom: 1.5rem;
   }
 
+  .microblog-title {
+    display: grid;
+    gap: 0.35rem;
+  }
+
   h1,
   .microblog-heading p,
   .post p {
@@ -216,7 +287,8 @@ function pollPercent(votes: number | null, total: number) {
     line-height: 1.1;
   }
 
-  .microblog-heading p,
+  .microblog-subtitle,
+  .microblog-count,
   .post-date,
   .poll-note,
   .post-poll small {
@@ -247,6 +319,33 @@ function pollPercent(votes: number | null, total: number) {
   .post-date {
     line-height: 1.3;
     text-underline-offset: 0.18em;
+  }
+
+  .post-body-with-media {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    align-items: start;
+    gap: 0.9rem;
+  }
+
+  .post-media {
+    display: block;
+    width: 4.5rem;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 1px solid #ddd8ce;
+    background: #e5e1d9;
+  }
+
+  .post-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .post-body-content {
+    min-width: 0;
   }
 
   .post-content {
