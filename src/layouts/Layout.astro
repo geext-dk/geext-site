@@ -56,8 +56,8 @@ const { title = "Denis Karpovskii" } = Astro.props;
         <a href="/">Home</a>
         <a href="/photography/">Photography</a>
         <a href="/projects/">Projects</a>
-        <a href="/tech/">Tech</a>
-        <a href="/life/">Life</a>
+        <!-- <a href="/tech/">Tech</a> -->
+        <!-- <a href="/life/">Life</a> -->
       </nav>
 
       <div class="page-content">
@@ -66,6 +66,7 @@ const { title = "Denis Karpovskii" } = Astro.props;
 
       <footer class="site-footer">
         <p>&copy; Denis Karpovskii</p>
+        <p>Powered by <a href="https://astro.build">Astro</a></p>
       </footer>
     </div>
   </body>
@@ -165,6 +166,8 @@ const { title = "Denis Karpovskii" } = Astro.props;
   }
 
   .site-footer {
+    display: flex;
+    justify-content: space-between;
     padding: 2rem 0 2.5rem;
     color: #76716a;
   }
