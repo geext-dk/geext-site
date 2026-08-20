@@ -1,0 +1,15 @@
+name: Daily Cloudflare Pages build
+
+on:
+  schedule:
+    - cron: "17 2 * * *" # 02:17 UTC daily
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Pages deploy
+        run: |
+          curl --fail-with-body -X POST \
+            "${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK_URL }}"
